@@ -1,0 +1,347 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "book": "Book Now"
+  },
+  "hero": {
+    "title": "Transform Your",
+    "titleHighlight": "Body",
+    "subtitle": "Professional fitness coach with 8+ years of experience. Personalized coaching, custom programs and nutritional guidance to reach your goals quickly.",
+    "cta": {
+      "primary": "Start Now",
+      "secondary": "Discover Services"
+    },
+    "stats": {
+      "clients": "Clients Transformed",
+      "experience": "Years of Experience",
+      "success": "Success Rate"
+    },
+    "freeSession": {
+      "title": "Free Discovery Session",
+      "description": "Complete assessment, personalized training plan and nutrition advice.",
+      "features": {
+        "assessment": "Complete physical assessment",
+        "program": "Custom program",
+        "nutrition": "Nutrition advice",
+        "followup": "Personalized follow-up"
+      },
+      "cta": "Book Now"
+    }
+  },
+  "services": {
+    "title": "My",
+    "titleHighlight": "Services",
+    "subtitle": "Solutions adapted to all needs and budgets to accompany you towards your fitness and wellness goals.",
+    "items": {
+      "personal": {
+        "title": "Personal Training",
+        "description": "Individual sessions adapted to your goals and level. Personalized follow-up and guaranteed progress.",
+        "features": {
+          "custom": "Custom programs",
+          "nutrition": "Nutritional guidance",
+          "motivation": "Constant motivation",
+          "results": "Fast results"
+        },
+        "price": "€60/session"
+      },
+      "group": {
+        "title": "Group Training",
+        "description": "Small group workouts to share motivation and reduce costs.",
+        "features": {
+          "groups": "Groups of 3-5 people",
+          "atmosphere": "Friendly atmosphere",
+          "price": "Reduced price",
+          "emulation": "Group emulation"
+        },
+        "price": "€25/session"
+      },
+      "online": {
+        "title": "Online Coaching",
+        "description": "Personalized workout programs to do at home with video follow-up.",
+        "features": {
+          "flexibility": "Schedule flexibility",
+          "video": "Video follow-up",
+          "nutrition": "Nutrition plans",
+          "support": "24/7 support"
+        },
+        "price": "€35/month"
+      },
+      "nutrition": {
+        "title": "Nutrition Coaching",
+        "description": "Personalized meal plans to optimize your results and health.",
+        "features": {
+          "assessment": "Nutritional assessment",
+          "menus": "Personalized menus",
+          "recipes": "Adapted recipes",
+          "followup": "Weekly follow-up"
+        },
+        "price": "€80/month"
+      }
+    },
+    "choose": "Choose this service",
+    "unsure": {
+      "title": "Not sure which service suits you?",
+      "subtitle": "Let's discuss your goals during a free 15-minute call",
+      "cta": "Free Call"
+    }
+  },
+  "about": {
+    "title": "About",
+    "titleHighlight": "Me",
+    "name": "Guillaume Martin",
+    "role": "Certified Fitness Coach",
+    "location": "Paris & Greater Paris Area",
+    "availability": "Available 7 days a week",
+    "hours": "6am - 9pm",
+    "bio": {
+      "p1": "Passionate about sports since always, I made my passion my profession 8 years ago. BPJEPS graduate and certified in sports nutrition, I accompany my clients towards their goals with a personalized and caring approach.",
+      "p2": "My philosophy? Each person is unique and deserves a tailor-made support. Whether you want to lose weight, gain muscle or simply feel better in your body, we will find together the method that suits you.",
+      "p3": "Beyond training sessions, I accompany you in your life change: nutrition, motivation, habits... for lasting results and overall well-being."
+    },
+    "achievements": {
+      "certifications": {
+        "title": "Certifications",
+        "items": ["BPJEPS AGFF", "CrossFit Level 1", "Sports Nutrition"]
+      },
+      "specializations": {
+        "title": "Specializations",
+        "items": ["Weight loss", "Muscle gain", "Athletic preparation", "Rehabilitation"]
+      },
+      "philosophy": {
+        "title": "Philosophy",
+        "items": ["Holistic approach", "Listening and caring", "Sustainable progress"]
+      }
+    },
+    "cta": "Let's Start Together"
+  },
+  "contact": {
+    "title": "Start Your",
+    "titleHighlight": "Transformation",
+    "subtitle": "Ready to reach your goals? Contact me now for a free discovery session.",
+    "form": {
+      "title": "Free Discovery Session",
+      "fields": {
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone",
+        "service": "Desired service",
+        "message": "Tell me about your goals",
+        "namePlaceholder": "Your full name",
+        "emailPlaceholder": "your@email.com",
+        "phonePlaceholder": "06 12 34 56 78",
+        "servicePlaceholder": "Select a service",
+        "messagePlaceholder": "Add details: your current level, availability, specific constraints, past experiences..."
+      },
+      "objectives": {
+        "title": "Select your goals (click to add):",
+        "help": "The more specific you are, the better I can tailor a program for you!",
+        "selected": "goal selected",
+        "selectedPlural": "goals selected"
+      },
+      "submit": {
+        "idle": "🚀 Book my free session",
+        "submitting": "⏳ Sending...",
+        "success": "✅ Message sent!",
+        "error": "❌ Error - Try again"
+      }
+    },
+    "objectives": [
+      "💪 Build muscle",
+      "⚖️ Lose weight", 
+      "🏃‍♀️ Improve fitness",
+      "🩹 Recovery after injury",
+      "👰 Prepare for event (wedding, vacation...)",
+      "😌 Reduce stress",
+      "🧘‍♀️ Improve posture",
+      "🔄 Get back to exercise after break",
+      "💯 Gain self-confidence",
+      "🏋️‍♀️ Improve strength",
+      "🎯 Lose belly fat",
+      "✨ Tone my body",
+      "🫁 Improve endurance",
+      "🥗 Fix eating habits",
+      "📅 Get motivated to exercise regularly",
+      "🏆 Reach goals quickly"
+    ],
+    "info": {
+      "title": "Contact Information",
+      "location": {
+        "title": "Location",
+        "lines": ["Paris & Greater Paris Area", "Travel possible"]
+      },
+      "phone": {
+        "title": "Phone",
+        "lines": ["+33 6 XX XX XX XX", "Calls & WhatsApp"]
+      },
+      "email": {
+        "title": "Email",
+        "lines": ["contact@gmfitness.fr", "Response within 24h"]
+      },
+      "hours": {
+        "title": "Hours",
+        "lines": ["Mon-Sun: 6am - 9pm", "Flexibility according to your needs"]
+      }
+    },
+    "offer": {
+      "title": "🎁 Special Offer",
+      "description": "Free discovery session for all new clients. Complete assessment and personalized program offered!",
+      "features": {
+        "duration": "Duration: 1h",
+        "location": "At home or in gym",
+        "commitment": "No commitment"
+      }
+    },
+    "social": {
+      "title": "📱 Social Media",
+      "description": "Follow my daily advice and transformations"
+    },
+    "map": {
+      "description": "Discover the different places where we can train together. I also travel to your home throughout the Greater Paris area.",
+      "note": "📍 Travel possible within a 30km radius around Paris"
+    }
+  },
+  "map": {
+    "title": "Session locations",
+    "subtitle": "Different training locations available",
+    "features": "Features",
+    "directions": "Get directions",
+    "locations_count": "available locations",
+    "travel": {
+      "title": "Travel area",
+      "description": "I travel throughout the Greater Paris area for home sessions. Travel radius up to 30km around Paris."
+    },
+    "locations": {
+      "gym1": {
+        "name": "Premium Fitness Gym",
+        "address": "15 Rue de Rivoli, 75001 Paris",
+        "type": "Partner gym",
+        "features": ["Complete equipment", "Personal training", "Nutrition guidance"]
+      },
+      "park": {
+        "name": "Tuileries Garden",
+        "address": "Place de la Concorde, 75001 Paris",
+        "type": "Outdoor training",
+        "features": ["Outdoor training", "Running", "Functional exercises"]
+      },
+      "home": {
+        "name": "Home coaching",
+        "address": "Paris & Greater Paris Area",
+        "type": "Home visits",
+        "features": ["At your place", "Equipment provided", "Flexible"]
+      }
+    }
+  },
+  "footer": {
+    "description": "Your professional fitness coach for sustainable transformation. Together, let's reach your fitness and wellness goals.",
+    "location": "Paris & Greater Paris Area",
+    "phone": "+33 6 XX XX XX XX",
+    "email": "contact@gmfitness.fr",
+    "sections": {
+      "services": "Services",
+      "navigation": "Navigation",
+      "connect": "Stay Connected"
+    },
+    "newsletter": {
+      "description": "Receive my fitness and nutrition tips every week",
+      "placeholder": "Your email",
+      "submit": "OK"
+    },
+    "social": {
+      "title": "Follow me"
+    },
+    "legal": {
+      "mentions": "Legal Notice",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookies"
+    },
+    "copyright": "All rights reserved.",
+    "backToTop": "Back to top"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "required": "Required"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Invalid email",
+    "phone": "Invalid phone number",
+    "minLength": "Minimum {{count}} characters",
+    "maxLength": "Maximum {{count}} characters"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "french": "Français",
+    "english": "English"
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "Discover the inspiring transformations of my clients and their feedback on my coaching.",
+    "loading": "Loading testimonials...",
+    "filters": {
+      "featured": "Featured",
+      "all": "All",
+      "video": "Videos",
+      "beforeAfter": "Before/After",
+      "fiveStars": "5 stars"
+    },
+    "stats": {
+      "testimonials": "Testimonials",
+      "averageRating": "Average rating",
+      "videos": "Videos",
+      "beforeAfter": "Before/After"
+    },
+    "tags": {
+      "popular": "Popular tags:"
+    },
+    "cta": {
+      "title": "Ready to join my satisfied clients?",
+      "subtitle": "Start your transformation today with personalized coaching and proven results.",
+      "button": "Start my journey"
+    },
+    "modal": {
+      "title": "Detailed testimonial"
+    },
+    "empty": {
+      "title": "No testimonials found",
+      "subtitle": "Try another filter or come back later."
+    },
+    "video": {
+      "play": "Play video",
+      "transcript": "Transcript",
+      "duration": "Duration"
+    },
+    "beforeAfter": {
+      "before": "BEFORE",
+      "after": "AFTER",
+      "instruction": "👆 Drag to compare"
+    },
+    "results": {
+      "title": "Results achieved",
+      "weightLoss": "kg lost",
+      "muscleGain": "kg muscle",
+      "bodyFatReduction": "% body fat",
+      "goals": "Goals achieved:"
+    },
+    "badges": {
+      "verified": "Verified",
+      "featured": "Featured"
+    }
+  }
+}

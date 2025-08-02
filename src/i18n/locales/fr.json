@@ -1,0 +1,347 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "testimonials": "Témoignages",
+    "contact": "Contact",
+    "book": "Réserver"
+  },
+  "hero": {
+    "title": "Transformez Votre",
+    "titleHighlight": "Corps",
+    "subtitle": "Coach sportif professionnel avec 8+ ans d'expérience. Coaching personnalisé, programmes sur-mesure et suivi nutritionnel pour atteindre vos objectifs rapidement.",
+    "cta": {
+      "primary": "Commencer Maintenant",
+      "secondary": "Découvrir les Services"
+    },
+    "stats": {
+      "clients": "Clients Transformés",
+      "experience": "Années d'Expérience", 
+      "success": "Taux de Réussite"
+    },
+    "freeSession": {
+      "title": "Séance Découverte Gratuite",
+      "description": "Évaluation complète, plan d'entraînement personnalisé et conseils nutrition.",
+      "features": {
+        "assessment": "Bilan physique complet",
+        "program": "Programme sur-mesure",
+        "nutrition": "Conseils nutrition",
+        "followup": "Suivi personnalisé"
+      },
+      "cta": "Réserver Maintenant"
+    }
+  },
+  "services": {
+    "title": "Mes",
+    "titleHighlight": "Services",
+    "subtitle": "Des solutions adaptées à tous les besoins et tous les budgets pour vous accompagner vers vos objectifs de forme et de bien-être.",
+    "items": {
+      "personal": {
+        "title": "Coaching Personnel",
+        "description": "Séances individuelles adaptées à vos objectifs et votre niveau. Suivi personnalisé et progression garantie.",
+        "features": {
+          "custom": "Programmes sur-mesure",
+          "nutrition": "Suivi nutritionnel", 
+          "motivation": "Motivation constante",
+          "results": "Résultats rapides"
+        },
+        "price": "60€/séance"
+      },
+      "group": {
+        "title": "Coaching Collectif",
+        "description": "Entraînements en petits groupes pour partager la motivation et réduire les coûts.",
+        "features": {
+          "groups": "Groupes de 3-5 personnes",
+          "atmosphere": "Ambiance conviviale",
+          "price": "Prix réduit",
+          "emulation": "Émulation de groupe"
+        },
+        "price": "25€/séance"
+      },
+      "online": {
+        "title": "Coaching en Ligne",
+        "description": "Programmes d'entraînement personnalisés à faire chez vous avec suivi vidéo.",
+        "features": {
+          "flexibility": "Flexibilité horaire",
+          "video": "Suivi vidéo",
+          "nutrition": "Plans nutrition",
+          "support": "Support 7j/7"
+        },
+        "price": "35€/mois"
+      },
+      "nutrition": {
+        "title": "Coaching Nutrition",
+        "description": "Plans alimentaires personnalisés pour optimiser vos résultats et votre santé.",
+        "features": {
+          "assessment": "Bilan nutritionnel",
+          "menus": "Menus personnalisés",
+          "recipes": "Recettes adaptées",
+          "followup": "Suivi hebdomadaire"
+        },
+        "price": "80€/mois"
+      }
+    },
+    "choose": "Choisir ce service",
+    "unsure": {
+      "title": "Pas sûr du service qui vous convient ?",
+      "subtitle": "Discutons de vos objectifs lors d'un appel gratuit de 15 minutes",
+      "cta": "Appel Gratuit"
+    }
+  },
+  "about": {
+    "title": "À Propos de",
+    "titleHighlight": "Moi",
+    "name": "Guillaume Martin",
+    "role": "Coach Sportif Diplômé",
+    "location": "Paris & Région Parisienne",
+    "availability": "Disponible 7j/7",
+    "hours": "6h - 21h",
+    "bio": {
+      "p1": "Passionné de sport depuis toujours, j'ai fait de ma passion mon métier il y a 8 ans. Diplômé BPJEPS et certifié en nutrition sportive, j'accompagne mes clients vers leurs objectifs avec une approche personnalisée et bienveillante.",
+      "p2": "Ma philosophie ? Chaque personne est unique et mérite un accompagnement sur-mesure. Que vous souhaitiez perdre du poids, gagner en muscle ou simplement vous sentir mieux dans votre corps, nous trouverons ensemble la méthode qui vous convient.",
+      "p3": "Au-delà des séances d'entraînement, je vous accompagne dans votre changement de vie : nutrition, motivation, habitudes… pour des résultats durables et un bien-être global."
+    },
+    "achievements": {
+      "certifications": {
+        "title": "Certifications",
+        "items": ["BPJEPS AGFF", "Crossfit Level 1", "Nutrition Sportive"]
+      },
+      "specializations": {
+        "title": "Spécialisations", 
+        "items": ["Perte de poids", "Prise de masse", "Préparation physique", "Rééducation"]
+      },
+      "philosophy": {
+        "title": "Philosophie",
+        "items": ["Approche holistique", "Écoute et bienveillance", "Progression durable"]
+      }
+    },
+    "cta": "Commençons Ensemble"
+  },
+  "contact": {
+    "title": "Commençons Votre",
+    "titleHighlight": "Transformation",
+    "subtitle": "Prêt à atteindre vos objectifs ? Contactez-moi dès maintenant pour une séance découverte gratuite.",
+    "form": {
+      "title": "Séance Découverte Gratuite",
+      "fields": {
+        "name": "Nom complet",
+        "email": "Email",
+        "phone": "Téléphone", 
+        "service": "Service souhaité",
+        "message": "Parlez-moi de vos objectifs",
+        "namePlaceholder": "Votre nom complet",
+        "emailPlaceholder": "votre@email.com",
+        "phonePlaceholder": "06 12 34 56 78",
+        "servicePlaceholder": "Sélectionnez un service",
+        "messagePlaceholder": "Ajoutez des détails : votre niveau actuel, vos disponibilités, contraintes particulières, expériences passées..."
+      },
+      "objectives": {
+        "title": "Sélectionnez vos objectifs (cliquez pour ajouter) :",
+        "help": "Plus vous êtes précis, plus je pourrai vous proposer un programme adapté !",
+        "selected": "objectif sélectionné",
+        "selectedPlural": "objectifs sélectionnés"
+      },
+      "submit": {
+        "idle": "🚀 Réserver ma séance gratuite",
+        "submitting": "⏳ Envoi en cours...",
+        "success": "✅ Message envoyé !",
+        "error": "❌ Erreur - Réessayer"
+      }
+    },
+    "objectives": [
+      "💪 Prendre du muscle",
+      "⚖️ Perdre du poids", 
+      "🏃‍♀️ Améliorer ma condition physique",
+      "🩹 Reprendre après une blessure",
+      "👰 Préparer un événement (mariage, vacances...)",
+      "😌 Réduire le stress",
+      "🧘‍♀️ Améliorer ma posture",
+      "🔄 Reprendre le sport après une pause",
+      "💯 Gagner en confiance en soi",
+      "🏋️‍♀️ Améliorer ma force",
+      "🎯 Perdre du ventre",
+      "✨ Tonifier mon corps",
+      "🫁 Améliorer mon endurance",
+      "🥗 Corriger mes habitudes alimentaires",
+      "📅 Me motiver à faire du sport régulièrement",
+      "🏆 Atteindre mes objectifs rapidement"
+    ],
+    "info": {
+      "title": "Informations de Contact",
+      "location": {
+        "title": "Localisation",
+        "lines": ["Paris & Région Parisienne", "Déplacements possibles"]
+      },
+      "phone": {
+        "title": "Téléphone",
+        "lines": ["+33 6 XX XX XX XX", "Appels & WhatsApp"]
+      },
+      "email": {
+        "title": "Email", 
+        "lines": ["contact@gmfitness.fr", "Réponse sous 24h"]
+      },
+      "hours": {
+        "title": "Horaires",
+        "lines": ["Lun-Dim : 6h - 21h", "Flexibilité selon vos besoins"]
+      }
+    },
+    "offer": {
+      "title": "🎁 Offre Spéciale",
+      "description": "Séance découverte gratuite pour tous les nouveaux clients. Une évaluation complète et un programme personnalisé offerts !",
+      "features": {
+        "duration": "Durée : 1h",
+        "location": "À domicile ou en salle", 
+        "commitment": "Sans engagement"
+      }
+    },
+    "social": {
+      "title": "📱 Réseaux Sociaux",
+      "description": "Suivez mes conseils et transformations quotidiennes"
+    },
+    "map": {
+      "description": "Découvrez les différents lieux où nous pouvons nous entraîner ensemble. Je me déplace également à votre domicile dans toute la région parisienne.",
+      "note": "📍 Déplacements possibles dans un rayon de 30km autour de Paris"
+    }
+  },
+  "map": {
+    "title": "Lieux de séances",
+    "subtitle": "Différents lieux d'entraînement disponibles",
+    "features": "Caractéristiques",
+    "directions": "Obtenir l'itinéraire",
+    "locations_count": "lieux disponibles",
+    "travel": {
+      "title": "Zone de déplacement",
+      "description": "Je me déplace dans toute la région parisienne pour les séances à domicile. Rayon de déplacement jusqu'à 30km autour de Paris."
+    },
+    "locations": {
+      "gym1": {
+        "name": "Salle Premium Fitness",
+        "address": "15 Rue de Rivoli, 75001 Paris",
+        "type": "Salle de sport partenaire",
+        "features": ["Équipements complets", "Coaching individuel", "Suivi nutritionnel"]
+      },
+      "park": {
+        "name": "Parc des Tuileries",
+        "address": "Place de la Concorde, 75001 Paris", 
+        "type": "Entraînement en extérieur",
+        "features": ["Training outdoor", "Course à pied", "Exercices fonctionnels"]
+      },
+      "home": {
+        "name": "Coaching à domicile",
+        "address": "Paris & Région Parisienne",
+        "type": "Déplacement à domicile",
+        "features": ["Chez vous", "Équipement fourni", "Flexible"]
+      }
+    }
+  },
+  "footer": {
+    "description": "Votre coach sportif professionnel pour une transformation durable. Ensemble, atteignons vos objectifs de forme et de bien-être.",
+    "location": "Paris & Région Parisienne",
+    "phone": "+33 6 XX XX XX XX",
+    "email": "contact@gmfitness.fr",
+    "sections": {
+      "services": "Services",
+      "navigation": "Navigation",
+      "connect": "Restez Connecté"
+    },
+    "newsletter": {
+      "description": "Recevez mes conseils fitness et nutrition chaque semaine",
+      "placeholder": "Votre email",
+      "submit": "OK"
+    },
+    "social": {
+      "title": "Suivez-moi"
+    },
+    "legal": {
+      "mentions": "Mentions Légales",
+      "terms": "Conditions Générales", 
+      "privacy": "Politique de Confidentialité",
+      "cookies": "Cookies"
+    },
+    "copyright": "Tous droits réservés.",
+    "backToTop": "Retour en haut"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "close": "Fermer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "required": "Requis"
+  },
+  "validation": {
+    "required": "Ce champ est requis",
+    "email": "Email invalide",
+    "phone": "Numéro de téléphone invalide",
+    "minLength": "Minimum {{count}} caractères",
+    "maxLength": "Maximum {{count}} caractères"
+  },
+  "theme": {
+    "light": "Clair",
+    "dark": "Sombre", 
+    "system": "Système"
+  },
+  "language": {
+    "french": "Français",
+    "english": "English"
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "subtitle": "Découvrez les transformations inspirantes de mes clients et leurs retours sur mon accompagnement.",
+    "loading": "Chargement des témoignages...",
+    "filters": {
+      "featured": "Coup de cœur",
+      "all": "Tous",
+      "video": "Vidéos",
+      "beforeAfter": "Avant/Après",
+      "fiveStars": "5 étoiles"
+    },
+    "stats": {
+      "testimonials": "Témoignages",
+      "averageRating": "Note moyenne",
+      "videos": "Vidéos",
+      "beforeAfter": "Avant/Après"
+    },
+    "tags": {
+      "popular": "Tags populaires :"
+    },
+    "cta": {
+      "title": "Prêt à rejoindre mes clients satisfaits ?",
+      "subtitle": "Commencez votre transformation dès aujourd'hui avec un accompagnement personnalisé et des résultats prouvés.",
+      "button": "Commencer mon parcours"
+    },
+    "modal": {
+      "title": "Témoignage détaillé"
+    },
+    "empty": {
+      "title": "Aucun témoignage trouvé",
+      "subtitle": "Essayez un autre filtre ou revenez plus tard."
+    },
+    "video": {
+      "play": "Lire la vidéo",
+      "transcript": "Transcription",
+      "duration": "Durée"
+    },
+    "beforeAfter": {
+      "before": "AVANT",
+      "after": "APRÈS",
+      "instruction": "👆 Glissez pour comparer"
+    },
+    "results": {
+      "title": "Résultats obtenus",
+      "weightLoss": "kg perdus",
+      "muscleGain": "kg de muscle",
+      "bodyFatReduction": "% de graisse",
+      "goals": "Objectifs atteints :"
+    },
+    "badges": {
+      "verified": "Vérifié",
+      "featured": "Coup de cœur"
+    }
+  }
+}

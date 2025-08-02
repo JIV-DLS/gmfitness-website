@@ -1,0 +1,202 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  FaFacebookF, 
+  FaInstagram, 
+  FaTwitter, 
+  FaWhatsapp, 
+  FaYoutube, 
+  FaTiktok, 
+  FaLinkedinIn 
+} from 'react-icons/fa';
+
+/**
+ * Composant pour afficher les icônes des réseaux sociaux
+ * Pattern: Component avec props configurables
+ */
+export const SocialIcons = ({
+  platforms = ['facebook', 'instagram', 'whatsapp'],
+  variant = 'default', // 'default', 'compact', 'footer'
+  showLabels = true,
+  className = ''
+}) => {
+  
+  const socialPlatforms = {
+    facebook: {
+      icon: FaFacebookF,
+      label: 'Facebook',
+      href: 'https://facebook.com/gmfitness',
+      color: 'hover:bg-blue-600',
+      bgColor: 'bg-blue-600'
+    },
+    instagram: {
+      icon: FaInstagram,
+      label: 'Instagram',
+      href: 'https://instagram.com/gmfitness',
+      color: 'hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500',
+      bgColor: 'bg-gradient-to-r from-purple-500 to-pink-500'
+    },
+    whatsapp: {
+      icon: FaWhatsapp,
+      label: 'WhatsApp',
+      href: 'https://wa.me/33600000000?text=Bonjour, je souhaite avoir des informations sur vos services de coaching',
+      color: 'hover:bg-green-500',
+      bgColor: 'bg-green-500'
+    },
+    twitter: {
+      icon: FaTwitter,
+      label: 'Twitter',
+      href: 'https://twitter.com/gmfitness',
+      color: 'hover:bg-blue-400',
+      bgColor: 'bg-blue-400'
+    },
+    youtube: {
+      icon: FaYoutube,
+      label: 'YouTube',
+      href: 'https://youtube.com/@gmfitness',
+      color: 'hover:bg-red-600',
+      bgColor: 'bg-red-600'
+    },
+    tiktok: {
+      icon: FaTiktok,
+      label: 'TikTok',
+      href: 'https://tiktok.com/@gmfitness',
+      color: 'hover:bg-black',
+      bgColor: 'bg-black'
+    },
+    linkedin: {
+      icon: FaLinkedinIn,
+      label: 'LinkedIn',
+      href: 'https://linkedin.com/in/gmfitness',
+      color: 'hover:bg-blue-700',
+      bgColor: 'bg-blue-700'
+    }
+  };
+
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'compact':
+        return {
+          container: 'flex space-x-2',
+          button: 'w-8 h-8 rounded-lg',
+          icon: 'text-sm',
+          text: 'text-xs'
+        };
+      case 'footer':
+        return {
+          container: 'flex space-x-4',
+          button: 'w-10 h-10 rounded-lg bg-gray-800 hover:bg-primary-600',
+          icon: 'text-lg',
+          text: 'text-sm'
+        };
+      default:
+        return {
+          container: 'flex space-x-4',
+          button: 'px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 dark:bg-gray-600 dark:hover:bg-gray-500',
+          icon: 'text-lg',
+          text: 'text-sm'
+        };
+    }
+  };
+
+  const styles = getVariantStyles();
+
+  return (
+    <div className={`${styles.container} ${className}`}>
+      {platforms.map((platform) => {
+        const social = socialPlatforms[platform];
+        if (!social) return null;
+
+        const IconComponent = social.icon;
+
+        return (
+          <motion.a
+            key={platform}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.button} flex items-center justify-center transition-all duration-300 ${
+              variant === 'footer' ? social.color : ''
+            }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            title={social.label}
+          >
+            <IconComponent className={`${styles.icon} ${
+              variant === 'footer' ? 'text-white' : 'text-white'
+            }`} />
+            {showLabels && variant === 'default' && (
+              <span className={`ml-2 ${styles.text} text-white font-medium`}>
+                {social.label}
+              </span>
+            )}
+          </motion.a>
+        );
+      })}
+    </div>
+  );
+};
+
+/**
+ * Bouton WhatsApp flottant
+ * Pattern: Fixed positioning + Animation
+ */
+export const WhatsAppFloat = ({ 
+  message = "Bonjour, je souhaite avoir des informations sur vos services de coaching",
+  className = ''
+}) => {
+  const phoneNumber = "33600000000"; // À remplacer par le vrai numéro
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  return (
+    <motion.a
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${className}`}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 2, duration: 0.5 }}
+      title="Contactez-nous sur WhatsApp"
+    >
+      <FaWhatsapp className="text-white text-xl" />
+      
+      {/* Notification pulse */}
+      <motion.div
+        className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ repeat: Infinity, duration: 2 }}
+      >
+        <span className="text-white text-xs font-bold">!</span>
+      </motion.div>
+    </motion.a>
+  );
+};
+
+/**
+ * Section réseaux sociaux complète
+ * Pattern: Composite + Configuration
+ */
+export const SocialMediaSection = ({ 
+  title = "💬 Réseaux Sociaux",
+  description = "Suivez mes conseils et découvrez les transformations de mes clients",
+  platforms = ['facebook', 'instagram', 'whatsapp'],
+  variant = 'default',
+  className = ''
+}) => {
+  return (
+    <div className={`bg-gray-900 dark:bg-gray-700 rounded-2xl p-6 text-white shadow-lg dark:shadow-xl dark:shadow-gray-950/50 ${className}`}>
+      <h4 className="font-bold mb-4">{title}</h4>
+      <p className="mb-4 text-gray-300 dark:text-gray-400">
+        {description}
+      </p>
+      <SocialIcons 
+        platforms={platforms}
+        variant={variant}
+        showLabels={true}
+      />
+    </div>
+  );
+};
