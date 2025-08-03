@@ -394,7 +394,7 @@ const Contact = () => {
             </h3>
 
             <div className="grid gap-4 lg:gap-6">
-              {contactInfo.map((info, index) => (
+              {contactInfo && contactInfo.length > 0 && contactInfo.map((info, index) => (
                 <motion.div
                   key={index}
                   className="flex items-start space-x-3 lg:space-x-4 p-3 lg:p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600"
@@ -406,7 +406,7 @@ const Contact = () => {
                   <div className="text-2xl">{info.icon}</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{info.title}</h4>
-                    {info.content.map((line, lineIndex) => (
+                    {info.content && info.content.map((line, lineIndex) => (
                       <p key={lineIndex} className="text-gray-600 dark:text-gray-300">{line}</p>
                     ))}
                   </div>
