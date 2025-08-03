@@ -205,10 +205,10 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Formulaire de contact */}
           <motion.div
-            className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8"
+            className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 lg:p-8"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}

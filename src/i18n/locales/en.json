@@ -343,5 +343,81 @@
       "verified": "Verified",
       "featured": "Featured"
     }
+  },
+  "booking": {
+    "title": "Book a",
+    "titleHighlight": "Session", 
+    "subtitle": "Choose your service, time slot and book online. Instant email confirmation.",
+    "services": {
+      "title": "Choose your service",
+      "personal": "Personal Training",
+      "duo": "Duo Training",
+      "group": "Group Training"
+    },
+    "datetime": {
+      "date": "Preferred date",
+      "time": "Time slot"
+    },
+    "client": {
+      "title": "Your information",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "notes": "Notes (optional)",
+      "notesPlaceholder": "Goals, constraints, questions...",
+      "suggestions": "Quick suggestions:"
+    },
+    "notesSuggestions": [
+      "🎯 Fitness goal",
+      "🏃‍♀️ Event preparation",
+      "💪 Muscle gain", 
+      "⚖️ Weight loss",
+      "🏃 Marathon/race preparation",
+      "🤕 Post-injury rehabilitation",
+      "🧘 Flexibility improvement",
+      "👥 Couple/family session",
+      "🏋️ Discover weight training",
+      "🍎 Nutrition advice included"
+    ],
+    "submit": "Confirm Booking",
+    "success": "Booking sent successfully!"
+  },
+  "footer": {
+    "brand": {
+      "name": "GM FITNESS",
+      "description": "Your professional fitness coach for lasting transformation. Together, let's reach your fitness and wellness goals.",
+      "location": "Cannes & French Riviera",
+      "phone": "+33 6 XX XX XX XX",
+      "email": "contact@gmfitness.fr"
+    },
+    "services": {
+      "title": "Services",
+      "personal": "Personal Training",
+      "group": "Group Training",
+      "online": "Online Coaching",
+      "nutrition": "Nutrition Coaching"
+    },
+    "navigation": {
+      "title": "Navigation", 
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact",
+      "testimonials": "Testimonials"
+    },
+    "newsletter": {
+      "title": "Stay Connected",
+      "description": "Receive my fitness and nutrition tips every week",
+      "placeholder": "Your email",
+      "submit": "OK",
+      "social": "Follow us"
+    },
+    "legal": {
+      "copyright": "All rights reserved.",
+      "terms": "Legal Notice",
+      "conditions": "Terms & Conditions",
+      "privacy": "Privacy Policy", 
+      "cookies": "Cookies"
+    },
+    "backToTop": "Back to top"
   }
 }

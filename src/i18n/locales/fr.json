@@ -343,5 +343,81 @@
       "verified": "Vérifié",
       "featured": "Coup de cœur"
     }
+  },
+  "booking": {
+    "title": "Réserver une",
+    "titleHighlight": "Séance",
+    "subtitle": "Choisissez votre service, votre créneau et réservez en ligne. Confirmation immédiate par email.",
+    "services": {
+      "title": "Choisissez votre service",
+      "personal": "Coaching Personnel",
+      "duo": "Coaching Duo", 
+      "group": "Coaching Collectif"
+    },
+    "datetime": {
+      "date": "Date souhaitée",
+      "time": "Horaire"
+    },
+    "client": {
+      "title": "Vos informations",
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "notes": "Notes (optionnel)",
+      "notesPlaceholder": "Objectifs, contraintes, questions...",
+      "suggestions": "Suggestions rapides :"
+    },
+    "notesSuggestions": [
+      "🎯 Objectif de remise en forme",
+      "🏃‍♀️ Préparation d'un événement", 
+      "💪 Gain de masse musculaire",
+      "⚖️ Perte de poids",
+      "🏃 Préparation marathon/course",
+      "🤕 Rééducation post-blessure",
+      "🧘 Amélioration souplesse",
+      "👥 Séance en couple/famille",
+      "🏋️ Découverte musculation",
+      "🍎 Conseils nutrition inclus"
+    ],
+    "submit": "Confirmer la Réservation",
+    "success": "Réservation envoyée avec succès !"
+  },
+  "footer": {
+    "brand": {
+      "name": "GM FITNESS",
+      "description": "Votre coach sportif professionnel pour une transformation durable. Ensemble, atteignons vos objectifs de forme et de bien-être.",
+      "location": "Cannes & Côte d'Azur",
+      "phone": "+33 6 XX XX XX XX",
+      "email": "contact@gmfitness.fr"
+    },
+    "services": {
+      "title": "Services",
+      "personal": "Coaching Personnel",
+      "group": "Coaching Collectif", 
+      "online": "Coaching en Ligne",
+      "nutrition": "Coaching Nutrition"
+    },
+    "navigation": {
+      "title": "Navigation",
+      "about": "À Propos",
+      "services": "Services",
+      "contact": "Contact",
+      "testimonials": "Témoignages"
+    },
+    "newsletter": {
+      "title": "Restez Connecté",
+      "description": "Recevez mes conseils fitness et nutrition chaque semaine",
+      "placeholder": "Votre email",
+      "submit": "OK",
+      "social": "Suivez-nous"
+    },
+    "legal": {
+      "copyright": "Tous droits réservés.",
+      "terms": "Mentions Légales",
+      "conditions": "Conditions Générales", 
+      "privacy": "Politique de Confidentialité",
+      "cookies": "Cookies"
+    },
+    "backToTop": "Retour en haut"
   }
 }

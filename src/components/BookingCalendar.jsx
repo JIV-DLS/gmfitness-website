@@ -1,10 +1,12 @@
 import React, { useState, memo } from 'react';
 import { motion } from 'framer-motion';
+import { useI18n } from '@/hooks/useI18n';
 
 /**
  * Simple BookingCalendar component - no dependencies
  */
 const BookingCalendar = memo(() => {
+  const { t } = useI18n();
   const [selectedService, setSelectedService] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
@@ -16,9 +18,9 @@ const BookingCalendar = memo(() => {
   });
 
   const services = [
-    { id: 'personal', name: 'Coaching Personnel', price: 80, duration: 60 },
-    { id: 'duo', name: 'Coaching Duo', price: 120, duration: 60 },
-    { id: 'group', name: 'Coaching Collectif', price: 25, duration: 45 }
+    { id: 'personal', name: t('booking.services.personal'), price: 80, duration: 60 },
+    { id: 'duo', name: t('booking.services.duo'), price: 120, duration: 60 },
+    { id: 'group', name: t('booking.services.group'), price: 25, duration: 45 }
   ];
 
   const timeSlots = [
@@ -26,7 +28,7 @@ const BookingCalendar = memo(() => {
   ];
 
   // Suggestions pour les notes
-  const notesSuggestions = [
+  const notesSuggestions = t('booking.notesSuggestions', [
     "🎯 Objectif de remise en forme",
     "🏃‍♀️ Préparation d'un événement",
     "💪 Gain de masse musculaire",
@@ -37,7 +39,7 @@ const BookingCalendar = memo(() => {
     "👥 Séance en couple/famille",
     "🏋️ Découverte musculation",
     "🍎 Conseils nutrition inclus"
-  ];
+  ]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,7 +49,7 @@ const BookingCalendar = memo(() => {
       time: selectedTime,
       client: clientInfo
     });
-    alert('Réservation envoyée avec succès !');
+    alert(t('booking.success'));
   };
 
   return (
@@ -61,10 +63,10 @@ const BookingCalendar = memo(() => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Réserver une <span className="text-primary-600 dark:text-primary-400">Séance</span>
+            {t('booking.title')} <span className="text-primary-600 dark:text-primary-400">{t('booking.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Choisissez votre créneau et commencez votre transformation dès aujourd'hui !
+            {t('booking.subtitle')}
           </p>
         </motion.div>
 
@@ -74,7 +76,7 @@ const BookingCalendar = memo(() => {
             {/* Service Selection */}
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-4">
-                Type de séance *
+                {t('booking.services.title')} *
               </label>
               <div className="grid gap-4 md:grid-cols-3">
                 {services.map((service) => (
@@ -148,7 +150,7 @@ const BookingCalendar = memo(() => {
             <div className="grid gap-6 md:grid-cols-2">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Nom complet *
+                  {t('booking.client.name')} *
                 </label>
                 <input
                   type="text"
@@ -162,7 +164,7 @@ const BookingCalendar = memo(() => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email *
+                  {t('booking.client.email')} *
                 </label>
                 <input
                   type="email"
@@ -177,7 +179,7 @@ const BookingCalendar = memo(() => {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Téléphone *
+                {t('booking.client.phone')} *
               </label>
               <input
                 type="tel"
@@ -191,12 +193,12 @@ const BookingCalendar = memo(() => {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Notes (optionnel)
+                {t('booking.client.notes')}
               </label>
               
               {/* Suggestions rapides */}
               <div className="mb-3">
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">Suggestions rapides :</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{t('booking.client.suggestions')}</p>
                 <div className="flex flex-wrap gap-2">
                   {notesSuggestions.map((suggestion, index) => (
                     <button
@@ -226,7 +228,7 @@ const BookingCalendar = memo(() => {
                 onChange={(e) => setClientInfo({...clientInfo, notes: e.target.value})}
                 rows={4}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                placeholder="Objectifs, contraintes, questions..."
+                placeholder={t('booking.client.notesPlaceholder')}
               />
             </div>
 
@@ -236,7 +238,7 @@ const BookingCalendar = memo(() => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Confirmer la Réservation
+              {t('booking.submit')}
             </motion.button>
           </form>
         </div>

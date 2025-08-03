@@ -8,22 +8,22 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: "Coaching Personnel", href: "#services" },
-      { name: "Coaching Collectif", href: "#services" },
-      { name: "Coaching en Ligne", href: "#services" },
-      { name: "Coaching Nutrition", href: "#services" }
+      { name: t('footer.services.personal'), href: "#services" },
+      { name: t('footer.services.group'), href: "#services" },
+      { name: t('footer.services.online'), href: "#services" },
+      { name: t('footer.services.nutrition'), href: "#services" }
     ],
     company: [
-      { name: "À Propos", href: "#about" },
-      { name: "Services", href: "#services" },
-      { name: "Contact", href: "#contact" },
-      { name: "Témoignages", href: "#" }
+      { name: t('footer.navigation.about'), href: "#about" },
+      { name: t('footer.navigation.services'), href: "#services" },
+      { name: t('footer.navigation.contact'), href: "#contact" },
+      { name: t('footer.navigation.testimonials'), href: "#testimonials" }
     ],
     legal: [
-      { name: "Mentions Légales", href: "#" },
-      { name: "Conditions Générales", href: "#" },
-      { name: "Politique de Confidentialité", href: "#" },
-      { name: "Cookies", href: "#" }
+      { name: t('footer.legal.terms'), href: "#" },
+      { name: t('footer.legal.conditions'), href: "#" },
+      { name: t('footer.legal.privacy'), href: "#" },
+      { name: t('footer.legal.cookies'), href: "#" }
     ]
   };
 
@@ -43,26 +43,25 @@ const Footer = () => {
             >
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-primary-400 mb-4">
-                  GM FITNESS
+                  {t('footer.brand.name')}
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-sm">
-                  Votre coach sportif professionnel pour une transformation durable. 
-                  Ensemble, atteignons vos objectifs de forme et de bien-être.
+                  {t('footer.brand.description')}
                 </p>
               </div>
               
               <div className="space-y-3">
                 <div className="flex items-center text-sm text-gray-300">
                   <span className="mr-3 text-primary-400">📍</span>
-                  <span>Cannes & Côte d'Azur</span>
+                  <span>{t('footer.brand.location')}</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
                   <span className="mr-3 text-primary-400">📞</span>
-                  <span>+33 6 XX XX XX XX</span>
+                  <span>{t('footer.brand.phone')}</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
                   <span className="mr-3 text-primary-400">✉️</span>
-                  <span>contact@gmfitness.fr</span>
+                  <span>{t('footer.brand.email')}</span>
                 </div>
               </div>
             </motion.div>
@@ -75,7 +74,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
+              <h4 className="text-lg font-semibold mb-6 text-white">{t('footer.services.title')}</h4>
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
