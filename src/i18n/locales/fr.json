@@ -354,7 +354,7 @@
     "subtitle": "Choisissez votre service, votre créneau et réservez en ligne. Confirmation immédiate par email.",
     "services": {
       "title": "Choisissez votre service",
-      "personal": "Coaching Personnel",
+      "personal": "Coaching Individuel",
       "duo": "Coaching Duo", 
       "group": "Coaching Collectif"
     },
@@ -396,10 +396,10 @@
     },
     "services": {
       "title": "Services",
-      "personal": "Coaching Personnel",
+      "personal": "Coaching Individuel",
       "group": "Coaching Collectif", 
-      "online": "Coaching en Ligne",
-      "nutrition": "Coaching Nutrition"
+      "online": "Programmes en Ligne",
+      "corporate": "Interventions Entreprises"
     },
     "navigation": {
       "title": "Navigation",

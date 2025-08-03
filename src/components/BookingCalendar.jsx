@@ -18,7 +18,7 @@ const BookingCalendar = memo(() => {
   });
 
   const services = [
-    { id: 'personal', name: t('booking.services.personal'), price: 80, duration: 60 },
+    { id: 'personal', name: t('booking.services.personal'), price: 70, duration: 60 },
     { id: 'duo', name: t('booking.services.duo'), price: 120, duration: 60 },
     { id: 'group', name: t('booking.services.group'), price: 25, duration: 45 }
   ];

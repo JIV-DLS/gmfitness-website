@@ -349,8 +349,8 @@
     "titleHighlight": "Session", 
     "subtitle": "Choose your service, time slot and book online. Instant email confirmation.",
     "services": {
-      "title": "Choose your service",
-      "personal": "Personal Training",
+      "title": "Choose your service", 
+      "personal": "Individual Training",
       "duo": "Duo Training",
       "group": "Group Training"
     },
@@ -392,10 +392,10 @@
     },
     "services": {
       "title": "Services",
-      "personal": "Personal Training",
+      "personal": "Individual Training",
       "group": "Group Training",
-      "online": "Online Coaching",
-      "nutrition": "Nutrition Coaching"
+      "online": "Online Programs",
+      "corporate": "Corporate Interventions"
     },
     "navigation": {
       "title": "Navigation", 
