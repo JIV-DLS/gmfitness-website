@@ -171,19 +171,19 @@
       "title": "Contact Information",
       "location": {
         "title": "Location",
-        "lines": ["Paris & Greater Paris Area", "Travel possible"]
+        "lines": ["French Riviera", "Travel possible"]
       },
       "phone": {
-        "title": "Phone",
-        "lines": ["+33 6 XX XX XX XX", "Calls & WhatsApp"]
+        "title": "Phone", 
+        "lines": ["06 17 04 35 99", "Calls & WhatsApp"]
       },
       "email": {
         "title": "Email",
-        "lines": ["contact@gmfitness.fr", "Response within 24h"]
+        "lines": ["contact@gilsonmendes.fr", "Response within 24h"]
       },
       "hours": {
         "title": "Hours",
-        "lines": ["Mon-Sun: 6am - 9pm", "Flexibility according to your needs"]
+        "lines": ["By appointment", "Flexibility according to your needs"]
       }
     },
     "offer": {
@@ -200,36 +200,36 @@
       "description": "Follow my daily advice and transformations"
     },
     "map": {
-      "description": "Discover the different places where we can train together. I also travel to your home throughout the Greater Paris area.",
-      "note": "📍 Travel possible within a 30km radius around Paris"
+      "description": "Discover the different places where we can train together. I also travel to your home throughout the French Riviera.",
+      "note": "📍 Travel possible throughout the Côte d'Azur region"
     }
   },
   "map": {
     "title": "Session locations",
-    "subtitle": "Different training locations available",
+    "subtitle": "Different training locations available on the French Riviera",
     "features": "Features",
     "directions": "Get directions",
     "locations_count": "available locations",
     "travel": {
       "title": "Travel area",
-      "description": "I travel throughout the Greater Paris area for home sessions. Travel radius up to 30km around Paris."
+      "description": "I travel throughout the French Riviera for home sessions. Travel possible throughout the Côte d'Azur."
     },
     "locations": {
       "gym1": {
-        "name": "Premium Fitness Gym",
-        "address": "15 Rue de Rivoli, 75001 Paris",
-        "type": "Partner gym",
-        "features": ["Complete equipment", "Personal training", "Nutrition guidance"]
+        "name": "Outdoor Training Spots",
+        "address": "Beaches and parks - French Riviera",
+        "type": "Outdoor training",
+        "features": ["Beach workouts", "Functional training", "Sea view sessions"]
       },
       "park": {
-        "name": "Tuileries Garden",
-        "address": "Place de la Concorde, 75001 Paris",
+        "name": "Promenade des Anglais",
+        "address": "Nice, French Riviera",
         "type": "Outdoor training",
-        "features": ["Outdoor training", "Running", "Functional exercises"]
+        "features": ["Running", "Functional exercises", "Seaside training"]
       },
       "home": {
         "name": "Home coaching",
-        "address": "Paris & Greater Paris Area",
+        "address": "French Riviera & surroundings",
         "type": "Home visits",
         "features": ["At your place", "Equipment provided", "Flexible"]
       }
@@ -237,9 +237,9 @@
   },
   "footer": {
     "description": "Your professional fitness coach for sustainable transformation. Together, let's reach your fitness and wellness goals.",
-    "location": "Paris & Greater Paris Area",
-    "phone": "+33 6 XX XX XX XX",
-    "email": "contact@gmfitness.fr",
+    "location": "French Riviera",
+    "phone": "06 17 04 35 99",
+    "email": "contact@gilsonmendes.fr",
     "sections": {
       "services": "Services",
       "navigation": "Navigation",

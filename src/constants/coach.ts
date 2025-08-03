@@ -5,12 +5,12 @@ import { Coach } from '@/types/coach';
  * Centralise toutes les informations du coach
  */
 export const COACH_DATA: Coach = {
-  id: 'gm-fitness-coach',
+  id: 'gilson-mendes-coach',
   personalInfo: {
-    firstName: 'Guillaume',
-    lastName: 'Martin',
-    displayName: 'Guillaume Martin',
-    bio: 'Coach sportif passionné avec plus de 8 ans d\'expérience dans la transformation physique et mentale. Spécialisé dans l\'accompagnement personnalisé et les résultats durables.',
+    firstName: 'Gilson',
+    lastName: 'Mendes',
+    displayName: 'Gilson Mendes',
+    bio: 'Coach sportif diplômé, passionné par la transformation physique et le bien-être. Ancien sportif de haut niveau, formé en psychologie, yoga et Pilates. Approche holistique corps-esprit.',
     philosophy: 'Chaque personne est unique et mérite un accompagnement sur-mesure. Mon approche holistique combine exercice, nutrition et bien-être mental pour des transformations durables.'
   },
   professionalInfo: {
@@ -60,35 +60,35 @@ export const COACH_DATA: Coach = {
     ],
     achievements: [
       {
-        title: '200+ clients transformés',
-        description: 'Plus de 200 personnes accompagnées vers leurs objectifs',
+        title: 'Formations multiples',
+        description: 'Licence psychologie, certifications yoga et Pilates',
         date: new Date('2024-01-01'),
         category: 'milestone'
       },
       {
-        title: 'Taux de réussite 95%',
-        description: '95% de mes clients atteignent leurs objectifs',
+        title: 'Ancien sportif haut niveau',
+        description: 'Expérience compétition, discipline et performance',
         date: new Date('2023-12-31'),
         category: 'milestone'
       },
       {
-        title: 'Coach de l\'année 2023',
-        description: 'Élu meilleur coach de la région parisienne',
+        title: 'Approche holistique',
+        description: 'Renforcement, mobilité, yoga, méditation, coaching mental',
         date: new Date('2023-12-15'),
         category: 'award'
       }
     ]
   },
   contact: {
-    phone: '+33 6 XX XX XX XX',
-    email: 'contact@gmfitness.fr',
-    location: 'Paris & Région Parisienne',
-    availability: 'Lundi-Dimanche : 6h-21h'
+    phone: '06 17 04 35 99',
+    email: 'contact@gilsonmendes.fr',
+    location: 'Côte d\'Azur',
+    availability: 'Sur rendez-vous - Flexibilité horaire'
   },
   socialMedia: {
-    instagram: 'https://instagram.com/gmfitness',
-    facebook: 'https://facebook.com/gmfitness',
-    youtube: 'https://youtube.com/@gmfitness'
+    instagram: 'https://instagram.com/gilsonmendes_coach',
+    facebook: 'https://facebook.com/gilsonmendes',
+    youtube: 'https://youtube.com/@gilsonmendes'
   },
   statistics: {
     clientsTransformed: 200,

@@ -77,7 +77,7 @@ const About = () => {
             >
               <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
                 <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">
-                  {t('about.name', 'Guillaume')}
+                  {t('about.name', 'Gilson Mendes')}
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
                   {t('about.role', 'Coach Sportif')}
@@ -85,10 +85,10 @@ const About = () => {
               </div>
               <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
                 <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">
-                  {t('about.location', 'Paris')}
+                  {t('about.location', 'Côte d\'Azur')}
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  {t('about.location_full', 'Région Parisienne')}
+                  {t('about.location_full', 'Côte d\'Azur & Alentours')}
                 </div>
               </div>
               <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
@@ -96,7 +96,7 @@ const About = () => {
                   {t('about.availability', '7j/7')}
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  {t('about.hours', '6h - 21h')}
+                  {t('about.hours', 'Sur RDV')}
                 </div>
               </div>
             </motion.div>

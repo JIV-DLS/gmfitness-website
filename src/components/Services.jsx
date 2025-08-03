@@ -11,9 +11,9 @@ const Services = () => {
       descriptionKey: "services.items.personal.description",
       featuresKeys: [
         "services.items.personal.features.custom",
-        "services.items.personal.features.nutrition",
-        "services.items.personal.features.motivation",
-        "services.items.personal.features.results"
+        "services.items.personal.features.psychology",
+        "services.items.personal.features.mobility",
+        "services.items.personal.features.mindfulness"
       ],
       priceKey: "services.items.personal.price"
     },
@@ -22,10 +22,10 @@ const Services = () => {
       titleKey: "services.items.group.title",
       descriptionKey: "services.items.group.description",
       featuresKeys: [
-        "services.items.group.features.groups",
-        "services.items.group.features.atmosphere",
-        "services.items.group.features.price",
-        "services.items.group.features.emulation"
+        "services.items.group.features.small",
+        "services.items.group.features.quality",
+        "services.items.group.features.affordable",
+        "services.items.group.features.motivation"
       ],
       priceKey: "services.items.group.price"
     },
@@ -34,24 +34,24 @@ const Services = () => {
       titleKey: "services.items.online.title",
       descriptionKey: "services.items.online.description",
       featuresKeys: [
-        "services.items.online.features.flexibility",
-        "services.items.online.features.video",
-        "services.items.online.features.nutrition",
-        "services.items.online.features.support"
+        "services.items.online.features.videos",
+        "services.items.online.features.plans",
+        "services.items.online.features.support",
+        "services.items.online.features.flexible"
       ],
       priceKey: "services.items.online.price"
     },
     {
-      icon: "🥗",
-      titleKey: "services.items.nutrition.title",
-      descriptionKey: "services.items.nutrition.description",
+      icon: "🏢",
+      titleKey: "services.items.corporate.title",
+      descriptionKey: "services.items.corporate.description",
       featuresKeys: [
-        "services.items.nutrition.features.assessment",
-        "services.items.nutrition.features.menus",
-        "services.items.nutrition.features.recipes",
-        "services.items.nutrition.features.followup"
+        "services.items.corporate.features.corporate",
+        "services.items.corporate.features.associations",
+        "services.items.corporate.features.seniors",
+        "services.items.corporate.features.wellbeing"
       ],
-      priceKey: "services.items.nutrition.price"
+      priceKey: "services.items.corporate.price"
     }
   ];
 
