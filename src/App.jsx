@@ -13,7 +13,7 @@ const Services = React.lazy(() => import('./components/Services'));
 const About = React.lazy(() => import('./components/About'));
 const TestimonialsSection = React.lazy(() => import('./components/testimonials/TestimonialsSection'));
 const BookingCalendar = React.lazy(() => import('./components/BookingCalendar'));
-const ColorThemePreview = React.lazy(() => import('./components/demo/ColorThemePreview'));
+
 const Contact = React.lazy(() => import('./components/Contact'));
 const Footer = React.lazy(() => import('./components/Footer'));
 
@@ -88,16 +88,14 @@ function App() {
               </Suspense>
             </ErrorBoundary>
 
-            {/* Demo: Comparateur de thèmes couleurs */}
+            {/* Section Réservations */}
             <ErrorBoundary>
               <Suspense fallback={
                 <div className="section-padding flex items-center justify-center">
-                  <LoadingSpinner message="Chargement du comparateur..." />
+                  <LoadingSpinner message="Chargement des réservations..." />
                 </div>
               }>
-                <div className="section-padding bg-white dark:bg-gray-900">
-                  <ColorThemePreview />
-                </div>
+                <BookingCalendar />
               </Suspense>
             </ErrorBoundary>
 

@@ -25,6 +25,20 @@ const BookingCalendar = memo(() => {
     '09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00', '18:00'
   ];
 
+  // Suggestions pour les notes
+  const notesSuggestions = [
+    "🎯 Objectif de remise en forme",
+    "🏃‍♀️ Préparation d'un événement",
+    "💪 Gain de masse musculaire",
+    "⚖️ Perte de poids",
+    "🏃 Préparation marathon/course",
+    "🤕 Rééducation post-blessure",
+    "🧘 Amélioration souplesse",
+    "👥 Séance en couple/famille",
+    "🏋️ Découverte musculation",
+    "🍎 Conseils nutrition inclus"
+  ];
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Réservation soumise:', {
@@ -179,11 +193,38 @@ const BookingCalendar = memo(() => {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Notes (optionnel)
               </label>
+              
+              {/* Suggestions rapides */}
+              <div className="mb-3">
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">Suggestions rapides :</p>
+                <div className="flex flex-wrap gap-2">
+                  {notesSuggestions.map((suggestion, index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      onClick={() => {
+                        const currentNotes = clientInfo.notes;
+                        const suggestionText = suggestion.replace(/^[🎯🏃‍♀️💪⚖️🏃🤕🧘👥🏋️🍎]\s/, '');
+                        if (!currentNotes.includes(suggestionText)) {
+                          setClientInfo({
+                            ...clientInfo,
+                            notes: currentNotes ? `${currentNotes}, ${suggestionText}` : suggestionText
+                          });
+                        }
+                      }}
+                      className="text-xs px-3 py-1.5 bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 rounded-full hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors border border-primary-200 dark:border-primary-700"
+                    >
+                      {suggestion}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <textarea
                 name="notes"
                 value={clientInfo.notes}
                 onChange={(e) => setClientInfo({...clientInfo, notes: e.target.value})}
-                rows={3}
+                rows={4}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 placeholder="Objectifs, contraintes, questions..."
               />
