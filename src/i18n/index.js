@@ -77,13 +77,8 @@ i18n
 // Export pour utilisation dans l'app
 export default i18n;
 
-// Types pour autocomplétion
-export type TranslationKeys = keyof typeof fr;
-
 // Helper pour obtenir les langues disponibles
 export const availableLanguages = [
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
   { code: 'en', name: 'English', flag: '🇬🇧' }
-] as const;
-
-export type LanguageCode = typeof availableLanguages[number]['code'];
+];

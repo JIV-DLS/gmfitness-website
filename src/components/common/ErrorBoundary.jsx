@@ -1,59 +1,40 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component } from 'react';
 import { motion } from 'framer-motion';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
-
 /**
- * Error Boundary pour capturer et gérer les erreurs React
- * Pattern: Error Boundary + Observer Pattern
+ * Error Boundary pour gérer les erreurs React
+ * Version JavaScript corrigée
  */
-export class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+export class ErrorBoundary extends Component {
+  constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, error: null, errorInfo: null };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error
-    };
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error, errorInfo) {
     this.setState({
       error,
       errorInfo
     });
 
-    // Log l'erreur pour monitoring
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
-    // Appel du callback personnalisé si fourni
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-    // En production, on pourrait envoyer l'erreur à un service de monitoring
     if (process.env.NODE_ENV === 'production') {
-      // Exemple: Sentry, LogRocket, etc.
-      // errorReportingService.log(error, errorInfo);
+      // En production, on pourrait envoyer l'erreur à un service de monitoring
     }
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
+    this.setState({ hasError: false, error: null, errorInfo: null });
+  }
 
   render() {
     if (this.state.hasError) {
@@ -86,11 +67,11 @@ export class ErrorBoundary extends Component<Props, State> {
               🚨
             </motion.div>
             
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Oops ! Une erreur s'est produite
             </h2>
             
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
               Ne vous inquiétez pas, notre équipe technique a été notifiée. 
               Vous pouvez essayer de recharger la page ou revenir plus tard.
             </p>
@@ -118,19 +99,19 @@ export class ErrorBoundary extends Component<Props, State> {
             {/* Affichage des détails de l'erreur en mode dev */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <motion.details
-                className="mt-8 text-left bg-red-50 p-4 rounded-lg"
+                className="mt-8 text-left bg-red-50 dark:bg-red-900/20 p-4 rounded-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
               >
-                <summary className="cursor-pointer font-semibold text-red-700 mb-2">
+                <summary className="cursor-pointer font-semibold text-red-700 dark:text-red-400 mb-2">
                   Détails de l'erreur (dev only)
                 </summary>
-                <pre className="text-sm text-red-600 whitespace-pre-wrap overflow-auto">
+                <pre className="text-sm text-red-600 dark:text-red-400 whitespace-pre-wrap overflow-auto">
                   {this.state.error.stack}
                 </pre>
                 {this.state.errorInfo && (
-                  <pre className="text-sm text-red-600 whitespace-pre-wrap overflow-auto mt-2">
+                  <pre className="text-sm text-red-600 dark:text-red-400 whitespace-pre-wrap overflow-auto mt-2">
                     {this.state.errorInfo.componentStack}
                   </pre>
                 )}
@@ -148,18 +129,14 @@ export class ErrorBoundary extends Component<Props, State> {
 /**
  * HOC pour wrapper facilement les composants avec ErrorBoundary
  */
-export function withErrorBoundary<P extends object>(
-  WrappedComponent: React.ComponentType<P>,
-  fallback?: ReactNode
-) {
-  const WithErrorBoundaryComponent = (props: P) => (
+export function withErrorBoundary(WrappedComponent, fallback) {
+  const WithErrorBoundaryComponent = (props) => (
     <ErrorBoundary fallback={fallback}>
       <WrappedComponent {...props} />
     </ErrorBoundary>
   );
 
-  WithErrorBoundaryComponent.displayName = 
-    `withErrorBoundary(${WrappedComponent.displayName || WrappedComponent.name})`;
+  WithErrorBoundaryComponent.displayName = `withErrorBoundary(${WrappedComponent.displayName || WrappedComponent.name})`;
 
   return WithErrorBoundaryComponent;
 }
@@ -168,7 +145,7 @@ export function withErrorBoundary<P extends object>(
  * Hook pour throw des erreurs qui seront catchées par ErrorBoundary
  */
 export function useErrorHandler() {
-  return (error: Error) => {
+  return (error) => {
     throw error;
   };
 }

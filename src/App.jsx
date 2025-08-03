@@ -12,6 +12,7 @@ const Hero = React.lazy(() => import('./components/Hero'));
 const Services = React.lazy(() => import('./components/Services'));
 const About = React.lazy(() => import('./components/About'));
 const TestimonialsSection = React.lazy(() => import('./components/testimonials/TestimonialsSection'));
+const BookingCalendar = React.lazy(() => import('./components/BookingCalendar'));
 const ColorThemePreview = React.lazy(() => import('./components/demo/ColorThemePreview'));
 const Contact = React.lazy(() => import('./components/Contact'));
 const Footer = React.lazy(() => import('./components/Footer'));

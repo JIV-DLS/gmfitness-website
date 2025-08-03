@@ -12,6 +12,7 @@ const Header = () => {
     { href: "#services", label: t('nav.services') },
     { href: "#about", label: t('nav.about') },
     { href: "#testimonials", label: t('nav.testimonials', 'Témoignages') },
+    { href: "#reservations", label: t('nav.booking', 'Réservations') },
     { href: "#contact", label: t('nav.contact') },
   ];
 

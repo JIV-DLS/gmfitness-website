@@ -1,19 +1,9 @@
-import React, { memo, useState, useMemo } from 'react';
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
-import { TestimonialCard } from './TestimonialCard';
-import { VideoPlayer } from './VideoPlayer';
-import { BeforeAfterSlider } from './BeforeAfterSlider';
-import { useTestimonials } from '@/hooks/useTestimonials';
 import { useI18n } from '@/hooks/useI18n';
-import { LoadingSpinner } from '@/components/common/LoadingSpinner';
-import { Testimonial } from '@/types/testimonials';
-import { AnimationFactory } from '@/utils/animations';
-
-// Props for TestimonialsSection component
 
 /**
- * Section complète des témoignages avec filtres et stats
- * Pattern: Container Component + State Management
+ * Section simplifiée des témoignages
  */
 export const TestimonialsSection = memo(({
   className = '',
@@ -21,85 +11,159 @@ export const TestimonialsSection = memo(({
   maxTestimonials = 12
 }) => {
   const { t } = useI18n();
-  const {
-    testimonials,
-    featuredTestimonials,
-    stats,
-    loading,
-    error,
-    getTestimonialsByType,
-    getTestimonialsByRating,
-    getVideoTestimonials,
-    getBeforeAfterTestimonials,
-    getPopularTags
-  } = useTestimonials();
 
-  const [activeFilter, setActiveFilter] = useState('featured');
-  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
-
-  // Filtres disponibles
-  const filters = [
-    { id: 'featured', label: 'Coup de cœur', icon: '⭐', count: featuredTestimonials.length },
-    { id: 'all', label: 'Tous', icon: '📝', count: testimonials.length },
-    { id: 'video', label: 'Vidéos', icon: '🎥', count: getVideoTestimonials().length },
-    { id: 'before_after', label: 'Avant/Après', icon: '📸', count: getBeforeAfterTestimonials().length },
-    { id: '5_stars', label: '5 étoiles', icon: '⭐', count: getTestimonialsByRating(5).length }
+  // Données de témoignages simplifiées et statiques
+  const testimonials = [
+    {
+      id: 1,
+      client: {
+        name: 'Sarah Martin',
+        age: 28,
+        location: 'Paris',
+        photo: 'https://images.unsplash.com/photo-1494790108755-2616b612b5c8?w=100&h=100&fit=crop&crop=face'
+      },
+      rating: 5,
+      content: 'Guillaume a transformé ma vie ! En 3 mois, j\'ai perdu 12kg et retrouvé ma confiance en moi. Son approche personnalisée et ses conseils nutrition ont fait toute la différence.',
+      program: 'Perte de poids',
+      duration: '3 mois',
+      date: '2024-01-15',
+      tags: ['perte de poids', 'nutrition', 'confiance'],
+      featured: true
+    },
+    {
+      id: 2,
+      client: {
+        name: 'Thomas Dubois',
+        age: 35,
+        location: 'Lyon',
+        photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face'
+      },
+      rating: 5,
+      content: 'Après une blessure au dos, Guillaume m\'a accompagné dans ma rééducation. Aujourd\'hui je suis plus fort qu\'avant ! Un vrai professionnel.',
+      program: 'Rééducation',
+      duration: '6 mois', 
+      date: '2024-02-20',
+      tags: ['rééducation', 'blessure', 'force'],
+      featured: true
+    },
+    {
+      id: 3,
+      client: {
+        name: 'Marie Leroy',
+        age: 42,
+        location: 'Marseille',
+        photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face'
+      },
+      rating: 5,
+      content: 'Grâce au programme de Guillaume, j\'ai terminé mon premier marathon ! Un rêve devenu réalité grâce à ses conseils experts.',
+      program: 'Préparation marathon',
+      duration: '4 mois',
+      date: '2024-03-10',
+      tags: ['marathon', 'endurance', 'objectif'],
+      featured: false
+    }
   ];
 
-  // Témoignages filtrés
-  const filteredTestimonials = useMemo(() => {
-    let filtered = [];
+  const featuredTestimonials = testimonials.filter(t => t.featured);
 
-    switch (activeFilter) {
-      case 'featured':
-        filtered = featuredTestimonials;
-        break;
-      case 'video':
-        filtered = getVideoTestimonials();
-        break;
-      case 'before_after':
-        filtered = getBeforeAfterTestimonials();
-        break;
-      case '5_stars':
-        filtered = getTestimonialsByRating(5);
-        break;
-      default:
-        filtered = testimonials;
-        break;
-    }
+  const renderStars = (rating) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <span
+        key={i}
+        className={`text-lg ${i < rating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`}
+      >
+        ⭐
+      </span>
+    ));
+  };
 
-    return filtered.slice(0, maxTestimonials);
-  }, [activeFilter, testimonials, featuredTestimonials, getVideoTestimonials, getBeforeAfterTestimonials, getTestimonialsByRating, maxTestimonials]);
-
-  const popularTags = getPopularTags(6);
-
-  if (loading && testimonials.length === 0) {
-    return (
-      <section className={`section-padding bg-gray-50 dark:bg-gray-800 ${className}`}>
-        <div className="container-max">
-          <div className="flex items-center justify-center min-h-[400px]">
-            <LoadingSpinner size="lg" message={t('testimonials.loading', 'Chargement des témoignages...')} />
+  const TestimonialCard = ({ testimonial, variant = 'default' }) => (
+    <motion.div
+      className={`rounded-xl p-6 transition-all duration-300 ${
+        variant === 'featured' 
+          ? 'bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 border-2 border-primary-200 dark:border-primary-700 shadow-lg' 
+          : 'bg-white dark:bg-gray-800 shadow-md hover:shadow-lg'
+      }`}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ y: -5 }}
+    >
+      {/* Header avec photo et infos client */}
+      <div className="flex items-start space-x-4 mb-4">
+        <div className="flex-shrink-0">
+          <img
+            src={testimonial.client.photo}
+            alt={testimonial.client.name}
+            className="w-12 h-12 rounded-full object-cover border-2 border-gray-200 dark:border-gray-600"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          <div className="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-800 items-center justify-center border-2 border-gray-200 dark:border-gray-600 hidden">
+            <span className="text-primary-600 dark:text-primary-400 font-semibold text-lg">
+              {testimonial.client.name.charAt(0).toUpperCase()}
+            </span>
           </div>
         </div>
-      </section>
-    );
-  }
-
-  if (error) {
-    return (
-      <section className={`section-padding bg-gray-50 dark:bg-gray-800 ${className}`}>
-        <div className="container-max">
-          <div className="text-center py-16">
-            <div className="text-4xl mb-4">😔</div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              Erreur de chargement
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400">{error}</p>
+        
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-gray-900 dark:text-white truncate">
+            {testimonial.client.name}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            {testimonial.client.age} ans • {testimonial.client.location}
+          </p>
+          <div className="flex items-center mt-1">
+            {renderStars(testimonial.rating)}
           </div>
         </div>
-      </section>
-    );
-  }
+
+        {variant === 'featured' && (
+          <div className="flex-shrink-0">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 dark:bg-primary-800 text-primary-800 dark:text-primary-200">
+              ⭐ Coup de cœur
+            </span>
+          </div>
+        )}
+      </div>
+
+      {/* Contenu du témoignage */}
+      <blockquote className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+        "{testimonial.content}"
+      </blockquote>
+
+      {/* Tags */}
+      {testimonial.tags && testimonial.tags.length > 0 && (
+        <div className="flex flex-wrap gap-2 mb-4">
+          {testimonial.tags.map((tag, index) => (
+            <span
+              key={index}
+              className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {/* Footer avec date et programme */}
+      <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-600 pt-4">
+        <div className="flex items-center space-x-4">
+          <span className="flex items-center">
+            🏋️‍♀️ {testimonial.program}
+          </span>
+          <span className="flex items-center">
+            ⏱️ {testimonial.duration}
+          </span>
+        </div>
+        
+        <time>{new Date(testimonial.date).toLocaleDateString()}</time>
+      </div>
+    </motion.div>
+  );
 
   return (
     <section id="testimonials" className={`section-padding bg-gray-50 dark:bg-gray-800 ${className}`}>
@@ -113,229 +177,112 @@ export const TestimonialsSection = memo(({
           viewport={{ once: true }}
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            {t('testimonials.title', 'Témoignages')} <span className="text-primary-600 dark:text-primary-400">Clients</span>
+            Témoignages <span className="text-primary-600 dark:text-primary-400">Clients</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-            {t('testimonials.subtitle', 'Découvrez les transformations inspirantes de mes clients et leurs retours sur mon accompagnement.')}
+            Découvrez les transformations inspirantes de mes clients et leurs retours sur mon accompagnement.
           </p>
 
           {/* Statistiques */}
-          {showStats && stats && (
+          {showStats && (
             <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto"
-              variants={AnimationFactory.stagger(0.1)}
-              initial="hidden"
-              whileInView="visible"
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <motion.div
-                className="text-center"
-                variants={AnimationFactory.staggerItem('up')}
-              >
-                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">
-                  {stats.total}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Témoignages</div>
-              </motion.div>
-              
-              <motion.div
-                className="text-center"
-                variants={AnimationFactory.staggerItem('up')}
-              >
-                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">
-                  {stats.averageRating.toFixed(1)}
-                </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">200+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Clients satisfaits</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">4.9</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Note moyenne</div>
-              </motion.div>
-              
-              <motion.div
-                className="text-center"
-                variants={AnimationFactory.staggerItem('up')}
-              >
-                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">
-                  {stats.videoCount}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Vidéos</div>
-              </motion.div>
-              
-              <motion.div
-                className="text-center"
-                variants={AnimationFactory.staggerItem('up')}
-              >
-                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">
-                  {stats.beforeAfterCount}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Avant/Après</div>
-              </motion.div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">85%</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Objectifs atteints</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">8+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Années d'expérience</div>
+              </div>
             </motion.div>
           )}
         </motion.div>
 
-        {/* Filtres */}
+        {/* Témoignages en vedette */}
         <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-12"
-          initial={{ opacity: 0, y: 20 }}
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          {filters.map((filter) => (
-            <motion.button
-              key={filter.id}
-                              onClick={() => setActiveFilter(filter.id)}
-              className={`
-                flex items-center space-x-2 px-4 py-2 rounded-full font-medium transition-all duration-300
-                ${activeFilter === filter.id
-                  ? 'bg-primary-600 text-white shadow-lg'
-                  : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-gray-600 border border-gray-200 dark:border-gray-600'
-                }
-              `}
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            ⭐ Témoignages en vedette
+          </h3>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {featuredTestimonials.map((testimonial) => (
+              <TestimonialCard 
+                key={testimonial.id} 
+                testimonial={testimonial} 
+                variant="featured" 
+              />
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Tous les témoignages */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            📝 Tous les témoignages
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.slice(0, maxTestimonials).map((testimonial) => (
+              <TestimonialCard 
+                key={testimonial.id} 
+                testimonial={testimonial} 
+                variant="default" 
+              />
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="bg-primary-600 dark:bg-primary-500 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Prêt à commencer votre transformation ?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Rejoignez plus de 200 clients satisfaits et atteignez vos objectifs de forme !
+            </p>
+            <motion.a
+              href="#contact"
+              className="inline-flex items-center px-8 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>{filter.icon}</span>
-              <span>{filter.label}</span>
-              <span className={`
-                px-2 py-0.5 rounded-full text-xs
-                ${activeFilter === filter.id
-                  ? 'bg-white/20 text-white'
-                  : 'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-400'
-                }
-              `}>
-                {filter.count}
-              </span>
-            </motion.button>
-          ))}
-        </motion.div>
-
-        {/* Tags populaires */}
-        {popularTags.length > 0 && (
-          <motion.div
-            className="flex flex-wrap justify-center gap-2 mb-12"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <span className="text-sm text-gray-600 dark:text-gray-400 mr-2">Tags populaires :</span>
-            {popularTags.map(({ tag, count }) => (
-              <motion.span
-                key={tag}
-                className="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full text-sm hover:bg-primary-100 dark:hover:bg-primary-800/50 cursor-pointer"
-                whileHover={{ scale: 1.05 }}
-              >
-                #{tag} ({count})
-              </motion.span>
-            ))}
-          </motion.div>
-        )}
-
-        {/* Grille des témoignages */}
-        {filteredTestimonials.length > 0 ? (
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={AnimationFactory.stagger(0.15)}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {filteredTestimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.id}
-                variants={AnimationFactory.staggerItem('up')}
-                onClick={() => setSelectedTestimonial(testimonial)}
-              >
-                <TestimonialCard
-                  testimonial={testimonial}
-                  variant={testimonial.featured && index === 0 ? 'featured' : 'default'}
-                  className="cursor-pointer hover:shadow-lg transition-shadow duration-300"
-                />
-              </motion.div>
-            ))}
-          </motion.div>
-        ) : (
-          <motion.div
-            className="text-center py-16"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
-            <div className="text-4xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              Aucun témoignage trouvé
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Essayez un autre filtre ou revenez plus tard.
-            </p>
-          </motion.div>
-        )}
-
-        {/* Call to Action */}
-        <motion.div
-          className="mt-16 text-center bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-sm"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            Prêt à rejoindre mes clients satisfaits ?
-          </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-            Commencez votre transformation dès aujourd'hui avec un accompagnement personnalisé 
-            et des résultats prouvés.
-          </p>
-          <motion.a
-            href="#contact"
-            className="btn-primary inline-block"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Commencer mon parcours
-          </motion.a>
+              Réserver ma séance gratuite
+            </motion.a>
+          </div>
         </motion.div>
       </div>
-
-      {/* Modal de témoignage détaillé */}
-      {selectedTestimonial && (
-        <motion.div
-          className="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={() => setSelectedTestimonial(null)}
-        >
-          <motion.div
-            className="bg-white dark:bg-gray-800 rounded-2xl max-w-4xl max-h-[90vh] overflow-y-auto"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  Témoignage détaillé
-                </h3>
-                <button
-                  onClick={() => setSelectedTestimonial(null)}
-                  className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
-                >
-                  ✕
-                </button>
-              </div>
-              
-              <TestimonialCard
-                testimonial={selectedTestimonial}
-                variant="featured"
-                showFullContent
-                className="border-0 shadow-none"
-              />
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
     </section>
   );
 });
 
 TestimonialsSection.displayName = 'TestimonialsSection';
+
+export default TestimonialsSection;
