@@ -4,7 +4,6 @@ import { Map } from '@/components/common/Map';
 import { SocialIcons } from '@/components/common/SocialIcons';
 
 const Contact = () => {
-  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,12 +17,13 @@ const Contact = () => {
   const [selectedObjectives, setSelectedObjectives] = useState([]);
 
   const handleChange = (e) => {
+    if (!e || !e.target) return;
+    
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
     
-    // Clear error when user starts typing
     if (errors[e.target.name]) {
       setErrors({
         ...errors,
@@ -35,26 +35,26 @@ const Contact = () => {
   const validateForm = () => {
     const newErrors = {};
     
-    if (!formData.name.trim()) {
-      newErrors.name = t('validation.required', 'Ce champ est requis');
+    if (!formData.name || !formData.name.trim()) {
+      newErrors.name = 'Ce champ est requis';
     }
     
-    if (!formData.email.trim()) {
-      newErrors.email = t('validation.required', 'Ce champ est requis');
+    if (!formData.email || !formData.email.trim()) {
+      newErrors.email = 'Ce champ est requis';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = t('validation.email', 'Email invalide');
+      newErrors.email = 'Email invalide';
     }
     
-    if (!formData.phone.trim()) {
-      newErrors.phone = t('validation.required', 'Ce champ est requis');
+    if (!formData.phone || !formData.phone.trim()) {
+      newErrors.phone = 'Ce champ est requis';
     }
     
     if (!formData.service) {
-      newErrors.service = t('validation.required', 'Ce champ est requis');
+      newErrors.service = 'Ce champ est requis';
     }
     
-    if (!formData.message.trim()) {
-      newErrors.message = t('validation.required', 'Ce champ est requis');
+    if (!formData.message || !formData.message.trim()) {
+      newErrors.message = 'Ce champ est requis';
     }
     
     setErrors(newErrors);
@@ -138,7 +138,7 @@ const Contact = () => {
       ? `Mes objectifs : ${newObjectives.join(', ')}\n\n`
       : '';
     
-    const currentMessage = formData.message.replace(/^.* : .*?\n\n/, '');
+    const currentMessage = (formData.message || '').replace(/^.* : .*?\n\n/, '');
     
     setFormData({
       ...formData,
