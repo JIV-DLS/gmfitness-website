@@ -37,7 +37,7 @@ const BookingCalendar = () => {
   };
 
   return (
-    <section id="reservations" className="section-padding bg-white dark:bg-gray-900">
+    <section id="reservations" className="section-padding bg-gradient-to-br from-mediterranean-50/70 to-azure-100/70 dark:from-mediterranean-900/70 dark:to-azure-800/70 backdrop-blur-sm">
       <div className="container-max">
         <motion.div
           className="text-center mb-12"

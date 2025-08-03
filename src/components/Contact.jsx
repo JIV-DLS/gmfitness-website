@@ -188,7 +188,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-white dark:bg-gray-800">
+    <section id="contact" className="section-padding bg-gradient-to-br from-ocean-50/80 to-azure-100/80 dark:from-ocean-900/80 dark:to-azure-800/80 backdrop-blur-sm">
       <div className="container-max">
         <motion.div
           className="text-center mb-16"

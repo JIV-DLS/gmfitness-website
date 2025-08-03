@@ -36,7 +36,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="section-padding bg-gradient-to-br from-azure-50/70 to-mediterranean-50/70 dark:from-azure-900/70 dark:to-mediterranean-900/70 backdrop-blur-sm">
       <div className="container-max">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div

@@ -77,7 +77,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="section-padding bg-white dark:bg-gray-800">
+    <section id="services" className="section-padding bg-white/90 dark:bg-azure-900/90 backdrop-blur-sm">
       <div className="container-max">
         <motion.div
           className="text-center mb-16"

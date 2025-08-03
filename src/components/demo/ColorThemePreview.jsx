@@ -1,30 +1,7 @@
 import React, { memo, useState } from 'react';
 import { motion } from 'framer-motion';
 
-interface ColorTheme {
-  id: string;
-  name: string;
-  description: string;
-  psychology: string;
-  primary: {
-    50: string;
-    100: string;
-    200: string;
-    300: string;
-    400: string;
-    500: string;
-    600: string;
-    700: string;
-    800: string;
-    900: string;
-  };
-  accent?: string;
-  pros: string[];
-  cons: string[];
-  bestFor: string[];
-}
-
-const COLOR_THEMES: ColorTheme[] = [
+const COLOR_THEMES = [
   {
     id: 'current-red',
     name: '🔴 Rouge Actuel',
@@ -140,9 +117,9 @@ const COLOR_THEMES: ColorTheme[] = [
  * Composant de preview des thèmes couleurs pour coach sportif
  */
 export const ColorThemePreview = memo(() => {
-  const [selectedTheme, setSelectedTheme] = useState<ColorTheme>(COLOR_THEMES[1]); // Bleu par défaut
+  const [selectedTheme, setSelectedTheme] = useState(COLOR_THEMES[1]); // Bleu par défaut
 
-  const applyThemeStyles = (theme: ColorTheme) => ({
+  const applyThemeStyles = (theme) => ({
     '--primary-50': theme.primary[50],
     '--primary-100': theme.primary[100],
     '--primary-200': theme.primary[200],
@@ -154,7 +131,7 @@ export const ColorThemePreview = memo(() => {
     '--primary-800': theme.primary[800],
     '--primary-900': theme.primary[900],
     '--accent': theme.accent || theme.primary[500],
-  } as React.CSSProperties);
+      });
 
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-8">
@@ -202,7 +179,7 @@ export const ColorThemePreview = memo(() => {
                 <div
                   key={weight}
                   className="w-3 h-3 rounded-sm"
-                  style={{ backgroundColor: theme.primary[weight as keyof typeof theme.primary] }}
+                  style={{ backgroundColor: theme.primary[weight] }}
                 />
               ))}
             </div>

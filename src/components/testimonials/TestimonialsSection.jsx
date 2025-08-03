@@ -5,7 +5,7 @@ import { useI18n } from '@/hooks/useI18n';
 /**
  * Section simplifiée des témoignages
  */
-export const TestimonialsSection = memo(({
+const TestimonialsSection = memo(({
   className = '',
   showStats = true,
   maxTestimonials = 12

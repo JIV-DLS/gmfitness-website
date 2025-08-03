@@ -5,7 +5,7 @@ const Hero = () => {
   const { t } = useI18n();
 
   return (
-    <section id="accueil" className="section-padding pt-32 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <section id="accueil" className="section-padding pt-32 bg-gradient-to-br from-azure-50/60 to-ocean-100/60 dark:from-azure-900/60 dark:to-ocean-800/60 backdrop-blur-sm">
       <div className="container-max">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
