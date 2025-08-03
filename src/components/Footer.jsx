@@ -28,10 +28,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container-max">
+    <footer className="bg-gradient-to-br from-azure-900 via-ocean-900 to-azure-800 text-white">
+      <div className="container-max px-6">
         {/* Main Footer Content */}
-        <div className="py-16">
+        <div className="py-20">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
             {/* Brand Section */}
             <motion.div
@@ -155,13 +155,13 @@ const Footer = () => {
 
         {/* Bottom Footer */}
         <motion.div
-          className="border-t border-gray-800 py-8"
+          className="border-t border-azure-700/30 py-10 px-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div className="text-sm text-gray-400">
               © {currentYear} GM Fitness. Tous droits réservés.
             </div>

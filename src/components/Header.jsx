@@ -18,12 +18,12 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg border-b border-gray-200 dark:border-gray-700"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-azure-900/90 backdrop-blur-md shadow-lg border-b border-azure-200/50 dark:border-azure-700/50"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <nav className="container-max flex items-center justify-between py-4">
+      <nav className="container-max flex items-center justify-between py-6 px-6">
         <motion.div
           className="text-2xl font-bold text-primary-600 dark:text-primary-400"
           whileHover={{ scale: 1.05 }}
@@ -32,7 +32,7 @@ const Header = () => {
         </motion.div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-8 px-2">
           {navItems.map((item) => (
             <motion.a
               key={item.href}
@@ -45,7 +45,7 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-4 px-2">
           <motion.a
             href="#contact"
             className="btn-primary"
