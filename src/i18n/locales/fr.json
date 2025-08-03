@@ -9,8 +9,8 @@
   },
   "hero": {
     "title": "Transformez Votre",
-    "titleHighlight": "Corps",
-    "subtitle": "Coach sportif professionnel avec 8+ ans d'expérience. Coaching personnalisé, programmes sur-mesure et suivi nutritionnel pour atteindre vos objectifs rapidement.",
+    "titleHighlight": "Bien-être",
+    "subtitle": "Coach sportif diplômé sur la Côte d'Azur. Ancien sportif de haut niveau, je vous accompagne avec une approche holistique alliant corps et esprit pour votre transformation.",
     "cta": {
       "primary": "Commencer Maintenant",
       "secondary": "Découvrir les Services"
@@ -35,27 +35,31 @@
   "services": {
     "title": "Mes",
     "titleHighlight": "Services",
-    "subtitle": "Des solutions adaptées à tous les besoins et tous les budgets pour vous accompagner vers vos objectifs de forme et de bien-être.",
+    "subtitle": "Une approche holistique combinant renforcement musculaire, mobilité, Pilates, yoga, méditation et coaching mental.",
     "items": {
       "personal": {
-        "title": "Coaching Personnel",
-        "description": "Séances individuelles adaptées à vos objectifs et votre niveau. Suivi personnalisé et progression garantie.",
+        "title": "Coaching Individuel",
+        "description": "Séances personnalisées alliant renforcement, mobilité et bien-être mental. Approche holistique adaptée à vos besoins.",
         "features": {
-          "custom": "Programmes sur-mesure",
-          "nutrition": "Suivi nutritionnel", 
-          "motivation": "Motivation constante",
-          "results": "Résultats rapides"
+          "custom": "Méthode holistique",
+          "psychology": "Coaching mental", 
+          "mobility": "Mobilité & Pilates",
+          "mindfulness": "Yoga & méditation"
         },
-        "price": "60€/séance"
+        "prices": {
+          "single": "70€/séance",
+          "pack5": "60€/séance (pack 5)",
+          "pack10": "50€/séance (pack 10)"
+        }
       },
       "group": {
-        "title": "Coaching Collectif",
-        "description": "Entraînements en petits groupes pour partager la motivation et réduire les coûts.",
+        "title": "Coaching Collectif", 
+        "description": "Séances en petit groupe (max 5 personnes) pour maintenir un suivi de qualité tout en bénéficiant de l'émulation collective.",
         "features": {
-          "groups": "Groupes de 3-5 personnes",
-          "atmosphere": "Ambiance conviviale",
-          "price": "Prix réduit",
-          "emulation": "Émulation de groupe"
+          "small": "Max 5 personnes",
+          "quality": "Suivi personnalisé",
+          "affordable": "Prix accessible", 
+          "motivation": "Émulation collective"
         },
         "price": "25€/séance"
       },
@@ -70,16 +74,16 @@
         },
         "price": "35€/mois"
       },
-      "nutrition": {
-        "title": "Coaching Nutrition",
-        "description": "Plans alimentaires personnalisés pour optimiser vos résultats et votre santé.",
+      "corporate": {
+        "title": "Interventions Entreprises",
+        "description": "Séances de bien-être en entreprise, associations et résidences seniors. Amélioration de la qualité de vie au travail.",
         "features": {
-          "assessment": "Bilan nutritionnel",
-          "menus": "Menus personnalisés",
-          "recipes": "Recettes adaptées",
-          "followup": "Suivi hebdomadaire"
+          "corporate": "Entreprises",
+          "associations": "Associations",
+          "seniors": "Résidences seniors",
+          "wellbeing": "Bien-être collectif"
         },
-        "price": "80€/mois"
+        "price": "Sur devis"
       }
     },
     "choose": "Choisir ce service",
@@ -384,11 +388,11 @@
   },
   "footer": {
     "brand": {
-      "name": "GM FITNESS",
-      "description": "Votre coach sportif professionnel pour une transformation durable. Ensemble, atteignons vos objectifs de forme et de bien-être.",
-      "location": "Cannes & Côte d'Azur",
-      "phone": "+33 6 XX XX XX XX",
-      "email": "contact@gmfitness.fr"
+      "name": "GILSON MENDES",
+      "description": "Coach sportif diplômé sur la Côte d'Azur. Une approche holistique pour votre bien-être physique et mental.",
+      "location": "Côte d'Azur",
+      "phone": "06 17 04 35 99",
+      "email": "contact@gilsonmendes.fr"
     },
     "services": {
       "title": "Services",

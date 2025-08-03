@@ -103,10 +103,10 @@ const Contact = () => {
   };
 
   const services = [
-    t('services.items.personal.title', 'Coaching Personnel'),
-    t('services.items.group.title', 'Coaching Collectif'), 
-    t('services.items.online.title', 'Coaching en Ligne'),
-    t('services.items.nutrition.title', 'Coaching Nutrition')
+    t('services.items.personal.title', 'Coaching Individuel'),
+    t('services.items.group.title', 'Coaching Collectif'),
+    t('services.items.online.title', 'Programmes en Ligne'), 
+    t('services.items.corporate.title', 'Interventions Entreprises')
   ];
 
   const commonObjectives = t('contact.objectives', [
@@ -151,38 +151,38 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: "📍",
-      title: "Adresse",
+      title: "Localisation", 
       content: [
-        "Salle de Sport Premium",
-        "123 Rue du Fitness",
-        "75001 Paris"
+        "Côte d'Azur",
+        "Déplacements possibles",
+        "À domicile ou en extérieur"
       ]
     },
     {
       icon: "📞",
       title: "Téléphone",
       content: [
-        "+33 1 23 45 67 89",
+        "06 17 04 35 99",
         "Disponible 7j/7",
-        "6h - 21h"
+        "Réponse rapide"
       ]
     },
     {
-      icon: "✉️",
-      title: "Email",
+      icon: "📱",
+      title: "Instagram",
       content: [
-        "contact@gmfitness.fr",
-        "Réponse sous 24h",
-        "Support prioritaire"
+        "@gilsonmendes_coach",
+        "Conseils quotidiens",
+        "Transformations clients"
       ]
     },
     {
       icon: "⏰",
       title: "Horaires",
       content: [
-        "Lun-Ven: 6h - 21h",
-        "Sam-Dim: 8h - 18h",
-        "Séances sur RDV"
+        "Sur rendez-vous",
+        "Flexibilité horaire",
+        "Séances adaptées"
       ]
     }
   ];
