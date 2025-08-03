@@ -419,5 +419,64 @@
       "cookies": "Cookies"
     },
     "backToTop": "Back to top"
+  },
+  "contact": {
+    "title": "Start Your",
+    "titleHighlight": "Transformation",
+    "subtitle": "Ready to reach your goals? Contact me now for a free discovery session.",
+    "form": {
+      "title": "Free Discovery Session",
+      "name": "Full name",
+      "phone": "Phone",
+      "email": "Email",
+      "service": "Desired service",
+      "message": "Message",
+      "messagePlaceholder": "Add details: your current level, availability, specific constraints, past experiences...",
+      "messageHint": "💬 The more specific you are, the better I can propose an adapted program!",
+      "submit": "🚀 Book my free session",
+      "submitting": "⏳ Sending...",
+      "success": "✅ Message sent!",
+      "error": "❌ Error - Try again"
+    },
+    "objectives": [
+      "💪 Build muscle",
+      "⚖️ Lose weight",
+      "🏃‍♀️ Improve fitness",
+      "🩹 Recovery after injury",
+      "👰 Prepare for an event (wedding, vacation...)",
+      "😌 Reduce stress",
+      "🧘‍♀️ Improve posture",
+      "🔄 Get back to sports after a break",
+      "💯 Gain self-confidence",
+      "🏋️‍♀️ Improve strength",
+      "🎯 Lose belly fat",
+      "✨ Tone my body",
+      "🫁 Improve endurance",
+      "🥗 Fix eating habits",
+      "📅 Stay motivated for regular exercise",
+      "🏆 Reach goals quickly"
+    ],
+    "info": {
+      "title": "Contact Information",
+      "offer": {
+        "title": "🎁 Special Offer",
+        "description": "First assessment session 100% free for all new clients. No commitment, discover my method risk-free!",
+        "features": "⭐ Complete assessment • 📋 Personalized plan • 🥗 Nutrition advice"
+      }
+    },
+    "social": {
+      "title": "Social Media",
+      "description": "Follow my tips and discover my clients' transformations"
+    },
+    "map": {
+      "description": "Discover the different places where we can train together. I also travel to your home throughout the Paris region."
+    }
+  },
+  "map": {
+    "title": "Training locations"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Invalid email"
   }
 }

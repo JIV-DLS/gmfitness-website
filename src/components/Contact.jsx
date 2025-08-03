@@ -109,7 +109,7 @@ const Contact = () => {
     t('services.items.nutrition.title', 'Coaching Nutrition')
   ];
 
-  const commonObjectives = [
+  const commonObjectives = t('contact.objectives', [
     "💪 Prendre du muscle",
     "⚖️ Perdre du poids", 
     "🏃‍♀️ Améliorer ma condition physique",
@@ -126,7 +126,7 @@ const Contact = () => {
     "🥗 Corriger mes habitudes alimentaires",
     "📅 Me motiver à faire du sport régulièrement",
     "🏆 Atteindre mes objectifs rapidement"
-  ];
+  ]);
 
   const handleObjectiveToggle = (objective) => {
     const newObjectives = selectedObjectives.includes(objective)
@@ -198,10 +198,10 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 lg:mb-6">
-            Commençons Votre <span className="text-primary-600 dark:text-primary-400">Transformation</span>
+            {t('contact.title')} <span className="text-primary-600 dark:text-primary-400">{t('contact.titleHighlight')}</span>
           </h2>
           <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
-            Prêt à atteindre vos objectifs ? Contactez-moi dès maintenant pour une séance découverte gratuite.
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -215,13 +215,13 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4 lg:mb-6">
-              Séance Découverte Gratuite
+              {t('contact.form.title')}
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Nom complet *
+                  {t('contact.form.name')} *
                 </label>
                 <input
                   type="text"
@@ -241,7 +241,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Téléphone *
+                  {t('contact.form.phone')} *
                 </label>
                 <input
                   type="tel"
@@ -261,7 +261,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email *
+                  {t('contact.form.email')} *
                 </label>
                 <input
                   type="email"
@@ -281,7 +281,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Service souhaité *
+                  {t('contact.form.service')} *
                 </label>
                 <select
                   id="service"
@@ -306,7 +306,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Parlez-moi de vos objectifs *
+                  {t('contact.form.message')} *
                 </label>
                 
                 {/* Suggestions d'objectifs */}
@@ -348,11 +348,11 @@ const Contact = () => {
                       ? 'border-red-500 dark:border-red-400' 
                       : 'border-gray-300 dark:border-gray-600'
                   } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none`}
-                  placeholder="Ajoutez des détails : votre niveau actuel, vos disponibilités, contraintes particulières, expériences passées..."
+                  placeholder={t('contact.form.messagePlaceholder')}
                 />
                 
                 <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
-                  💬 Plus vous êtes précis, plus je pourrai vous proposer un programme adapté !
+                  {t('contact.form.messageHint')}
                 </div>
                 
                 {errors.message && <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.message}</p>}
@@ -373,10 +373,10 @@ const Contact = () => {
                 whileHover={status === 'idle' ? { scale: 1.02 } : {}}
                 whileTap={status === 'idle' ? { scale: 0.98 } : {}}
               >
-                {status === 'submitting' && '⏳ Envoi en cours...'}
-                {status === 'success' && '✅ Message envoyé !'}
-                {status === 'error' && '❌ Erreur - Réessayer'}
-                {status === 'idle' && '🚀 Réserver ma séance gratuite'}
+                {status === 'submitting' && t('contact.form.submitting')}
+                {status === 'success' && t('contact.form.success')}
+                {status === 'error' && t('contact.form.error')}
+                {status === 'idle' && t('contact.form.submit')}
               </motion.button>
             </form>
           </motion.div>
@@ -415,13 +415,12 @@ const Contact = () => {
             </div>
 
             <div className="bg-primary-50 dark:bg-primary-900/20 rounded-2xl p-6">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-4">🎁 Offre Spéciale</h4>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-4">{t('contact.info.offer.title')}</h4>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Première séance d'évaluation <strong>100% gratuite</strong> pour tous les nouveaux clients.
-                Aucun engagement, découvrez ma méthode sans risque !
+                {t('contact.info.offer.description')}
               </p>
               <div className="text-sm text-gray-600 dark:text-gray-400">
-                ⭐ Bilan complet • 📋 Plan personnalisé • 🥗 Conseils nutrition
+                {t('contact.info.offer.features')}
               </div>
             </div>
 

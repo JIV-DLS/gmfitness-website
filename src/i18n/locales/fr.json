@@ -419,5 +419,64 @@
       "cookies": "Cookies"
     },
     "backToTop": "Retour en haut"
+  },
+  "contact": {
+    "title": "Commençons Votre",
+    "titleHighlight": "Transformation",
+    "subtitle": "Prêt à atteindre vos objectifs ? Contactez-moi dès maintenant pour une séance découverte gratuite.",
+    "form": {
+      "title": "Séance Découverte Gratuite",
+      "name": "Nom complet",
+      "phone": "Téléphone",
+      "email": "Email", 
+      "service": "Service souhaité",
+      "message": "Message",
+      "messagePlaceholder": "Ajoutez des détails : votre niveau actuel, vos disponibilités, contraintes particulières, expériences passées...",
+      "messageHint": "💬 Plus vous êtes précis, plus je pourrai vous proposer un programme adapté !",
+      "submit": "🚀 Réserver ma séance gratuite",
+      "submitting": "⏳ Envoi en cours...",
+      "success": "✅ Message envoyé !",
+      "error": "❌ Erreur - Réessayer"
+    },
+    "objectives": [
+      "💪 Prendre du muscle",
+      "⚖️ Perdre du poids",
+      "🏃‍♀️ Améliorer ma condition physique", 
+      "🩹 Reprendre après une blessure",
+      "👰 Préparer un événement (mariage, vacances...)",
+      "😌 Réduire le stress",
+      "🧘‍♀️ Améliorer ma posture",
+      "🔄 Reprendre le sport après une pause",
+      "💯 Gagner en confiance en soi",
+      "🏋️‍♀️ Améliorer ma force",
+      "🎯 Perdre du ventre",
+      "✨ Tonifier mon corps",
+      "🫁 Améliorer mon endurance",
+      "🥗 Corriger mes habitudes alimentaires",
+      "📅 Me motiver à faire du sport régulièrement",
+      "🏆 Atteindre mes objectifs rapidement"
+    ],
+    "info": {
+      "title": "Informations de Contact",
+      "offer": {
+        "title": "🎁 Offre Spéciale",
+        "description": "Première séance d'évaluation 100% gratuite pour tous les nouveaux clients. Aucun engagement, découvrez ma méthode sans risque !",
+        "features": "⭐ Bilan complet • 📋 Plan personnalisé • 🥗 Conseils nutrition"
+      }
+    },
+    "social": {
+      "title": "Réseaux Sociaux",
+      "description": "Suivez mes conseils et découvrez les transformations de mes clients"
+    },
+    "map": {
+      "description": "Découvrez les différents lieux où nous pouvons nous entraîner ensemble. Je me déplace également à votre domicile dans toute la région parisienne."
+    }
+  },
+  "map": {
+    "title": "Lieux de séances"
+  },
+  "validation": {
+    "required": "Ce champ est requis",
+    "email": "Email invalide"
   }
 }
