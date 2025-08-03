@@ -109,7 +109,7 @@ const Contact = () => {
     t('services.items.nutrition.title', 'Coaching Nutrition')
   ];
 
-  const commonObjectives = t('contact.objectives', [
+  const commonObjectives = [
     "💪 Prendre du muscle",
     "⚖️ Perdre du poids", 
     "🏃‍♀️ Améliorer ma condition physique",
@@ -126,7 +126,7 @@ const Contact = () => {
     "🥗 Corriger mes habitudes alimentaires",
     "📅 Me motiver à faire du sport régulièrement",
     "🏆 Atteindre mes objectifs rapidement"
-  ]);
+  ];
 
   const handleObjectiveToggle = (objective) => {
     const newObjectives = selectedObjectives.includes(objective)
