@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useI18n } from '@/hooks/useI18n';
 import { Map } from '@/components/common/Map';
-import { SocialMediaSection } from '@/components/common/SocialIcons';
+import { SocialIcons } from '@/components/common/SocialIcons';
 
 const Contact = () => {
   const { t } = useI18n();
@@ -424,12 +424,17 @@ const Contact = () => {
               </div>
             </div>
 
-            <SocialMediaSection 
-              title={t('contact.social.title')}
-              description={t('contact.social.description')}
-              platforms={['instagram', 'facebook', 'whatsapp', 'youtube']}
-              variant="default"
-            />
+            <div className="bg-white dark:bg-gray-700 rounded-2xl p-6">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-4">{t('contact.social.title')}</h4>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                {t('contact.social.description')}
+              </p>
+              <SocialIcons
+                platforms={['instagram', 'facebook', 'whatsapp', 'youtube']}
+                variant="default"
+                showLabels={true}
+              />
+            </div>
           </motion.div>
         </div>
 
