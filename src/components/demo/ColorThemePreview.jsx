@@ -116,7 +116,7 @@ const COLOR_THEMES = [
 /**
  * Composant de preview des thèmes couleurs pour coach sportif
  */
-export const ColorThemePreview = memo(() => {
+const ColorThemePreview = memo(() => {
   const [selectedTheme, setSelectedTheme] = useState(COLOR_THEMES[1]); // Bleu par défaut
 
   const applyThemeStyles = (theme) => ({
@@ -368,3 +368,5 @@ export const ColorThemePreview = memo(() => {
 });
 
 ColorThemePreview.displayName = 'ColorThemePreview';
+
+export default ColorThemePreview;

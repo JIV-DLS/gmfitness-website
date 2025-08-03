@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { motion } from 'framer-motion';
 
 /**
  * Simple BookingCalendar component - no dependencies
  */
-const BookingCalendar = () => {
+const BookingCalendar = memo(() => {
   const [selectedService, setSelectedService] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
@@ -202,6 +202,8 @@ const BookingCalendar = () => {
       </div>
     </section>
   );
-};
+});
+
+BookingCalendar.displayName = 'BookingCalendar';
 
 export default BookingCalendar;

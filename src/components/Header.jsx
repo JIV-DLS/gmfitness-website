@@ -64,9 +64,9 @@ const Header = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <div className="w-6 h-6 flex flex-col justify-around">
-            <span className={`h-0.5 bg-gray-700 transition-all ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`h-0.5 bg-gray-700 transition-all ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`h-0.5 bg-gray-700 transition-all ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            <span className={`h-0.5 bg-gray-700 dark:bg-white transition-all ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`h-0.5 bg-gray-700 dark:bg-white transition-all ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`h-0.5 bg-gray-700 dark:bg-white transition-all ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
           </div>
         </button>
 

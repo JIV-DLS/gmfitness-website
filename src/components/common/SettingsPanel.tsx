@@ -80,7 +80,7 @@ export const SettingsPanel = memo<SettingsPanelProps>(({
         aria-expanded={isOpen}
       >
         <motion.svg
-          className="w-5 h-5 text-gray-600 dark:text-gray-400"
+          className="w-5 h-5 text-gray-600 dark:text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -138,7 +138,7 @@ export const SettingsPanel = memo<SettingsPanelProps>(({
                     className="p-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                     aria-label="Fermer"
                   >
-                    <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-gray-500 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
