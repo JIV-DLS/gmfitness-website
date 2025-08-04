@@ -98,22 +98,22 @@
     "availability": "Available 7 days a week",
     "hours": "6am - 9pm",
     "bio": {
-      "p1": "Passionate about sports since always, I made my passion my profession 8 years ago. BPJEPS graduate and certified in sports nutrition, I accompany my clients towards their goals with a personalized and caring approach.",
-      "p2": "My philosophy? Each person is unique and deserves a tailor-made support. Whether you want to lose weight, gain muscle or simply feel better in your body, we will find together the method that suits you.",
-      "p3": "Beyond training sessions, I accompany you in your life change: nutrition, motivation, habits... for lasting results and overall well-being."
+      "p1": "Certified sports coach, passionate about physical transformation and well-being. Former high-level athlete, driven by discipline, the taste for effort and the search for progression, I decided to put my experience and skills at the service of those who want to feel better in their body and mind.",
+      "p2": "My approach: Holistic and personalized, it combines performance, well-being and mental balance for a lasting transformation.",
+      "p3": "Each person is unique and deserves tailor-made support. Whether you want to lose weight, gain muscle or simply feel better in your body, we will find together the method that suits you."
     },
     "achievements": {
       "certifications": {
-        "title": "Certifications",
-        "items": ["BPJEPS AGFF", "CrossFit Level 1", "Sports Nutrition"]
+        "title": "🎓 Education",
+        "items": ["Bachelor's degree in psychology", "Yoga and Pilates training", "BPJEPS Physical Activities"]
       },
       "specializations": {
-        "title": "Specializations",
-        "items": ["Weight loss", "Muscle gain", "Athletic preparation", "Rehabilitation"]
+        "title": "💪 Specialties",
+        "items": ["Strength training", "Mobility", "Pilates & yoga", "Meditation", "Mental coaching"]
       },
       "philosophy": {
-        "title": "Philosophy",
-        "items": ["Holistic approach", "Listening and caring", "Sustainable progress"]
+        "title": "🔎 My Approach",
+        "items": ["Body and mind balance in harmony", "Personalization adapted to your goals", "Sustainable and caring transformation"]
       }
     },
     "cta": "Let's Start Together"
