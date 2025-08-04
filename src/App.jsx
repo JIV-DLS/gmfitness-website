@@ -1,7 +1,6 @@
 import React, { Suspense, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppProvider } from '@/context/AppContext';
-import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { LoadingSpinner } from '@/components/common/LoadingSpinner';
 import { commonVariants } from '@/utils/animations';
 import { WhatsAppFloat } from '@/components/common/SocialIcons';
@@ -31,14 +30,13 @@ function App() {
 
   return (
     <AppProvider>
-      <ErrorBoundary>
-        <motion.div
-          className="min-h-screen bg-white dark:bg-gray-900"
-          variants={commonVariants.pageTransition}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
+      <motion.div
+        className="min-h-screen bg-white dark:bg-gray-900"
+        variants={commonVariants.pageTransition}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
           <Suspense fallback={
             <div className="fixed top-0 left-0 w-full h-20 bg-white dark:bg-gray-900 z-50 flex items-center justify-center">
               <LoadingSpinner size="sm" message="Chargement..." />
@@ -48,84 +46,69 @@ function App() {
           </Suspense>
 
           <main>
-            <ErrorBoundary>
-              <Suspense fallback={
-                <div className="min-h-screen flex items-center justify-center">
-                  <LoadingSpinner size="lg" message="Chargement de la page..." />
-                </div>
-              }>
-                <Hero />
-              </Suspense>
-            </ErrorBoundary>
-
-            <ErrorBoundary>
-              <Suspense fallback={
-                <div className="section-padding flex items-center justify-center">
-                  <LoadingSpinner message="Chargement des services..." />
-                </div>
-              }>
-                <Services />
-              </Suspense>
-            </ErrorBoundary>
-
-            <ErrorBoundary>
-              <Suspense fallback={
-                <div className="section-padding flex items-center justify-center">
-                  <LoadingSpinner message="Chargement des informations..." />
-                </div>
-              }>
-                <About />
-              </Suspense>
-            </ErrorBoundary>
-
-            <ErrorBoundary>
-              <Suspense fallback={
-                <div className="section-padding flex items-center justify-center">
-                  <LoadingSpinner message="Chargement des témoignages..." />
-                </div>
-              }>
-                <TestimonialsSection />
-              </Suspense>
-            </ErrorBoundary>
-
-            {/* Section Réservations */}
-            <ErrorBoundary>
-              <Suspense fallback={
-                <div className="section-padding flex items-center justify-center">
-                  <LoadingSpinner message="Chargement des réservations..." />
-                </div>
-              }>
-                <BookingCalendar />
-              </Suspense>
-            </ErrorBoundary>
-
-            <ErrorBoundary>
-              <Suspense fallback={
-                <div className="section-padding flex items-center justify-center">
-                  <LoadingSpinner message="Chargement du formulaire..." />
-                </div>
-              }>
-                <Contact />
-              </Suspense>
-            </ErrorBoundary>
-          </main>
-
-          <ErrorBoundary>
             <Suspense fallback={
-              <div className="bg-gray-900 dark:bg-gray-800 text-white p-8 text-center">
-                <LoadingSpinner color="white" size="sm" />
+              <div className="min-h-screen flex items-center justify-center">
+                <LoadingSpinner size="lg" message="Chargement de la page..." />
               </div>
             }>
-              <Footer />
+              <Hero />
             </Suspense>
-                          </ErrorBoundary>
 
-                {/* WhatsApp flottant */}
-                <WhatsAppFloat message="Bonjour, je souhaite avoir des informations sur vos services de coaching sportif" />
-              </motion.div>
-            </ErrorBoundary>
-          </AppProvider>
-        );
-      }
+            <Suspense fallback={
+              <div className="section-padding flex items-center justify-center">
+                <LoadingSpinner message="Chargement des services..." />
+              </div>
+            }>
+              <Services />
+            </Suspense>
 
-      export default App;
+            <Suspense fallback={
+              <div className="section-padding flex items-center justify-center">
+                <LoadingSpinner message="Chargement des informations..." />
+              </div>
+            }>
+              <About />
+            </Suspense>
+
+            <Suspense fallback={
+              <div className="section-padding flex items-center justify-center">
+                <LoadingSpinner message="Chargement des témoignages..." />
+              </div>
+            }>
+              <TestimonialsSection />
+            </Suspense>
+
+            {/* Section Réservations */}
+            <Suspense fallback={
+              <div className="section-padding flex items-center justify-center">
+                <LoadingSpinner message="Chargement des réservations..." />
+              </div>
+            }>
+              <BookingCalendar />
+            </Suspense>
+
+            <Suspense fallback={
+              <div className="section-padding flex items-center justify-center">
+                <LoadingSpinner message="Chargement du formulaire..." />
+              </div>
+            }>
+              <Contact />
+            </Suspense>
+          </main>
+
+          <Suspense fallback={
+            <div className="bg-gray-900 dark:bg-gray-800 text-white p-8 text-center">
+              <LoadingSpinner color="white" size="sm" />
+            </div>
+          }>
+            <Footer />
+          </Suspense>
+
+        {/* WhatsApp flottant */}
+        <WhatsAppFloat message="Bonjour, je souhaite avoir des informations sur vos services de coaching sportif" />
+      </motion.div>
+    </AppProvider>
+  );
+}
+
+export default App;
