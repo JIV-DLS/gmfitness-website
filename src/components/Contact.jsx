@@ -457,7 +457,7 @@ const Contact = () => {
           
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              {t('contact.map.note', '📍 Déplacements possibles dans un rayon de 30km autour de Paris')}
+              📍 Déplacements possibles dans toute la Côte d'Azur
             </p>
           </div>
         </motion.div>
