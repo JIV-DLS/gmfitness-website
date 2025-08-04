@@ -115,34 +115,15 @@ export default function BookingForm() {
           </div>
           
           <div className="p-8">
-            {/* Placeholder for Fillout iframe */}
-            <div className="aspect-[4/3] bg-gray-50 dark:bg-gray-700 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex flex-col items-center justify-center">
-              <div className="text-6xl mb-4">📋</div>
-              <h4 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                Formulaire Fillout
-              </h4>
-              <p className="text-gray-500 dark:text-gray-400 text-center max-w-md">
-                Remplacez cette section par votre iframe Fillout pour activer la réservation en ligne
-              </p>
-              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                <code className="text-sm text-blue-800 dark:text-blue-200">
-                  {`<iframe src="https://forms.fillout.com/t/YOUR_FORM_ID" />`}
-                </code>
-              </div>
-            </div>
-            
-            {/* Instructions temporaires */}
-            <div className="mt-6 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
-              <h5 className="font-semibold text-amber-800 dark:text-amber-200 mb-2">
-                🚀 Pour activer Fillout :
-              </h5>
-              <ol className="text-sm text-amber-700 dark:text-amber-300 space-y-1">
-                <li>1. Créez votre formulaire sur fillout.com</li>
-                <li>2. Configurez les champs (service, date, heure, contact)</li>
-                <li>3. Copiez l'URL d'embed</li>
-                <li>4. Remplacez le contenu de cette div par l'iframe</li>
-              </ol>
-            </div>
+            {/* Fillout booking form */}
+            <iframe
+              src="https://forms.fillout.com/t/c24LK1RZ97us"
+              className="w-full h-[800px] border-0 rounded-xl"
+              frameBorder="0"
+              title="Réservation de séance avec Gilson Mendes - Coach Sportif Côte d'Azur"
+              allowFullScreen
+              loading="lazy"
+            />
           </div>
         </motion.div>
 
