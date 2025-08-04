@@ -94,17 +94,17 @@
     }
   },
   "about": {
-    "title": "À Propos de",
-    "titleHighlight": "Moi",
+    "title": "👤 Qui suis-je ?",
+    "titleHighlight": "",
     "name": "Gilson Mendes",
     "role": "Coach Sportif Diplômé",
     "location": "Côte d'Azur",
     "availability": "Disponible 7j/7",
     "hours": "6h - 21h",
     "bio": {
-      "p1": "Passionné de sport depuis toujours, j'ai fait de ma passion mon métier il y a 8 ans. Diplômé BPJEPS et certifié en nutrition sportive, j'accompagne mes clients vers leurs objectifs avec une approche personnalisée et bienveillante.",
-      "p2": "Ma philosophie ? Chaque personne est unique et mérite un accompagnement sur-mesure. Que vous souhaitiez perdre du poids, gagner en muscle ou simplement vous sentir mieux dans votre corps, nous trouverons ensemble la méthode qui vous convient.",
-      "p3": "Au-delà des séances d'entraînement, je vous accompagne dans votre changement de vie : nutrition, motivation, habitudes… pour des résultats durables et un bien-être global."
+      "p1": "Coach sportif diplômé, passionné par la transformation physique et le bien-être. Ancien sportif de haut niveau, animé par la discipline, le goût de l'effort et la recherche de progression, j'ai décidé de mettre mon expérience et mes compétences au service de ceux qui veulent se sentir mieux dans leur corps et dans leur esprit.",
+      "p2": "Mon approche : Holistique et personnalisée, elle allie performance, bien-être et équilibre mental pour une transformation durable.",
+      "p3": "Chaque personne est unique et mérite un accompagnement sur-mesure. Que vous souhaitiez perdre du poids, gagner en muscle ou simplement vous sentir mieux dans votre corps, nous trouverons ensemble la méthode qui vous convient."
     },
     "achievements": {
       "certifications": {
