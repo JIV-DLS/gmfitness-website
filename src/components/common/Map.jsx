@@ -9,36 +9,44 @@ import { useI18n } from '@/hooks/useI18n';
 export const Map = memo(({ className = '', height = '400px' }) => {
   const { t } = useI18n();
 
-  // Lieux de séances avec leurs informations
+  // Lieux de séances avec leurs informations - Côte d'Azur
   const sessionLocations = [
     {
       id: 1,
-      name: t('map.locations.gym1.name', 'Salle Premium Fitness'),
-      address: t('map.locations.gym1.address', '15 Rue de Rivoli, 75001 Paris'),
-      type: t('map.locations.gym1.type', 'Salle de sport partenaire'),
-      features: t('map.locations.gym1.features', ['Équipements complets', 'Coaching individuel', 'Suivi nutritionnel']),
-      icon: '🏋️‍♀️'
+      name: 'Coaching à domicile',
+      address: 'Cannes et environs',
+      type: 'Déplacement à domicile',
+      features: ['Chez vous', 'Équipement fourni', 'Flexible'],
+      icon: '🏠'
     },
     {
       id: 2,
-      name: t('map.locations.park.name', 'Parc des Tuileries'),
-      address: t('map.locations.park.address', 'Place de la Concorde, 75001 Paris'),
-      type: t('map.locations.park.type', 'Entraînement en extérieur'),
-      features: t('map.locations.park.features', ['Training outdoor', 'Course à pied', 'Exercices fonctionnels']),
-      icon: '🌳'
+      name: 'Plages de Cannes',
+      address: 'Boulevard de la Croisette, Cannes',
+      type: 'Entraînement en extérieur',
+      features: ['Vue mer', 'Air pur', 'Sable fin', 'Lever de soleil'],
+      icon: '🏖️'
     },
     {
       id: 3,
-      name: t('map.locations.home.name', 'Coaching à domicile'),
-      address: t('map.locations.home.address', 'Paris & Région Parisienne'),
-      type: t('map.locations.home.type', 'Déplacement à domicile'),
-      features: t('map.locations.home.features', ['Chez vous', 'Équipement fourni', 'Flexible']),
-      icon: '🏠'
+      name: 'Parc de la Croix des Gardes',
+      address: 'Parc de la Croix des Gardes, Cannes',
+      type: 'Entraînement nature',
+      features: ['Parcours trail', 'Vue panoramique', 'Air pur', 'Exercices fonctionnels'],
+      icon: '🌳'
+    },
+    {
+      id: 4,
+      name: 'Port de Cannes',
+      address: 'Vieux Port, Cannes',
+      type: 'Entraînement urbain',
+      features: ['Quais aménagés', 'Course à pied', 'Stretching', 'Ambiance maritime'],
+      icon: '⛵'
     }
   ];
 
-  // URL Google Maps avec marqueurs multiples pour Paris
-  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.9185499491!2d2.2646349503906246!3d48.85893740314273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sfr!2sfr!4v1643900000000!5m2!1sfr!2sfr";
+  // URL Google Maps avec marqueurs multiples pour Cannes
+  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23277.826205949473!2d7.001640947265624!3d43.552847836840944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce812c78f12c2d%3A0x408ab2ae4bb21b0!2sCannes%2C%20France!5e0!3m2!1sfr!2sfr!4v1643900000000!5m2!1sfr!2sfr";
 
   return (
     <div className={`space-y-6 ${className}`}>
@@ -167,10 +175,10 @@ export const Map = memo(({ className = '', height = '400px' }) => {
               {t('map.travel.title', 'Zone de déplacement')}
             </h4>
             <p className="text-sm text-blue-800 dark:text-blue-400 mb-3">
-              {t('map.travel.description', 'Je me déplace dans toute la région parisienne pour les séances à domicile. Rayon de déplacement jusqu\'à 30km autour de Paris.')}
+              Je me déplace dans toute la Côte d'Azur pour les séances à domicile. Rayon de déplacement jusqu'à 30km autour de Cannes.
             </p>
             <div className="flex flex-wrap gap-2">
-              {['Paris', 'Boulogne', 'Neuilly', 'Levallois', 'Vincennes', 'Montreuil'].map((city) => (
+              {['Cannes', 'Nice', 'Antibes', 'Juan-les-Pins', 'Mougins', 'Grasse'].map((city) => (
                 <span key={city} className="px-2 py-1 bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">
                   {city}
                 </span>

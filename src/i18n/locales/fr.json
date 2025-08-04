@@ -232,10 +232,10 @@
         "features": ["Training outdoor", "Course à pied", "Exercices fonctionnels"]
       },
       "home": {
-        "name": "Coaching à domicile",
-        "address": "Côte d'Azur",
-        "type": "Déplacement à domicile",
-        "features": ["Chez vous", "Équipement fourni", "Flexible"]
+              "name": "Coaching à domicile",
+      "address": "Cannes et environs",
+      "type": "Déplacement à domicile",
+      "features": ["Chez vous", "Équipement fourni", "Flexible"]
       }
     }
   },
