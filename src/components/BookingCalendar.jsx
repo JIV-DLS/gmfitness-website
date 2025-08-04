@@ -28,7 +28,7 @@ const BookingCalendar = memo(() => {
   ];
 
   // Suggestions pour les notes
-  const notesSuggestions = t('booking.notesSuggestions', [
+  const notesSuggestions = [
     "🎯 Objectif de remise en forme",
     "🏃‍♀️ Préparation d'un événement",
     "💪 Gain de masse musculaire",
@@ -39,7 +39,7 @@ const BookingCalendar = memo(() => {
     "👥 Séance en couple/famille",
     "🏋️ Découverte musculation",
     "🍎 Conseils nutrition inclus"
-  ]);
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -200,7 +200,7 @@ const BookingCalendar = memo(() => {
               <div className="mb-3">
                 <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{t('booking.client.suggestions')}</p>
                 <div className="flex flex-wrap gap-2">
-                  {notesSuggestions.map((suggestion, index) => (
+                  {notesSuggestions && notesSuggestions.length > 0 && notesSuggestions.map((suggestion, index) => (
                     <button
                       key={index}
                       type="button"
