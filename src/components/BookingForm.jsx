@@ -118,13 +118,13 @@ export default function BookingForm() {
           <div className="relative">
             <iframe
               src="https://forms.fillout.com/t/c24LK1RZ97us"
-              className="w-full h-[1200px] border-0"
+              className="w-full h-[1300px] border-0"
               frameBorder="0"
               title="Réservation de séance avec Gilson Mendes - Coach Sportif Côte d'Azur"
               allowFullScreen
               loading="lazy"
               style={{ 
-                minHeight: '1200px',
+                minHeight: '1300px',
                 overflow: 'hidden'
               }}
             />
