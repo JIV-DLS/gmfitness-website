@@ -9,12 +9,12 @@ export default function BookingForm() {
   return (
     <section
       id="booking"
-      className="min-h-screen bg-gradient-to-br from-azure-50 via-ocean-50 to-mediterranean-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-4"
+      className="min-h-screen bg-gradient-to-br from-azure-50 via-ocean-50 to-mediterranean-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-4"
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -33,7 +33,7 @@ export default function BookingForm() {
 
         {/* Services Cards */}
         <motion.div
-          className="grid md:grid-cols-3 gap-6 mb-12"
+          className="grid md:grid-cols-3 gap-4 mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -97,7 +97,7 @@ export default function BookingForm() {
           </div>
         </motion.div>
 
-        {/* Fillout Booking Form */}
+        {/* Fillout Booking Form - Full Screen */}
         <motion.div
           className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700"
           initial={{ opacity: 0, y: 30 }}
@@ -105,24 +105,28 @@ export default function BookingForm() {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-r from-azure-500 to-ocean-500 p-6 text-white">
-            <h3 className="text-2xl font-bold mb-2">
+          <div className="bg-gradient-to-r from-azure-500 to-ocean-500 p-4 text-white">
+            <h3 className="text-xl font-bold mb-1">
               📅 Planifiez votre séance
             </h3>
-            <p className="text-azure-100">
+            <p className="text-azure-100 text-sm">
               Sélectionnez vos préférences et trouvez le créneau parfait
             </p>
           </div>
           
-          <div className="p-8">
-            {/* Fillout booking form */}
+          {/* Fillout booking form - No padding for full width */}
+          <div className="relative">
             <iframe
               src="https://forms.fillout.com/t/c24LK1RZ97us"
-              className="w-full h-[800px] border-0 rounded-xl"
+              className="w-full h-[1000px] border-0"
               frameBorder="0"
               title="Réservation de séance avec Gilson Mendes - Coach Sportif Côte d'Azur"
               allowFullScreen
               loading="lazy"
+              style={{ 
+                minHeight: '1000px',
+                overflow: 'hidden'
+              }}
             />
           </div>
         </motion.div>
