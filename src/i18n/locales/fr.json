@@ -96,9 +96,9 @@
   "about": {
     "title": "À Propos de",
     "titleHighlight": "Moi",
-    "name": "Guillaume Martin",
+    "name": "Gilson Mendes",
     "role": "Coach Sportif Diplômé",
-    "location": "Paris & Région Parisienne",
+    "location": "Côte d'Azur",
     "availability": "Disponible 7j/7",
     "hours": "6h - 21h",
     "bio": {
@@ -175,7 +175,7 @@
       "title": "Informations de Contact",
       "location": {
         "title": "Localisation",
-        "lines": ["Paris & Région Parisienne", "Déplacements possibles"]
+        "lines": ["Côte d'Azur", "Déplacements possibles"]
       },
       "phone": {
         "title": "Téléphone",
@@ -233,7 +233,7 @@
       },
       "home": {
         "name": "Coaching à domicile",
-        "address": "Paris & Région Parisienne",
+        "address": "Côte d'Azur",
         "type": "Déplacement à domicile",
         "features": ["Chez vous", "Équipement fourni", "Flexible"]
       }
@@ -241,7 +241,7 @@
   },
   "footer": {
     "description": "Votre coach sportif professionnel pour une transformation durable. Ensemble, atteignons vos objectifs de forme et de bien-être.",
-    "location": "Paris & Région Parisienne",
+    "location": "Côte d'Azur",
     "phone": "+33 6 XX XX XX XX",
     "email": "gilson.mendes.coach@gmail.com",
     "sections": {
