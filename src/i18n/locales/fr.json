@@ -179,11 +179,11 @@
       },
       "phone": {
         "title": "Téléphone",
-        "lines": ["+33 6 XX XX XX XX", "Appels & WhatsApp"]
+        "lines": ["06 17 04 35 99", "Appels & WhatsApp"]
       },
       "email": {
         "title": "Email", 
-        "lines": ["contact@gmfitness.fr", "Réponse sous 24h"]
+        "lines": ["gilson.mendes.coach@gmail.com", "Réponse sous 24h"]
       },
       "hours": {
         "title": "Horaires",
@@ -243,7 +243,7 @@
     "description": "Votre coach sportif professionnel pour une transformation durable. Ensemble, atteignons vos objectifs de forme et de bien-être.",
     "location": "Paris & Région Parisienne",
     "phone": "+33 6 XX XX XX XX",
-    "email": "contact@gmfitness.fr",
+    "email": "gilson.mendes.coach@gmail.com",
     "sections": {
       "services": "Services",
       "navigation": "Navigation",

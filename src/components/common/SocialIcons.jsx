@@ -25,35 +25,35 @@ export const SocialIcons = ({
     facebook: {
       icon: FaFacebookF,
       label: 'Facebook',
-      href: 'https://facebook.com/gmfitness',
+      href: 'https://facebook.com/gilsonmendes.coach',
       color: 'hover:bg-blue-600',
       bgColor: 'bg-blue-600'
     },
     instagram: {
       icon: FaInstagram,
       label: 'Instagram',
-      href: 'https://instagram.com/gmfitness',
+      href: 'https://instagram.com/gilsonmendes_coach',
       color: 'hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500',
       bgColor: 'bg-gradient-to-r from-purple-500 to-pink-500'
     },
     whatsapp: {
       icon: FaWhatsapp,
       label: 'WhatsApp',
-      href: 'https://wa.me/33600000000?text=Bonjour, je souhaite avoir des informations sur vos services de coaching',
+      href: 'https://wa.me/33617043599?text=Bonjour, je souhaite avoir des informations sur vos services de coaching',
       color: 'hover:bg-green-500',
       bgColor: 'bg-green-500'
     },
     twitter: {
       icon: FaTwitter,
       label: 'Twitter',
-      href: 'https://twitter.com/gmfitness',
+      href: 'https://twitter.com/gilsonmendes_coach',
       color: 'hover:bg-blue-400',
       bgColor: 'bg-blue-400'
     },
     youtube: {
       icon: FaYoutube,
       label: 'YouTube',
-      href: 'https://youtube.com/@gmfitness',
+      href: 'https://youtube.com/@gilsonmendes_coach',
       color: 'hover:bg-red-600',
       bgColor: 'bg-red-600'
     },
@@ -145,7 +145,7 @@ export const WhatsAppFloat = ({
   message = "Bonjour, je souhaite avoir des informations sur vos services de coaching",
   className = ''
 }) => {
-  const phoneNumber = "33600000000"; // À remplacer par le vrai numéro
+  const phoneNumber = "33617043599"; // Gilson Mendes - 06 17 04 35 99
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
