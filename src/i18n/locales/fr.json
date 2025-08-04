@@ -108,12 +108,12 @@
     },
     "achievements": {
       "certifications": {
-        "title": "Certifications",
-        "items": ["BPJEPS AGFF", "Crossfit Level 1", "Nutrition Sportive"]
+        "title": "🎓 Formations",
+        "items": ["Licence en psychologie", "Formations en yoga et Pilates", "BPJEPS Activités de la Forme"]
       },
       "specializations": {
-        "title": "Spécialisations", 
-        "items": ["Perte de poids", "Prise de masse", "Préparation physique", "Rééducation"]
+        "title": "💪 Spécialités", 
+        "items": ["Renforcement musculaire", "Mobilité", "Pilates & yoga", "Méditation", "Coaching mental"]
       },
       "philosophy": {
         "title": "Philosophie",
