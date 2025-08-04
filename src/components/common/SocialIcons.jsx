@@ -162,15 +162,6 @@ export const WhatsAppFloat = ({
       title="Contactez-nous sur WhatsApp"
     >
       <FaWhatsapp className="text-white text-xl" />
-      
-      {/* Notification pulse */}
-      <motion.div
-        className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      >
-        <span className="text-white text-xs font-bold">!</span>
-      </motion.div>
     </motion.a>
   );
 };
