@@ -9,12 +9,12 @@ export default function BookingForm() {
   return (
     <section
       id="booking"
-      className="min-h-screen bg-gradient-to-br from-azure-50 via-ocean-50 to-mediterranean-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-4"
+      className="min-h-screen bg-gradient-to-br from-azure-50 via-ocean-50 to-mediterranean-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-4 px-4"
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
-          className="text-center mb-8"
+          className="text-center mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -33,14 +33,14 @@ export default function BookingForm() {
 
         {/* Services Cards */}
         <motion.div
-          className="grid md:grid-cols-3 gap-4 mb-8"
+          className="grid md:grid-cols-3 gap-3 mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
           {/* Coaching Individuel */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
             <div className="text-center">
               <div className="text-4xl mb-4">🏋️‍♂️</div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
@@ -59,7 +59,7 @@ export default function BookingForm() {
           </div>
 
           {/* Coaching Collectif */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
             <div className="text-center">
               <div className="text-4xl mb-4">👥</div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
@@ -78,7 +78,7 @@ export default function BookingForm() {
           </div>
 
           {/* Séance Découverte */}
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-6 shadow-lg border-2 border-green-200 dark:border-green-700 hover:shadow-xl transition-all duration-300">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-4 shadow-lg border-2 border-green-200 dark:border-green-700 hover:shadow-xl transition-all duration-300">
             <div className="text-center">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
@@ -118,13 +118,13 @@ export default function BookingForm() {
           <div className="relative">
             <iframe
               src="https://forms.fillout.com/t/c24LK1RZ97us"
-              className="w-full h-[1000px] border-0"
+              className="w-full h-[1400px] border-0"
               frameBorder="0"
               title="Réservation de séance avec Gilson Mendes - Coach Sportif Côte d'Azur"
               allowFullScreen
               loading="lazy"
               style={{ 
-                minHeight: '1000px',
+                minHeight: '1400px',
                 overflow: 'hidden'
               }}
             />
