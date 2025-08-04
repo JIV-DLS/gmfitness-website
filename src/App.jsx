@@ -11,7 +11,7 @@ const Hero = React.lazy(() => import('./components/Hero'));
 const Services = React.lazy(() => import('./components/Services'));
 const About = React.lazy(() => import('./components/About'));
 const TestimonialsSection = React.lazy(() => import('./components/testimonials/TestimonialsSection'));
-const BookingCalendar = React.lazy(() => import('./components/BookingCalendar'));
+const BookingForm = React.lazy(() => import('./components/BookingForm'));
 
 const Contact = React.lazy(() => import('./components/Contact'));
 const Footer = React.lazy(() => import('./components/Footer'));
@@ -84,7 +84,7 @@ function App() {
                 <LoadingSpinner message="Chargement des réservations..." />
               </div>
             }>
-              <BookingCalendar />
+              <BookingForm />
             </Suspense>
 
             <Suspense fallback={
