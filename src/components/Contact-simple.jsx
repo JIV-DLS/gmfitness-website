@@ -12,7 +12,7 @@ const Contact = () => {
     message: ''
   });
   
-  const [status, setStatus] = useState('idle'); // idle, submitting, success, error
+  const [status, setStatus] = useState('idle');
   const [errors, setErrors] = useState({});
   const [selectedObjectives, setSelectedObjectives] = useState([]);
 
@@ -35,17 +35,17 @@ const Contact = () => {
   const validateForm = () => {
     const newErrors = {};
     
-    if (!formData.name || !formData.name.trim()) {
+    if (!formData.name?.trim()) {
       newErrors.name = 'Ce champ est requis';
     }
     
-    if (!formData.email || !formData.email.trim()) {
+    if (!formData.email?.trim()) {
       newErrors.email = 'Ce champ est requis';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email invalide';
     }
     
-    if (!formData.phone || !formData.phone.trim()) {
+    if (!formData.phone?.trim()) {
       newErrors.phone = 'Ce champ est requis';
     }
     
@@ -53,7 +53,7 @@ const Contact = () => {
       newErrors.service = 'Ce champ est requis';
     }
     
-    if (!formData.message || !formData.message.trim()) {
+    if (!formData.message?.trim()) {
       newErrors.message = 'Ce champ est requis';
     }
     
@@ -64,20 +64,15 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (!validateForm()) {
-      return;
-    }
+    if (!validateForm()) return;
 
     setStatus('submitting');
     
     try {
-      // Simuler l'envoi du formulaire
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
       console.log('Formulaire soumis:', formData);
       setStatus('success');
       
-      // Reset form after success
       setTimeout(() => {
         setFormData({
           name: '',
@@ -133,7 +128,6 @@ const Contact = () => {
     
     setSelectedObjectives(newObjectives);
     
-    // Met à jour automatiquement le message avec les objectifs sélectionnés
     const objectiveText = newObjectives.length > 0 
       ? `Mes objectifs : ${newObjectives.join(', ')}\n\n`
       : '';
@@ -145,45 +139,6 @@ const Contact = () => {
       message: objectiveText + currentMessage
     }));
   };
-
-  const contactInfo = [
-    {
-      icon: "📍",
-      title: "Localisation", 
-      content: [
-        "Côte d'Azur",
-        "Déplacements possibles",
-        "À domicile ou en extérieur"
-      ]
-    },
-    {
-      icon: "📞",
-      title: "Téléphone",
-      content: [
-        "06 17 04 35 99",
-        "Disponible 7j/7",
-        "Réponse rapide"
-      ]
-    },
-    {
-      icon: "📱",
-      title: "Instagram",
-      content: [
-        "@gilsonmendes_coach",
-        "Conseils quotidiens",
-        "Transformations clients"
-      ]
-    },
-    {
-      icon: "⏰",
-      title: "Horaires",
-      content: [
-        "Sur rendez-vous",
-        "Flexibilité horaire",
-        "Séances adaptées"
-      ]
-    }
-  ];
 
   return (
     <section id="contact" className="section-padding bg-gradient-to-br from-ocean-50/80 to-azure-100/80 dark:from-ocean-900/80 dark:to-azure-800/80 backdrop-blur-sm">
@@ -227,7 +182,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-lg border ${
+                  className={`w-full px-3 lg:px-4 py-2 lg:py-3 rounded-lg border ${
                     errors.name 
                       ? 'border-red-500 dark:border-red-400' 
                       : 'border-gray-300 dark:border-gray-600'
@@ -247,12 +202,12 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-lg border ${
+                  className={`w-full px-3 lg:px-4 py-2 lg:py-3 rounded-lg border ${
                     errors.phone 
                       ? 'border-red-500 dark:border-red-400' 
                       : 'border-gray-300 dark:border-gray-600'
                   } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors`}
-                  placeholder="06 12 34 56 78"
+                  placeholder="+33 6 XX XX XX XX"
                 />
                 {errors.phone && <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.phone}</p>}
               </div>
@@ -267,12 +222,12 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-lg border ${
+                  className={`w-full px-3 lg:px-4 py-2 lg:py-3 rounded-lg border ${
                     errors.email 
                       ? 'border-red-500 dark:border-red-400' 
                       : 'border-gray-300 dark:border-gray-600'
                   } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors`}
-                  placeholder="votre@email.com"
+                  placeholder="votre.email@exemple.com"
                 />
                 {errors.email && <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.email}</p>}
               </div>
@@ -286,7 +241,7 @@ const Contact = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-lg border ${
+                  className={`w-full px-3 lg:px-4 py-2 lg:py-3 rounded-lg border ${
                     errors.service 
                       ? 'border-red-500 dark:border-red-400' 
                       : 'border-gray-300 dark:border-gray-600'
@@ -294,9 +249,7 @@ const Contact = () => {
                 >
                   <option value="">Sélectionnez un service</option>
                   {services.map((service, index) => (
-                    <option key={index} value={service}>
-                      {service}
-                    </option>
+                    <option key={index} value={service}>{service}</option>
                   ))}
                 </select>
                 {errors.service && <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.service}</p>}
@@ -307,40 +260,35 @@ const Contact = () => {
                   Message *
                 </label>
                 
-                {/* Suggestions d'objectifs */}
                 <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
                   <p className="text-sm font-medium text-blue-800 dark:text-blue-300 mb-3">
                     💡 Sélectionnez vos objectifs (cliquez pour ajouter) :
                   </p>
+                  
                   <div className="flex flex-wrap gap-2">
                     {commonObjectives.map((objective, index) => (
                       <button
                         key={index}
                         type="button"
                         onClick={() => handleObjectiveToggle(objective)}
-                        className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                        className={`text-xs px-3 py-1.5 rounded-full border transition-all ${
                           selectedObjectives.includes(objective)
-                            ? 'bg-primary-500 text-white shadow-md transform scale-105'
-                            : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:border-primary-300 dark:hover:border-primary-600'
+                            ? 'bg-blue-600 text-white border-blue-600'
+                            : 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-300 border-blue-300 dark:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30'
                         }`}
                       >
                         {objective}
                       </button>
                     ))}
                   </div>
-                  {selectedObjectives.length > 0 && (
-                    <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
-                      ✅ {selectedObjectives.length} objectif{selectedObjectives.length > 1 ? 's' : ''} sélectionné{selectedObjectives.length > 1 ? 's' : ''}
-                    </p>
-                  )}
                 </div>
-
+                
                 <textarea
                   id="message"
                   name="message"
-                  rows={5}
                   value={formData.message}
                   onChange={handleChange}
+                  rows={5}
                   className={`w-full px-4 py-3 rounded-lg border ${
                     errors.message 
                       ? 'border-red-500 dark:border-red-400' 
@@ -379,7 +327,7 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* Informations de contact */}
+          {/* Informations de contact - HARDCODED NO MAPPING */}
           <motion.div
             className="space-y-6 lg:space-y-8"
             initial={{ opacity: 0, x: 50 }}
@@ -391,25 +339,47 @@ const Contact = () => {
               Informations de Contact
             </h3>
 
+            {/* Contact info hardcoded - NO MAPPING */}
             <div className="grid gap-4 lg:gap-6">
-              {contactInfo && contactInfo.length > 0 && contactInfo.map((info, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start space-x-3 lg:space-x-4 p-3 lg:p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-2xl">{info.icon}</div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{info.title}</h4>
-                    {info.content && info.content.map((line, lineIndex) => (
-                      <p key={lineIndex} className="text-gray-600 dark:text-gray-300">{line}</p>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
+              <div className="flex items-start space-x-3 lg:space-x-4 p-3 lg:p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+                <div className="text-2xl">📍</div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Localisation</h4>
+                  <p className="text-gray-600 dark:text-gray-300">Côte d'Azur</p>
+                  <p className="text-gray-600 dark:text-gray-300">Déplacements possibles</p>
+                  <p className="text-gray-600 dark:text-gray-300">À domicile ou en extérieur</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3 lg:space-x-4 p-3 lg:p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+                <div className="text-2xl">📞</div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Téléphone</h4>
+                  <p className="text-gray-600 dark:text-gray-300">06 17 04 35 99</p>
+                  <p className="text-gray-600 dark:text-gray-300">Disponible 7j/7</p>
+                  <p className="text-gray-600 dark:text-gray-300">Réponse rapide</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3 lg:space-x-4 p-3 lg:p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+                <div className="text-2xl">📱</div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Instagram</h4>
+                  <p className="text-gray-600 dark:text-gray-300">@gilsonmendes_coach</p>
+                  <p className="text-gray-600 dark:text-gray-300">Conseils quotidiens</p>
+                  <p className="text-gray-600 dark:text-gray-300">Transformations clients</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3 lg:space-x-4 p-3 lg:p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+                <div className="text-2xl">⏰</div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Horaires</h4>
+                  <p className="text-gray-600 dark:text-gray-300">Sur rendez-vous</p>
+                  <p className="text-gray-600 dark:text-gray-300">Flexibilité horaire</p>
+                  <p className="text-gray-600 dark:text-gray-300">Séances adaptées</p>
+                </div>
+              </div>
             </div>
 
             <div className="bg-primary-50 dark:bg-primary-900/20 rounded-2xl p-6">
@@ -453,13 +423,7 @@ const Contact = () => {
             </p>
           </div>
           
-          <Map height="500px" className="mx-auto max-w-6xl" />
-          
-          <div className="mt-6 text-center">
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              {t('contact.map.note', '📍 Déplacements possibles dans un rayon de 30km autour de Paris')}
-            </p>
-          </div>
+          <Map />
         </motion.div>
       </div>
     </section>
