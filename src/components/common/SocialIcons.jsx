@@ -92,7 +92,7 @@ export const SocialIcons = ({
       default:
         return {
           container: 'flex space-x-4',
-          button: 'px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 dark:bg-gray-600 dark:hover:bg-gray-500',
+          button: 'px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 border border-gray-200 dark:border-gray-500',
           icon: 'text-lg',
           text: 'text-sm'
         };
@@ -116,17 +116,21 @@ export const SocialIcons = ({
             target="_blank"
             rel="noopener noreferrer"
             className={`${styles.button} flex items-center justify-center transition-all duration-300 ${
-              variant === 'footer' ? social.color : ''
+              variant === 'footer' ? social.color : `${social.color} group`
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             title={social.label}
           >
             <IconComponent className={`${styles.icon} ${
-              variant === 'footer' ? 'text-white' : 'text-white'
+              variant === 'footer' 
+                ? 'text-white' 
+                : variant === 'default'
+                  ? 'text-gray-600 dark:text-white group-hover:text-white'
+                  : 'text-white'
             }`} />
             {showLabels && variant === 'default' && (
-              <span className={`ml-2 ${styles.text} text-white font-medium`}>
+              <span className={`ml-2 ${styles.text} text-gray-600 dark:text-white group-hover:text-white font-medium`}>
                 {social.label}
               </span>
             )}
