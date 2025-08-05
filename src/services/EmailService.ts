@@ -54,7 +54,7 @@ export class EmailJSProvider implements EmailProvider {
         this.coachTemplateId,
         {
           ...templateParams,
-          to_email: 'votre-email@gmail.com' // Remplacez par votre email
+          to_email: 'gilson.mendes@gmail.com' // Votre email de réception
         },
         this.publicKey
       );
