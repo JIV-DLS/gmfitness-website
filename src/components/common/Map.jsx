@@ -14,7 +14,7 @@ export const Map = memo(({ className = '', height = '400px' }) => {
     {
       id: 1,
       name: 'Coaching à domicile',
-      address: 'Mouans-Sartoux et environs',
+      address: 'Côte d\'Azur (Mouans-Sartoux, Cannes et environs)',
       type: 'Déplacement à domicile',
       features: ['Chez vous', 'Équipement fourni', 'Flexible'],
       icon: '🏠'
@@ -29,6 +29,14 @@ export const Map = memo(({ className = '', height = '400px' }) => {
     },
     {
       id: 3,
+      name: 'Plages de Cannes',
+      address: 'Boulevard de la Croisette, Cannes',
+      type: 'Entraînement en extérieur',
+      features: ['Vue mer', 'Air pur', 'Sable fin', 'Lever de soleil'],
+      icon: '🏖️'
+    },
+    {
+      id: 4,
       name: 'Sophia Antipolis',
       address: 'Technopole Sophia Antipolis',
       type: 'Entraînement urbain',
@@ -36,7 +44,15 @@ export const Map = memo(({ className = '', height = '400px' }) => {
       icon: '🏢'
     },
     {
-      id: 4,
+      id: 5,
+      name: 'Parc de la Croix des Gardes',
+      address: 'Parc de la Croix des Gardes, Cannes',
+      type: 'Entraînement nature',
+      features: ['Parcours trail', 'Vue panoramique', 'Air pur', 'Exercices fonctionnels'],
+      icon: '🌳'
+    },
+    {
+      id: 6,
       name: 'Grasse Centre',
       address: 'Jardins publics de Grasse',
       type: 'Entraînement en ville',
@@ -175,10 +191,10 @@ export const Map = memo(({ className = '', height = '400px' }) => {
               {t('map.travel.title', 'Zone de déplacement')}
             </h4>
             <p className="text-sm text-blue-800 dark:text-blue-400 mb-3">
-              Je me déplace dans toute la Côte d'Azur pour les séances à domicile. Rayon de déplacement jusqu'à 30km autour de Mouans-Sartoux.
+              Je me déplace dans toute la Côte d'Azur pour les séances à domicile. Zone de couverture étendue entre Mouans-Sartoux et Cannes.
             </p>
             <div className="flex flex-wrap gap-2">
-              {['Mouans-Sartoux', 'Grasse', 'Valbonne', 'Sophia Antipolis', 'Mougins', 'Antibes'].map((city) => (
+              {['Mouans-Sartoux', 'Cannes', 'Grasse', 'Valbonne', 'Sophia Antipolis', 'Mougins', 'Antibes', 'Juan-les-Pins'].map((city) => (
                 <span key={city} className="px-2 py-1 bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">
                   {city}
                 </span>
