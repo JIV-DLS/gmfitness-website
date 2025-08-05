@@ -62,7 +62,7 @@ export const Map = memo(({ className = '', height = '400px' }) => {
   ];
 
   // URL Google Maps centrée sur Mouans-Sartoux (06370) - Coordonnées exactes : 43.625752246186416, 6.975112390360447
-  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11583.5!2d6.975112390360447!3d43.625752246186416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0176720f227%3A0x40819a5fd970220!2s06370%20Mouans-Sartoux%2C%20France!5e0!3m2!1sfr!2sfr!4v1643900000000!5m2!1sfr!2sfr";
+  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.9999999999995!2d6.973112390360447!3d43.623752246186416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd016bf9ee47d%3A0x4e8beb13b2b98de7!2sMouans-Sartoux%2C%20France!5e0!3m2!1sfr!2sfr!4v1699000000000!5m2!1sfr!2sfr";
 
   return (
     <div className={`space-y-6 ${className}`}>
