@@ -14,39 +14,39 @@ export const Map = memo(({ className = '', height = '400px' }) => {
     {
       id: 1,
       name: 'Coaching à domicile',
-      address: 'Cannes et environs',
+      address: 'Mouans-Sartoux et environs',
       type: 'Déplacement à domicile',
       features: ['Chez vous', 'Équipement fourni', 'Flexible'],
       icon: '🏠'
     },
     {
       id: 2,
-      name: 'Plages de Cannes',
-      address: 'Boulevard de la Croisette, Cannes',
-      type: 'Entraînement en extérieur',
-      features: ['Vue mer', 'Air pur', 'Sable fin', 'Lever de soleil'],
-      icon: '🏖️'
+      name: 'Parc de la Valmasque',
+      address: 'Parc départemental de la Valmasque, Valbonne',
+      type: 'Entraînement nature',
+      features: ['Forêt', 'Parcours trail', 'Air pur', 'Exercices fonctionnels'],
+      icon: '🌲'
     },
     {
       id: 3,
-      name: 'Parc de la Croix des Gardes',
-      address: 'Parc de la Croix des Gardes, Cannes',
-      type: 'Entraînement nature',
-      features: ['Parcours trail', 'Vue panoramique', 'Air pur', 'Exercices fonctionnels'],
-      icon: '🌳'
+      name: 'Sophia Antipolis',
+      address: 'Technopole Sophia Antipolis',
+      type: 'Entraînement urbain',
+      features: ['Espaces verts', 'Course à pied', 'Stretching', 'Zone moderne'],
+      icon: '🏢'
     },
     {
       id: 4,
-      name: 'Port de Cannes',
-      address: 'Vieux Port, Cannes',
-      type: 'Entraînement urbain',
-      features: ['Quais aménagés', 'Course à pied', 'Stretching', 'Ambiance maritime'],
-      icon: '⛵'
+      name: 'Grasse Centre',
+      address: 'Jardins publics de Grasse',
+      type: 'Entraînement en ville',
+      features: ['Parcs urbains', 'Air parfumé', 'Vue panoramique', 'Accessibilité'],
+      icon: '🌸'
     }
   ];
 
-  // URL Google Maps avec marqueurs multiples pour Cannes
-  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23277.826205949473!2d7.001640947265624!3d43.552847836840944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce812c78f12c2d%3A0x408ab2ae4bb21b0!2sCannes%2C%20France!5e0!3m2!1sfr!2sfr!4v1643900000000!5m2!1sfr!2sfr";
+  // URL Google Maps avec marqueurs multiples pour Mouans-Sartoux
+  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23169.472934719458!2d6.966540547265624!3d43.615023836840944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0176720f227%3A0x40819a5fd970220!2s06370%20Mouans-Sartoux%2C%20France!5e0!3m2!1sfr!2sfr!4v1643900000000!5m2!1sfr!2sfr";
 
   return (
     <div className={`space-y-6 ${className}`}>
@@ -175,10 +175,10 @@ export const Map = memo(({ className = '', height = '400px' }) => {
               {t('map.travel.title', 'Zone de déplacement')}
             </h4>
             <p className="text-sm text-blue-800 dark:text-blue-400 mb-3">
-              Je me déplace dans toute la Côte d'Azur pour les séances à domicile. Rayon de déplacement jusqu'à 30km autour de Cannes.
+              Je me déplace dans toute la Côte d'Azur pour les séances à domicile. Rayon de déplacement jusqu'à 30km autour de Mouans-Sartoux.
             </p>
             <div className="flex flex-wrap gap-2">
-              {['Cannes', 'Nice', 'Antibes', 'Juan-les-Pins', 'Mougins', 'Grasse'].map((city) => (
+              {['Mouans-Sartoux', 'Grasse', 'Valbonne', 'Sophia Antipolis', 'Mougins', 'Antibes'].map((city) => (
                 <span key={city} className="px-2 py-1 bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">
                   {city}
                 </span>
