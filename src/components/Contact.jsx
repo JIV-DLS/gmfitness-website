@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Map } from '@/components/common/Map';
 import { SocialIcons } from '@/components/common/SocialIcons';
+import { EmailService } from '@/services/EmailService';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -71,27 +72,39 @@ const Contact = () => {
     setStatus('submitting');
     
     try {
-      // Simuler l'envoi du formulaire
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      console.log('📧 Envoi réel EmailJS avec:', formData);
       
-      console.log('Formulaire soumis:', formData);
-      setStatus('success');
+      // VRAI ENVOI EMAILJS - Plus de simulation !
+      const emailService = EmailService.getInstance();
+      const result = await emailService.sendContactEmail(formData);
       
-      // Reset form after success
-      setTimeout(() => {
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          service: '',
-          message: ''
-        });
-        setSelectedObjectives([]);
-        setStatus('idle');
-      }, 3000);
+      if (result.success) {
+        console.log('✅ Emails envoyés avec succès:', result);
+        setStatus('success');
+        
+        // Reset form after success
+        setTimeout(() => {
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            service: '',
+            message: ''
+          });
+          setSelectedObjectives([]);
+          setStatus('idle');
+        }, 3000);
+      } else {
+        console.error('❌ Erreur EmailJS:', result.error);
+        setStatus('error');
+        
+        setTimeout(() => {
+          setStatus('idle');
+        }, 3000);
+      }
       
     } catch (error) {
-      console.error('Erreur:', error);
+      console.error('❌ Erreur complète:', error);
       setStatus('error');
       
       setTimeout(() => {
