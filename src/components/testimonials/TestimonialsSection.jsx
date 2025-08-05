@@ -185,7 +185,7 @@ const TestimonialsSection = memo(({
       featured: false
     },
     {
-      id: 6,
+      id: 12,
       client: {
         name: 'Marie Leroy',
         age: 42,
