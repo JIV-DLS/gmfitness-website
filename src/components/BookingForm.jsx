@@ -27,7 +27,7 @@ export default function BookingForm() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Choisissez votre créneau et type de séance. Coaching personnalisé sur la Côte d'Azur.
+            Choisissez votre créneau et type de séance. Première séance découverte gratuite !
           </p>
         </motion.div>
 

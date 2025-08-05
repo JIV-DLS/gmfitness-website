@@ -10,42 +10,81 @@ export interface EmailProvider {
 }
 
 /**
- * Provider pour EmailJS
+ * Provider pour EmailJS - REAL IMPLEMENTATION
  */
 export class EmailJSProvider implements EmailProvider {
   private serviceId: string;
-  private templateId: string;
+  private coachTemplateId: string;
+  private clientTemplateId: string;
   private publicKey: string;
 
-  constructor(serviceId: string, templateId: string, publicKey: string) {
+  constructor(serviceId: string, coachTemplateId: string, clientTemplateId: string, publicKey: string) {
     this.serviceId = serviceId;
-    this.templateId = templateId;
+    this.coachTemplateId = coachTemplateId;
+    this.clientTemplateId = clientTemplateId;
     this.publicKey = publicKey;
   }
 
   async sendEmail(data: ContactFormData): Promise<ApiResponse> {
     try {
-      // Simulation EmailJS - remplacer par vraie implémentation
-      console.log('Envoi via EmailJS:', data);
+      // Import EmailJS dynamically
+      const emailjs = await import('@emailjs/browser');
       
-      // Simule un délai réseau
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Simule succès/échec aléatoire pour demo
-      const success = Math.random() > 0.2; // 80% de succès
-      
-      if (success) {
-        return {
-          success: true,
-          message: 'Email envoyé avec succès via EmailJS'
-        };
-      } else {
-        throw new Error('Erreur simulation EmailJS');
-      }
+      console.log('📧 Envoi real EmailJS avec:', {
+        service: this.serviceId,
+        coachTemplate: this.coachTemplateId,
+        clientTemplate: this.clientTemplateId,
+        data: { name: data.name, email: data.email, service: data.service }
+      });
+
+      // Préparer les données pour les templates
+      const templateParams = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        service: data.service,
+        message: data.message,
+        date: new Date().toLocaleDateString('fr-FR'),
+        time: new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
+      };
+
+      // Envoi 1: Email au coach (notification)
+      const coachResult = await emailjs.default.send(
+        this.serviceId,
+        this.coachTemplateId,
+        {
+          ...templateParams,
+          to_email: 'votre-email@gmail.com' // Remplacez par votre email
+        },
+        this.publicKey
+      );
+
+      console.log('✅ Email coach envoyé:', coachResult);
+
+      // Envoi 2: Auto-reply au client
+      const clientResult = await emailjs.default.send(
+        this.serviceId,
+        this.clientTemplateId,
+        templateParams,
+        this.publicKey
+      );
+
+      console.log('✅ Email client envoyé:', clientResult);
+
+      return {
+        success: true,
+        message: '📧 Emails envoyés avec succès ! Coach notifié + Client confirmé.',
+        data: {
+          coachEmailId: coachResult.text,
+          clientEmailId: clientResult.text
+        }
+      };
+
     } catch (error) {
+      console.error('❌ Erreur EmailJS:', error);
       return {
         success: false,
-        error: error instanceof Error ? error.message : 'Erreur inconnue'
+        error: error instanceof Error ? error.message : 'Erreur EmailJS inconnue'
       };
     }
   }
@@ -140,8 +179,13 @@ export class EmailService {
   public static getInstance(provider?: EmailProvider): EmailService {
     if (!EmailService.instance) {
       if (!provider) {
-        // Provider par défaut - simulation
-        provider = new EmailJSProvider('', '', '');
+        // Provider par défaut - REAL EmailJS avec vos clés
+        provider = new EmailJSProvider(
+          'service_kkc0gz7',        // Votre Service ID
+          'template_cw3v3oy',       // Template coach (notification)
+          'template_zjtnp3j',       // Template client (auto-reply)
+          'JYVZuZEWM9bElEb_B'       // Votre Public Key
+        );
       }
       EmailService.instance = new EmailService(provider);
     }

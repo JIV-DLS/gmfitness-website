@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation - Votre séance découverte gratuite</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8fafc;
+            padding: 20px;
+        }
+        .container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        .content {
+            background: white;
+            padding: 30px 20px;
+        }
+        .welcome-badge {
+            background: #48bb78;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .message-section {
+            background: #f7fafc;
+            border-left: 4px solid #4299e1;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .message-section h3 {
+            margin: 0 0 10px 0;
+            color: #2d3748;
+            font-size: 18px;
+        }
+        .message-section p {
+            margin: 0 0 10px 0;
+            color: #4a5568;
+        }
+        .next-steps {
+            background: #edf2f7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .next-steps h3 {
+            margin: 0 0 15px 0;
+            color: #2d3748;
+            font-size: 18px;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .step-number {
+            background: #4299e1;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 12px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .step-content {
+            color: #4a5568;
+        }
+        .contact-info {
+            background: #2d3748;
+            color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .contact-info h3 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+        }
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .contact-btn {
+            background: #4299e1;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact-btn:hover {
+            background: #3182ce;
+        }
+        .whatsapp-btn {
+            background: #25d366;
+        }
+        .whatsapp-btn:hover {
+            background: #1da851;
+        }
+        .phone-btn {
+            background: #38a169;
+        }
+        .phone-btn:hover {
+            background: #2f855a;
+        }
+        .testimonial {
+            background: #fef5e7;
+            border: 1px solid #f6e05e;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+            text-align: center;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            margin-top: 10px;
+            color: #744210;
+        }
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #90cdf4;
+            text-decoration: none;
+        }
+        .social-links {
+            margin: 15px 0;
+        }
+        .social-links a {
+            color: #90cdf4;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .content, .header, .footer {
+                padding: 20px 15px;
+            }
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-btn {
+                width: 200px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>✅ Demande Bien Reçue !</h1>
+            <p>Votre séance découverte gratuite</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Auto-Reply Notice -->
+            <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 15px; margin-bottom: 20px; text-align: center;">
+                <p style="margin: 0; color: #856404; font-weight: 600;">
+                    🤖 <strong>Email automatique de confirmation</strong>
+                </p>
+                <p style="margin: 5px 0 0 0; color: #856404; font-size: 14px;">
+                    Vous recevrez mon contact personnel par <strong>téléphone ou email dans les 2 heures</strong>
+                </p>
+            </div>
+
+            <div class="welcome-badge">🎉 Bienvenue {{name}} !</div>
+            
+            <div class="message-section">
+                <h3>🙏 Merci pour votre confiance</h3>
+                <p>Bonjour <strong>{{name}}</strong>,</p>
+                <p>J'ai bien reçu votre demande de séance découverte gratuite pour <strong>{{service}}</strong>.</p>
+                <p>Je suis ravi de pouvoir vous accompagner dans l'atteinte de vos objectifs de transformation physique et bien-être sur la Côte d'Azur.</p>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="next-steps">
+                <h3>📋 Prochaines étapes</h3>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Contact personnel dans les 2h</strong><br>
+                        Je vous appelle directement ou vous envoie un email personnalisé pour analyser vos objectifs et vous proposer 2-3 créneaux pour votre séance découverte.
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Planification de votre séance (60 min)</strong><br>
+                        • Bilan physique complet<br>
+                        • Évaluation de vos objectifs<br>
+                        • Programme personnalisé<br>
+                        • Conseils nutrition
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>Début de votre transformation</strong><br>
+                        Si vous êtes satisfait(e), nous démarrons votre programme sur-mesure.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial -->
+            <div class="testimonial">
+                "La séance découverte m'a permis de comprendre exactement ce dont j'avais besoin. Gilson a su adapter son approche à mes objectifs. Résultat : -8kg en 3 mois !"
+                <div class="testimonial-author">- Sophie, 34 ans, Cannes</div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>📱 Vous préférez me contacter directement ?</h3>
+                <p>Pas besoin d'attendre ! Vous pouvez me joindre immédiatement :</p>
+                
+                <div class="contact-buttons">
+                    <a href="https://wa.me/33617043599?text=Bonjour Gilson, j'ai reçu votre email concernant ma séance découverte. Je souhaite..." class="contact-btn whatsapp-btn">
+                        💬 WhatsApp
+                    </a>
+                    <a href="tel:+33617043599" class="contact-btn phone-btn">
+                        📞 06 17 04 35 99
+                    </a>
+                    <a href="mailto:gilson@gmfitness.fr?subject=Séance découverte - {{name}}" class="contact-btn">
+                        📧 Email
+                    </a>
+                </div>
+                
+                <p style="margin-top: 15px; font-size: 12px; opacity: 0.8;">
+                    📞 Je vous appelle sous 2h • 📧 Ou répondez à cet email<br>
+                    Disponible 7j/7 de 6h à 21h
+                </p>
+            </div>
+
+            <!-- Additional Info -->
+            <div style="background: #e6fffa; border: 1px solid #81e6d9; border-radius: 8px; padding: 15px; margin: 20px 0;">
+                <h4 style="margin: 0 0 10px 0; color: #234e52;">🎁 Votre séance découverte inclut :</h4>
+                <ul style="margin: 0; padding-left: 20px; color: #2c7a7b;">
+                    <li>Évaluation physique complète (30 min)</li>
+                    <li>Définition d'objectifs réalistes</li>
+                    <li>Essai d'exercices adaptés</li>
+                    <li>Plan nutrition personnalisé</li>
+                    <li>Proposition de programme sur-mesure</li>
+                </ul>
+                <p style="margin: 10px 0 0 0; font-weight: 600; color: #234e52;">
+                    Valeur : 80€ • Gratuit pour vous !
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Gilson Mendes</strong></p>
+            <p>Coach Sportif Diplômé • Côte d'Azur</p>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/gilsonmendes_coach">📸 Instagram</a>
+                <a href="https://youtube.com/@Gilson.Mendes-Fitness">🎥 YouTube</a>
+                <a href="https://jonasvihoaleaniglo.github.io/gmfitness-website/">🌐 Site Web</a>
+            </div>
+            
+            <hr style="border: none; border-top: 1px solid #4a5568; margin: 15px 0;">
+            <p style="font-size: 12px; opacity: 0.8;">
+                🤖 Ceci est un email automatique de confirmation<br>
+                📞 Contact personnel dans les 2 heures maximum<br>
+                📍 Interventions : Cannes, Nice, Antibes, Juan-les-Pins<br>
+                🏠 Séances à domicile • 🏖️ Plages • 🌳 Parcs • 🏋️ Studios
+            </p>
+        </div>
+    </div>
+</body>
+</html>

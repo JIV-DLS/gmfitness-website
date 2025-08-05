@@ -100,32 +100,32 @@ const Hero = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h3 className="text-2xl font-bold mb-4">
-                  💪 Coach Sportif Diplômé
+                  {t('hero.freeSession.title', 'Séance Découverte Gratuite')}
                 </h3>
                 <p className="mb-6">
-                  Ancien sportif de haut niveau, passionné par la transformation physique et le bien-être sur la Côte d'Azur.
+                  {t('hero.freeSession.description', 'Évaluation complète, plan d\'entraînement personnalisé et conseils nutrition.')}
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center">
-                    <span className="mr-2">🎓</span> Licence en psychologie
+                    <span className="mr-2">✓</span> {t('hero.freeSession.features.assessment', 'Bilan physique complet')}
                   </li>
                   <li className="flex items-center">
-                    <span className="mr-2">🧘‍♂️</span> Formations yoga et Pilates
+                    <span className="mr-2">✓</span> {t('hero.freeSession.features.program', 'Programme sur-mesure')}
                   </li>
                   <li className="flex items-center">
-                    <span className="mr-2">🏋️‍♂️</span> BPJEPS Activités de la Forme
+                    <span className="mr-2">✓</span> {t('hero.freeSession.features.nutrition', 'Conseils nutrition')}
                   </li>
                   <li className="flex items-center">
-                    <span className="mr-2">🎯</span> Approche holistique corps-esprit
+                    <span className="mr-2">✓</span> {t('hero.freeSession.features.followup', 'Suivi personnalisé')}
                   </li>
                 </ul>
                 <motion.a
-                  href="#about"
+                  href="#contact"
                   className="bg-white dark:bg-gray-100 text-primary-600 dark:text-primary-700 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-200 transition-colors block text-center"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  En savoir plus
+                  {t('hero.freeSession.cta', 'Réserver Maintenant')}
                 </motion.a>
               </motion.div>
             </div>

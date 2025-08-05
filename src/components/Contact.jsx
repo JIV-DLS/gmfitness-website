@@ -413,12 +413,12 @@ const Contact = () => {
             </div>
 
             <div className="bg-primary-50 dark:bg-primary-900/20 rounded-2xl p-6">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-4">🎯 Mon Approche</h4>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-4">🎁 Offre Spéciale</h4>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Coaching personnalisé avec une approche holistique alliant performance physique et équilibre mental pour une transformation durable.
+                Première séance d'évaluation 100% gratuite pour tous les nouveaux clients. Aucun engagement, découvrez ma méthode sans risque !
               </p>
               <div className="text-sm text-gray-600 dark:text-gray-400">
-                💪 Renforcement • 🧘‍♂️ Mobilité • 🧠 Coaching mental • 🏖️ Séances outdoor
+                ⭐ Bilan complet • 📋 Plan personnalisé • 🥗 Conseils nutrition
               </div>
             </div>
 
