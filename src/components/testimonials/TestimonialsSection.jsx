@@ -14,61 +14,146 @@ const TestimonialsSection = memo(({
 
   // Données de témoignages avec avis Google authentiques
   const testimonials = [
-    // AVIS GOOGLE AUTHENTIQUES
+    // AVIS GOOGLE AUTHENTIQUES - VRAIS TÉMOIGNAGES
     {
       id: 1,
       type: 'google_review',
       client: {
-        name: 'Marie L.',
-        location: 'Mouans-Sartoux',
-        photo: '🏃‍♀️', // Emoji as placeholder for Google users
-        initials: 'ML'
+        name: 'Pierre A.',
+        location: 'Côte d\'Azur',
+        photo: '💪',
+        initials: 'PA'
       },
       rating: 5,
-      content: 'Excellent coach ! Gilson m\'a aidée à atteindre mes objectifs de remise en forme. Très professionnel et à l\'écoute. Je recommande vivement !',
+      content: 'Gilson est un super coach en plus d\'être quelqu\'un de très sympathique et attentionné. Très bon suivi et grande disponibilité, il m\'a fait progresser et dépasser mes objectifs. Je le recommande à 100 %.',
       date: '2024-10-15',
       verified: true,
       source: 'google',
-      tags: ['professionnel', 'à l\'écoute', 'recommande'],
+      tags: ['sympathique', 'suivi', 'objectifs', 'recommande'],
       featured: true
     },
     {
       id: 2,
       type: 'google_review', 
       client: {
-        name: 'Thomas D.',
-        location: 'Cannes',
-        photo: '💪',
-        initials: 'TD'
+        name: 'Martine P.',
+        location: 'Côte d\'Azur',
+        photo: '🌟',
+        initials: 'MP'
       },
       rating: 5,
-      content: 'Super séances de coaching ! Gilson sait adapter les exercices selon mes besoins. Très satisfait du suivi et des résultats obtenus.',
-      date: '2024-09-28',
+      content: 'Gilson est très sympathique et sérieux. Prend bien son temps pour expliquer les mouvements et les adapte aux personnes.',
+      date: '2024-11-15',
       verified: true,
       source: 'google',
-      tags: ['adaptation', 'suivi', 'résultats'],
+      tags: ['sympathique', 'adaptation', 'explication'],
       featured: true
     },
     {
       id: 3,
       type: 'google_review',
       client: {
-        name: 'Sophie M.',
-        location: 'Grasse',
-        photo: '🌟',
-        initials: 'SM'
+        name: 'Laetitia S.',
+        location: 'Côte d\'Azur',
+        photo: '🏃‍♀️',
+        initials: 'LS'
       },
       rating: 5,
-      content: 'Coach très compétent et motivant. Les séances sont variées et adaptées à mon niveau. Une approche holistique que j\'apprécie beaucoup.',
-      date: '2024-08-12',
+      content: 'Gilson est un coach très professionnel, sympathique, à l\'écoute. Ses cours sont dynamiques. Il s\'adapte aux personnes présentes. Il explique bien les exercices et corrige bien les postures. Je recommande.',
+      date: '2023-11-15',
       verified: true,
       source: 'google',
-      tags: ['compétent', 'motivant', 'holistique'],
+      tags: ['professionnel', 'dynamique', 'adaptation', 'postures'],
       featured: true
     },
-    // TÉMOIGNAGES DÉTAILLÉS
     {
       id: 4,
+      type: 'google_review',
+      client: {
+        name: 'Karim C.',
+        location: 'Côte d\'Azur',
+        photo: '🎯',
+        initials: 'KC'
+      },
+      rating: 5,
+      content: 'Gilson est un coach très à l\'écoute de tes envies, de tes ressentis, qui adapte ses programmes en fonction de ce que tu recherches, un suivi régulier et complet.',
+      date: '2023-08-15',
+      verified: true,
+      source: 'google',
+      tags: ['écoute', 'adaptation', 'programmes', 'suivi'],
+      featured: true
+    },
+    {
+      id: 5,
+      type: 'google_review',
+      client: {
+        name: 'Coralie J.',
+        location: 'Côte d\'Azur',
+        photo: '⭐',
+        initials: 'CJ'
+      },
+      rating: 5,
+      content: 'Gilson est un coach en or. Il est très professionnel, patient et à l\'écoute. Il surveille la bonne exécution des mouvements.',
+      date: '2023-09-15',
+      verified: true,
+      source: 'google',
+      tags: ['coach en or', 'patient', 'professionnel', 'technique'],
+      featured: true
+    },
+    {
+      id: 6,
+      type: 'google_review',
+      client: {
+        name: 'Antoine T.',
+        location: 'Côte d\'Azur',
+        photo: '🚀',
+        initials: 'AT'
+      },
+      rating: 5,
+      content: 'Coach au top, compétent et serviable qui s\'adapte aux besoins de chacun. Grosse évolution pour ma part sur 6 mois d\'entraînement. Vous pouvez y aller les yeux fermés, c\'est du PRO !!',
+      date: '2023-09-15',
+      verified: true,
+      source: 'google',
+      tags: ['compétent', 'évolution', '6 mois', 'professionnel'],
+      featured: true
+    },
+    {
+      id: 7,
+      type: 'google_review',
+      client: {
+        name: 'Carla A.',
+        location: 'Côte d\'Azur',
+        photo: '💖',
+        initials: 'CA'
+      },
+      rating: 5,
+      content: 'Coach à l\'écoute et toujours positif. Il s\'adapte à tout type de situation. Il me suit depuis 5 mois et je remarque de réels changements au niveau de mon corps.',
+      date: '2023-12-15',
+      verified: true,
+      source: 'google',
+      tags: ['positif', 'adaptation', '5 mois', 'changements'],
+      featured: true
+    },
+    {
+      id: 8,
+      type: 'google_review',
+      client: {
+        name: 'Darel P.',
+        location: 'Côte d\'Azur',
+        photo: '🔥',
+        initials: 'DP'
+      },
+      rating: 5,
+      content: 'Très bon coach à l\'écoute, m\'a transformé en l\'espace de 6 mois. Je vous le conseille fortement !! 💪',
+      date: '2023-12-15',
+      verified: true,
+      source: 'google',
+      tags: ['transformation', '6 mois', 'écoute', 'conseille'],
+      featured: true
+    },
+    // TÉMOIGNAGES DÉTAILLÉS  
+    {
+      id: 10,
       client: {
         name: 'Sarah Martin',
         age: 28,
