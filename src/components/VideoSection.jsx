@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
  */
 export default function VideoSection() {
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [previewVideo, setPreviewVideo] = useState(null);
 
   // Vidéo de présentation du coach
   const presentationVideo = {
@@ -55,8 +56,18 @@ export default function VideoSection() {
     return `https://www.youtube.com/embed/${youtubeId}?rel=0&modestbranding=1&showinfo=0`;
   };
 
+  const getYouTubePreviewUrl = (youtubeId) => {
+    return `https://www.youtube.com/embed/${youtubeId}?rel=0&modestbranding=1&showinfo=0&autoplay=1&mute=1&controls=0&loop=1&playlist=${youtubeId}`;
+  };
+
   const getYouTubeThumbnail = (youtubeId) => {
+    // Essayer plusieurs qualités de thumbnail YouTube
     return `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+  };
+
+  const getYouTubeThumbnailFallback = (youtubeId) => {
+    // Fallback si maxresdefault ne fonctionne pas
+    return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
   };
 
   return (
@@ -153,36 +164,61 @@ export default function VideoSection() {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              {/* Thumbnail avec play button */}
+              {/* Thumbnail avec preview au hover */}
               <div 
                 className="relative aspect-video bg-gray-200 dark:bg-gray-700 cursor-pointer group"
                 onClick={() => setSelectedVideo(video)}
+                onMouseEnter={() => setPreviewVideo(video.id)}
+                onMouseLeave={() => setPreviewVideo(null)}
               >
                 {video.youtubeId ? (
-                  <img
-                    src={getYouTubeThumbnail(video.youtubeId)}
-                    alt={video.title}
-                    className="w-full h-full object-cover"
-                  />
+                  <>
+                    {/* Preview iframe au hover */}
+                    {previewVideo === video.id ? (
+                      <iframe
+                        src={getYouTubePreviewUrl(video.youtubeId)}
+                        className="w-full h-full object-cover"
+                        frameBorder="0"
+                        allow="autoplay; muted"
+                        title={`Preview ${video.title}`}
+                      />
+                    ) : (
+                      /* Thumbnail normal */
+                      <>
+                        <img
+                          src={getYouTubeThumbnail(video.youtubeId)}
+                          alt={video.title}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            // Fallback vers une qualité inférieure si maxres ne marche pas
+                            e.target.src = getYouTubeThumbnailFallback(video.youtubeId);
+                          }}
+                        />
+                        
+                        {/* Play button overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-50 transition-all duration-300">
+                          <div className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <svg className="w-6 h-6 text-azure-600 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M8 5v10l7-5z" />
+                            </svg>
+                          </div>
+                          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-75 text-white px-3 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Survolez pour un aperçu
+                          </div>
+                        </div>
+
+                        {/* Duration badge */}
+                        {video.duration && (
+                          <div className="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-xs">
+                            {video.duration}
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </>
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
                     <span className="text-4xl">🎥</span>
-                  </div>
-                )}
-                
-                {/* Play button overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-6 h-6 text-azure-600 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8 5v10l7-5z" />
-                    </svg>
-                  </div>
-                </div>
-
-                {/* Duration badge */}
-                {video.duration && (
-                  <div className="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-xs">
-                    {video.duration}
                   </div>
                 )}
               </div>
