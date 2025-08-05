@@ -13,7 +13,7 @@ export default function VideoSection() {
     id: 'presentation',
     title: 'Découvrez Gilson Mendes',
     description: 'Présentation de votre coach sportif sur la Côte d\'Azur',
-    youtubeId: '', // À remplacer par l'ID YouTube
+    youtubeId: 'NdcT_AjbnGM', // YouTube Short de présentation
     thumbnail: '/api/placeholder/400/225',
     category: 'Présentation'
   };
@@ -22,30 +22,30 @@ export default function VideoSection() {
   const sessionVideos = [
     {
       id: 'session1',
-      title: 'Séance Renforcement Musculaire',
-      description: 'Exemple d\'une séance de renforcement complet',
-      youtubeId: '', // À remplacer par l'ID YouTube
+      title: '20 minutes de Pilates pour un ventre plat',
+      description: 'Pilates 100% abdo - Séance complète pour renforcer votre core',
+      youtubeId: '02ic0w-QWfs',
       thumbnail: '/api/placeholder/400/225',
       category: 'Exemples de séances',
-      duration: '15 min'
+      duration: '20 min'
     },
     {
       id: 'session2', 
-      title: 'Séance Pilates & Mobilité',
-      description: 'Travail de la mobilité et du core avec Pilates',
-      youtubeId: '', // À remplacer par l'ID YouTube
+      title: 'YOGA FLOW - Routine parfaite',
+      description: 'Séance de yoga flow de 25 minutes pour détente et flexibilité',
+      youtubeId: '_hlpJcbWl48',
       thumbnail: '/api/placeholder/400/225',
       category: 'Exemples de séances',
-      duration: '12 min'
+      duration: '25 min'
     },
     {
       id: 'session3',
-      title: 'Entraînement en Extérieur',
-      description: 'Séance fonctionnelle sur la plage de Cannes',
-      youtubeId: '', // À remplacer par l'ID YouTube
+      title: '20 Minutes Stretching corps complet',
+      description: 'Séance d\'étirement complète pour assouplir tout le corps',
+      youtubeId: 'BBqzBUFQRKg',
       thumbnail: '/api/placeholder/400/225', 
       category: 'Exemples de séances',
-      duration: '18 min'
+      duration: '20 min'
     }
   ];
 
@@ -80,7 +80,7 @@ export default function VideoSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Vidéos de présentation et exemples de séances pour mieux comprendre ma méthode de coaching
+            Découvrez ma chaîne YouTube et mes séances : Pilates, Yoga, Stretching et plus encore !
           </p>
         </motion.div>
 
@@ -131,7 +131,7 @@ export default function VideoSection() {
             💪 Exemples de Séances
           </h3>
           <p className="text-gray-600 dark:text-gray-300 text-center mb-8">
-            Découvrez la diversité de mes méthodes d'entraînement
+            Pilates, Yoga Flow et Stretching - Séances complètes directement depuis ma chaîne YouTube
           </p>
         </motion.div>
 
@@ -276,9 +276,20 @@ export default function VideoSection() {
           viewport={{ once: true }}
         >
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Prêt à commencer votre transformation ?
+            Envie de plus de contenu ? Découvrez ma chaîne YouTube complète !
           </p>
           <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="https://www.youtube.com/@Gilson.Mendes-Fitness/featured"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center"
+            >
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              Ma chaîne YouTube
+            </a>
             <a
               href="#booking"
               className="bg-azure-600 hover:bg-azure-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
