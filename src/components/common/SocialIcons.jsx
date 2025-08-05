@@ -26,21 +26,21 @@ export const SocialIcons = ({
       icon: FaFacebookF,
       label: 'Facebook',
       href: 'https://facebook.com/gilsonmendes.coach',
-      color: 'hover:bg-blue-600',
+      color: 'hover:bg-blue-600 hover:border-blue-600',
       bgColor: 'bg-blue-600'
     },
     instagram: {
       icon: FaInstagram,
       label: 'Instagram',
       href: 'https://instagram.com/gilsonmendes_coach',
-      color: 'hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500',
+      color: 'hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-purple-500',
       bgColor: 'bg-gradient-to-r from-purple-500 to-pink-500'
     },
     whatsapp: {
       icon: FaWhatsapp,
       label: 'WhatsApp',
       href: 'https://wa.me/33617043599?text=Bonjour, je souhaite avoir des informations sur vos services de coaching',
-      color: 'hover:bg-green-500',
+      color: 'hover:bg-green-500 hover:border-green-500',
       bgColor: 'bg-green-500'
     },
     twitter: {
@@ -53,8 +53,8 @@ export const SocialIcons = ({
     youtube: {
       icon: FaYoutube,
       label: 'YouTube',
-      href: 'https://youtube.com/@gilsonmendes_coach',
-      color: 'hover:bg-red-600',
+      href: 'https://youtube.com/@Gilson.Mendes-Fitness',
+      color: 'hover:bg-red-600 hover:border-red-600',
       bgColor: 'bg-red-600'
     },
     tiktok: {
@@ -116,7 +116,11 @@ export const SocialIcons = ({
             target="_blank"
             rel="noopener noreferrer"
             className={`${styles.button} flex items-center justify-center transition-all duration-300 ${
-              variant === 'footer' ? social.color : `${social.color} group`
+              variant === 'footer' 
+                ? social.color 
+                : variant === 'default'
+                  ? `group ${social.color}`
+                  : social.color
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
