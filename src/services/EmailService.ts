@@ -27,15 +27,20 @@ export class EmailJSProvider implements EmailProvider {
 
   async sendEmail(data: ContactFormData): Promise<ApiResponse> {
     try {
-      // Import EmailJS dynamically
+      // Import EmailJS statically at the top of file instead
       const emailjs = await import('@emailjs/browser');
       
-      console.log('📧 Envoi real EmailJS avec:', {
+      console.log('📧 Début envoi EmailJS...');
+      console.log('📧 Configuration:', {
         service: this.serviceId,
         coachTemplate: this.coachTemplateId,
         clientTemplate: this.clientTemplateId,
-        data: { name: data.name, email: data.email, service: data.service }
+        publicKey: this.publicKey?.substring(0, 5) + '...' // Log partial key for security
       });
+      console.log('📧 Data:', { name: data.name, email: data.email, service: data.service });
+
+      // Initialize EmailJS with public key
+      emailjs.default.init(this.publicKey);
 
       // Préparer les données pour les templates
       const templateParams = {
@@ -48,25 +53,27 @@ export class EmailJSProvider implements EmailProvider {
         time: new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
       };
 
+      console.log('📧 Template params:', templateParams);
+
       // Envoi 1: Email au coach (notification)
+      console.log('📧 Envoi email coach...');
       const coachResult = await emailjs.default.send(
         this.serviceId,
         this.coachTemplateId,
         {
           ...templateParams,
           to_email: 'gilson.mendes@gmail.com' // Votre email de réception
-        },
-        this.publicKey
+        }
       );
 
       console.log('✅ Email coach envoyé:', coachResult);
 
       // Envoi 2: Auto-reply au client
+      console.log('📧 Envoi email client...');
       const clientResult = await emailjs.default.send(
         this.serviceId,
         this.clientTemplateId,
-        templateParams,
-        this.publicKey
+        templateParams
       );
 
       console.log('✅ Email client envoyé:', clientResult);
@@ -81,10 +88,14 @@ export class EmailJSProvider implements EmailProvider {
       };
 
     } catch (error) {
-      console.error('❌ Erreur EmailJS:', error);
+      console.error('❌ Erreur EmailJS complète:', error);
+      console.error('❌ Error name:', error.name);
+      console.error('❌ Error message:', error.message);
+      console.error('❌ Error stack:', error.stack);
+      
       return {
         success: false,
-        error: error instanceof Error ? error.message : 'Erreur EmailJS inconnue'
+        error: error instanceof Error ? `EmailJS Error: ${error.message}` : 'Erreur EmailJS inconnue'
       };
     }
   }
