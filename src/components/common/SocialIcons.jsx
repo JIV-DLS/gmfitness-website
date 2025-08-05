@@ -77,22 +77,22 @@ export const SocialIcons = ({
     switch (variant) {
       case 'compact':
         return {
-          container: 'flex space-x-2',
+          container: 'flex flex-wrap gap-2',
           button: 'w-8 h-8 rounded-lg',
           icon: 'text-sm',
           text: 'text-xs'
         };
       case 'footer':
         return {
-          container: 'flex space-x-4',
+          container: 'flex flex-wrap gap-4',
           button: 'w-10 h-10 rounded-lg bg-gray-800 hover:bg-primary-600',
           icon: 'text-lg',
           text: 'text-sm'
         };
       default:
         return {
-          container: 'flex space-x-4',
-          button: 'px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 border border-gray-200 dark:border-gray-500',
+          container: 'flex flex-wrap gap-3',
+          button: 'px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 border border-gray-200 dark:border-gray-500 flex-1 min-w-[120px] sm:flex-none',
           icon: 'text-lg',
           text: 'text-sm'
         };
