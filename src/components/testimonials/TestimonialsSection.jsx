@@ -51,7 +51,7 @@ const TestimonialsSection = memo(({
       client: {
         name: 'Marie Leroy',
         age: 42,
-        location: 'Marseille',
+        location: 'Mouans-Sartoux',
         photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face'
       },
       rating: 5,

@@ -61,8 +61,8 @@ export const Map = memo(({ className = '', height = '400px' }) => {
     }
   ];
 
-  // URL Google Maps avec marqueurs multiples pour Mouans-Sartoux
-  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23169.472934719458!2d6.966540547265624!3d43.615023836840944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0176720f227%3A0x40819a5fd970220!2s06370%20Mouans-Sartoux%2C%20France!5e0!3m2!1sfr!2sfr!4v1643900000000!5m2!1sfr!2sfr";
+  // URL Google Maps centrée sur Mouans-Sartoux (06370) - Coordonnées exactes : 43°37'12"N, 6°58'19"E
+  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11583.943564215847!2d6.9644127!3d43.6200007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0176720f227%3A0x40819a5fd970220!2s06370%20Mouans-Sartoux%2C%20France!5e0!3m2!1sfr!2sfr!4v1000000000000!5m2!1sfr!2sfr";
 
   return (
     <div className={`space-y-6 ${className}`}>
@@ -191,7 +191,7 @@ export const Map = memo(({ className = '', height = '400px' }) => {
               {t('map.travel.title', 'Zone de déplacement')}
             </h4>
             <p className="text-sm text-blue-800 dark:text-blue-400 mb-3">
-              Je me déplace dans toute la Côte d'Azur pour les séances à domicile. Zone de couverture étendue entre Mouans-Sartoux et Cannes.
+              Je me déplace dans toute la Côte d'Azur pour les séances à domicile. Basé à Mouans-Sartoux (06370), zone de couverture étendue jusqu'à Cannes.
             </p>
             <div className="flex flex-wrap gap-2">
               {['Mouans-Sartoux', 'Cannes', 'Grasse', 'Valbonne', 'Sophia Antipolis', 'Mougins', 'Antibes', 'Juan-les-Pins'].map((city) => (

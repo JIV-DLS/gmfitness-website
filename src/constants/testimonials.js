@@ -86,7 +86,7 @@ export const SAMPLE_TESTIMONIALS = [
   {
     clientName: 'Marie Leroy',
     clientAge: 42,
-    clientLocation: 'Marseille',
+    clientLocation: 'Mouans-Sartoux',
     rating: 5,
     title: 'Préparation marathon réussie !',
     content: 'Guillaume m\'a aidée à préparer mon premier marathon. Grâce à son programme d\'entraînement personnalisé et ses conseils nutritionnels, j\'ai non seulement terminé la course, mais j\'ai aussi amélioré mon temps de 30 minutes par rapport à mes attentes ! Un coach exceptionnel.',
@@ -103,7 +103,7 @@ export const SAMPLE_TESTIMONIALS = [
     client: {
       name: 'Marie Leroy',
       age: 42,
-      location: 'Marseille',
+      location: 'Mouans-Sartoux',
       photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face'
     },
     results: {
