@@ -131,16 +131,165 @@ export default function BookingForm() {
           </div>
         </motion.div>
 
-        {/* Contact rapide */}
+        {/* Questions fréquentes */}
         <motion.div
-          className="text-center mt-12"
+          className="mt-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Questions fréquentes ? Contactez-moi en 1 clic ! 💬
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Cliquez sur votre question pour m'envoyer un message pré-rédigé via WhatsApp ou Email
+            </p>
+          </div>
+
+          {/* Questions grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            {/* Tarifs */}
+            <motion.a
+              href="https://wa.me/33617043599?text=Bonjour Gilson ! J'aimerais connaître vos tarifs pour les séances de coaching individuel. Avez-vous des forfaits avantageux ? Merci !"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-green-400 dark:hover:border-green-400 transition-all duration-300 group cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">💰</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                    Quels sont vos tarifs ?
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                    Tarifs séances individuelles, forfaits, réductions...
+                  </p>
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Disponibilités */}
+            <motion.a
+              href="https://wa.me/33617043599?text=Bonjour ! J'aimerais connaître vos créneaux disponibles pour des séances de coaching. Je suis plutôt libre le matin/midi/soir. Merci !"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-green-400 dark:hover:border-green-400 transition-all duration-300 group cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">📅</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                    Quelles sont vos disponibilités ?
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                    Créneaux libres, horaires, planning...
+                  </p>
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Séances à domicile */}
+            <motion.a
+              href="https://wa.me/33617043599?text=Bonjour ! Je souhaiterais des séances de coaching à mon domicile. Vous déplacez-vous dans ma zone ? Je suis à [votre ville]. Merci !"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-green-400 dark:hover:border-green-400 transition-all duration-300 group cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">🏠</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                    Séances à domicile possibles ?
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                    Zone de déplacement, équipements, tarifs...
+                  </p>
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Programme personnalisé */}
+            <motion.a
+              href="mailto:gilson.mendes@gmail.com?subject=Demande de programme personnalisé&body=Bonjour Gilson,%0D%0A%0D%0AJe souhaiterais obtenir plus d'informations sur vos programmes personnalisés de coaching.%0D%0A%0D%0AMes objectifs : [perte de poids / prise de muscle / remise en forme / autre]%0D%0AMon niveau actuel : [débutant / intermédiaire / confirmé]%0D%0AMa disponibilité : [nombre de séances par semaine souhaitées]%0D%0A%0D%0APourriez-vous me proposer un programme adapté ?%0D%0A%0D%0AMerci !%0D%0A"
+              className="p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-400 transition-all duration-300 group cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">📋</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    Programme personnalisé ?
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                    Objectifs, durée, fréquence des séances...
+                  </p>
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Première séance */}
+            <motion.a
+              href="https://wa.me/33617043599?text=Bonjour ! Je suis intéressé(e) par votre séance découverte GRATUITE. Comment ça se passe concrètement ? Quand pourrait-on faire ça ? 😊"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-green-400 dark:hover:border-green-400 transition-all duration-300 group cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">🎁</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                    Comment marche la séance gratuite ?
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                    Déroulement, durée, lieu, à apporter...
+                  </p>
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Équipements */}
+            <motion.a
+              href="mailto:gilson.mendes@gmail.com?subject=Question sur les équipements&body=Bonjour Gilson,%0D%0A%0D%0AJ'ai une question concernant les équipements pour les séances de coaching :%0D%0A%0D%0A- Fournissez-vous tout le matériel nécessaire ?%0D%0A- Que dois-je prévoir de mon côté ?%0D%0A- Pour les séances à domicile, amenez-vous tout ?%0D%0A%0D%0AMerci pour ces précisions !%0D%0A"
+              className="p-4 bg-white dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-400 transition-all duration-300 group cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">🏋️</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    Équipements fournis ?
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                    Matériel inclus, à prévoir, transport...
+                  </p>
+                </div>
+              </div>
+            </motion.a>
+          </div>
+        </motion.div>
+
+        {/* Contact rapide */}
+        <motion.div
+          className="text-center mt-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+        >
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Une question ? Contactez-moi directement :
+            Ou contactez-moi directement :
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -160,7 +309,7 @@ export default function BookingForm() {
               06 17 04 35 99
             </a>
             <a
-              href="mailto:gilson.mendes.coach@gmail.com"
+              href="mailto:gilson.mendes@gmail.com"
               className="inline-flex items-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
             >
               <span className="mr-2">✉️</span>
