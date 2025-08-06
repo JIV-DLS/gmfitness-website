@@ -39,47 +39,52 @@
     "items": {
       "personal": {
         "title": "Personal Training",
-        "description": "Individual sessions adapted to your goals and level. Personalized follow-up and guaranteed progress.",
+        "description": "Personalized sessions combining strength, mobility, and mental well-being. Holistic approach adapted to your needs.",
         "features": {
-          "custom": "Custom programs",
-          "nutrition": "Nutritional guidance",
-          "motivation": "Constant motivation",
-          "results": "Fast results"
+          "custom": "Holistic method",
+          "psychology": "Mental coaching", 
+          "mobility": "Mobility & Pilates",
+          "mindfulness": "Yoga & meditation"
         },
-        "price": "€60/session"
+        "price": "From €50/session",
+        "prices": {
+          "single": "€70/session",
+          "pack5": "€60/session (pack of 5)",
+          "pack10": "€50/session (pack of 10)"
+        }
       },
       "group": {
-        "title": "Group Training",
-        "description": "Small group workouts to share motivation and reduce costs.",
+        "title": "Group Training", 
+        "description": "Small group sessions (max 5 people) to maintain quality follow-up while benefiting from collective motivation.",
         "features": {
-          "groups": "Groups of 3-5 people",
-          "atmosphere": "Friendly atmosphere",
-          "price": "Reduced price",
-          "emulation": "Group emulation"
+          "small": "Max 5 people",
+          "quality": "Personalized follow-up",
+          "affordable": "Affordable price", 
+          "motivation": "Group motivation"
         },
         "price": "€25/session"
       },
       "online": {
-        "title": "Online Coaching",
-        "description": "Personalized workout programs to do at home with video follow-up.",
+        "title": "Online Programs",
+        "description": "Personalized training programs to do at home with videos, plans, and accompaniment.",
         "features": {
-          "flexibility": "Schedule flexibility",
-          "video": "Video follow-up",
-          "nutrition": "Nutrition plans",
-          "support": "24/7 support"
+          "videos": "Exercise videos",
+          "plans": "Training plans",
+          "support": "Personal accompaniment",
+          "flexible": "Flexible schedule"
         },
         "price": "€35/month"
       },
-      "nutrition": {
-        "title": "Nutrition Coaching",
-        "description": "Personalized meal plans to optimize your results and health.",
+      "corporate": {
+        "title": "Corporate Interventions",
+        "description": "Wellness sessions in companies, associations and senior residences. Improving quality of life at work.",
         "features": {
-          "assessment": "Nutritional assessment",
-          "menus": "Personalized menus",
-          "recipes": "Adapted recipes",
-          "followup": "Weekly follow-up"
+          "corporate": "Companies",
+          "associations": "Associations",
+          "seniors": "Senior residences",
+          "wellbeing": "Collective well-being"
         },
-        "price": "€80/month"
+        "price": "Quote on request"
       }
     },
     "choose": "Choose this service",
