@@ -128,26 +128,33 @@ const Footer = () => {
                 <p className="text-gray-300 mb-4 text-sm">
                   Recevez mes conseils fitness et nutrition chaque semaine
                 </p>
-                <div className="flex max-w-xs w-full">
-                  <input
-                    type="email"
-                    placeholder="Votre email"
-                    className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary-500 text-sm min-w-0"
-                  />
-                  <motion.button
-                    className="bg-primary-600 hover:bg-primary-700 px-3 py-2 rounded-r-lg transition-colors text-sm font-medium flex-shrink-0"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    OK
-                  </motion.button>
+                
+                {/* Newsletter Sendinblue/Brevo iframe */}
+                <div className="w-full">
+                  <div className="relative w-full max-w-md mx-auto lg:mx-0 overflow-hidden rounded-lg">
+                    <iframe 
+                      width="100%" 
+                      height="280" 
+                      src="https://15e78585.sibforms.com/serve/MUIFAOR33He0VWnsOQmpAvAtRpFiMsvng1pHRsBHghAl2ajsEQNwtlKnYSh6H-vVyzcH2LENvwVsCEB5WLyPex6fk1blDa7YXDcQxTd8_rwu_yIqwh8xQJbc8sZZ1VIRITfktw1Db2nW894YDTWc7RacalYRm9knk-9mwS6G3Ck-3zY5fRmaX_SvN4eIgHUn5L0cwcNVMB3Gfgt_" 
+                      frameBorder="0" 
+                      scrolling="auto" 
+                      allowFullScreen
+                      className="w-full h-full rounded-lg"
+                      style={{ 
+                        display: 'block',
+                        minHeight: '280px',
+                        border: 'none'
+                      }}
+                      title="Newsletter Inscription"
+                    />
+                  </div>
                 </div>
               </div>
 
                               <div>
                 <p className="text-gray-300 mb-4 text-sm">Suivez-nous</p>
                 <SocialIcons 
-                  platforms={['facebook', 'instagram', 'tiktok', 'whatsapp', 'youtube']}
+                  platforms={['facebook', 'instagram', 'twitter', 'whatsapp', 'youtube']}
                   variant="footer"
                   showLabels={false}
                 />
