@@ -56,7 +56,7 @@ Le site se déploie automatiquement sur GitHub Pages à chaque push sur la branc
 **Configuration nécessaire :**
 1. Aller dans Settings > Pages de votre repository
 2. Source : "GitHub Actions"
-3. Le site sera disponible sur : `https://jonasvihoaleaniglo.github.io/gmfitness-website/`
+3. Le site sera disponible sur : `https://jiv-dls.github.io/gmfitness-website/#services/`
 
 ### Déploiement manuel
 ```bash

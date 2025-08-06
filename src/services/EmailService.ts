@@ -73,7 +73,10 @@ export class EmailJSProvider implements EmailProvider {
       const clientResult = await emailjs.default.send(
         this.serviceId,
         this.clientTemplateId,
-        templateParams
+        {
+          ...templateParams,
+          to_email: data.email // Votre email de réception
+        }
       );
 
       console.log('✅ Email client envoyé:', clientResult);

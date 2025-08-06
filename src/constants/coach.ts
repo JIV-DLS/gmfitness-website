@@ -86,7 +86,7 @@ export const COACH_DATA: Coach = {
     availability: 'Sur rendez-vous - Flexibilité horaire'
   },
   socialMedia: {
-    instagram: 'https://instagram.com/gilsonmendes_coach',
+    instagram: 'https://www.instagram.com/gilson_mendes_coach_sportif?igsh=OGJkMDFoMTY1aTdu&utm_source=qr',
     facebook: 'https://facebook.com/gilsonmendes',
     youtube: 'https://youtube.com/@gilsonmendes'
   },
