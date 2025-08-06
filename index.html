@@ -14,10 +14,10 @@
     
     <!-- Open Graph / Facebook / WhatsApp / Messenger -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jiv-dls.github.io/gmfitness-website/#services/" />
+    <meta property="og:url" content="https://jonasvihoaleaniglo.github.io/gmfitness-website/" />
     <meta property="og:title" content="Gilson Mendes - Coach Sportif Côte d'Azur" />
     <meta property="og:description" content="Coach sportif diplômé sur la Côte d'Azur. Coaching personnalisé, transformation physique et bien-être. Séance découverte gratuite ! 📞 06 17 04 35 99" />
-    <meta property="og:image" content="https://jiv-dls.github.io/gmfitness-website/#services/preview-image.jpg" />
+    <meta property="og:image" content="https://jonasvihoaleaniglo.github.io/gmfitness-website/preview-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Gilson Mendes - Coach Sportif Côte d'Azur" />
@@ -26,17 +26,17 @@
     
     <!-- Twitter Cards -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://jiv-dls.github.io/gmfitness-website/#services/" />
+    <meta property="twitter:url" content="https://jonasvihoaleaniglo.github.io/gmfitness-website/" />
     <meta property="twitter:title" content="Gilson Mendes - Coach Sportif Côte d'Azur" />
     <meta property="twitter:description" content="Coach sportif diplômé sur la Côte d'Azur. Coaching personnalisé, transformation physique et bien-être. Séance découverte gratuite !" />
-    <meta property="twitter:image" content="https://jiv-dls.github.io/gmfitness-website/#services/preview-image.jpg" />
+    <meta property="twitter:image" content="https://jonasvihoaleaniglo.github.io/gmfitness-website/preview-image.jpg" />
     <meta property="twitter:image:alt" content="Gilson Mendes - Coach Sportif Côte d'Azur" />
     
     <!-- WhatsApp specific -->
     <meta property="og:phone_number" content="+33617043599" />
     
     <!-- Additional SEO -->
-    <link rel="canonical" href="https://jiv-dls.github.io/gmfitness-website/#services/" />
+    <link rel="canonical" href="https://jonasvihoaleaniglo.github.io/gmfitness-website/" />
     <meta name="geo.region" content="FR-06" />
     <meta name="geo.placename" content="Côte d'Azur, France" />
     <meta name="geo.position" content="43.5528;7.0174" />
@@ -48,5 +48,45 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Sendinblue/Brevo Newsletter Scripts -->
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = 'Veuillez choisir un code pays';
+      window.LOCALE = 'fr';
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+      window.REQUIRED_ERROR_MESSAGE = "Vous devez renseigner ce champ. ";
+      window.GENERIC_INVALID_MESSAGE = "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+      
+      window.translation = {
+          common: {
+              selectedList: '{quantity} liste sélectionnée',
+              selectedLists: '{quantity} listes sélectionnées',
+              selectedOption: '{quantity} sélectionné',
+              selectedOptions: '{quantity} sélectionnés',
+          }
+      };
+
+      var AUTOHIDE = Boolean(0);
+    </script>
+    
+    <script>
+      ;(function (d, s, c) {
+          var j = d.createElement(s),
+            t = d.getElementsByTagName(s)[0]
+          j.src = "https://sibforms.com/forms/end-form/elastic-apm-rum.umd.min.js"
+          j.onload = function () { 
+            if (typeof elasticApm !== 'undefined') {
+              elasticApm.init(c) 
+            }
+          }
+          t.parentNode.insertBefore(j, t)
+      })(document, 'script', { 
+        serviceName: 'End Forms', 
+        serverUrl: 'https://596808a16dec4fc39413bf34b0a70240.apm.eu-west-1.aws.cloud.es.io:443', 
+        environment: 'production'
+      })
+    </script>
+
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
   </body>
 </html>

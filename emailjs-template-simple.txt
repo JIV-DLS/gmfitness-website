@@ -28,4 +28,4 @@ Téléphone: {{phone}}
 ---
 Gilson Mendes - Coach Sportif
 Côte d'Azur | 06 17 04 35 99
-https://jiv-dls.github.io/gmfitness-website/#services/
+https://jonasvihoaleaniglo.github.io/gmfitness-website/

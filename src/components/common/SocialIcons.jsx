@@ -25,14 +25,14 @@ export const SocialIcons = ({
     facebook: {
       icon: FaFacebookF,
       label: 'Facebook',
-      href: 'https://www.facebook.com/Gilson.Coach.sportif?mibextid=wwXIfr&rdid=xiQ7OhrWJ0F0VAnX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FtFnpwVeu%2F%3Fmibextid%3DwwXIfr%26al_applink_data%3D%257B%2522qpl_join_id%2522%253A%2522BB9BFA0C-0DD1-44C1-BE60-4500242108CD%2522%257D%26from_xma_click%3Dxma_e2ee%26tam_xma_content_type%3D2000%26is_fb_content%3Dtrue%26forward%3Dfalse%26ts%3D1754476913124%26pl%3D1',
+      href: 'https://facebook.com/gilsonmendes.coach',
       color: 'hover:!bg-blue-600 hover:!border-blue-600',
       bgColor: 'bg-blue-600'
     },
     instagram: {
       icon: FaInstagram,
       label: 'Instagram',
-      href: 'https://www.instagram.com/gilson_mendes_coach_sportif?igsh=OGJkMDFoMTY1aTdu&utm_source=qr',
+      href: 'https://instagram.com/gilsonmendes_coach',
       color: 'hover:!bg-gradient-to-r hover:!from-purple-500 hover:!to-pink-500 hover:!border-purple-500',
       bgColor: 'bg-gradient-to-r from-purple-500 to-pink-500'
     },
@@ -44,11 +44,11 @@ export const SocialIcons = ({
       bgColor: 'bg-green-500'
     },
     twitter: {
-      icon: FaTiktok,
-      label: 'TikTok',
-      href: 'https://www.tiktok.com/@gilson.coach?_r=1&_d=secCgYIASAHKAESPgo8Ffwa3cTjnC5Bp2IT7%2BzrkDzY8ingcX0oRtElMbDz6nVrFTwLpFUGxXOsRmVzt78V3c5GwlPljCa%2BVuyHGgA%3D&_svg=2&checksum=e90ca44a4e9707a02e8068d3b4f2c816f9b792978f51037839afbc5a35a1b718&item_author_type=1&sec_uid=MS4wLjABAAAAFGtOv8D8wloT4qyM6Dxf1ldLDnQpYrk73ravVLKifkmXiB9nWZ1EawQpcDPmqalX&sec_user_id=MS4wLjABAAAAFGtOv8D8wloT4qyM6Dxf1ldLDnQpYrk73ravVLKifkmXiB9nWZ1EawQpcDPmqalX&share_app_id=1233&share_author_id=7334072145071277089&share_link_id=A87E8DF8-A5D9-4ABC-8AF2-20F5FBF2FC00&share_scene=1&sharer_language=fr&social_share_type=4&source=h5_m&timestamp=1754477359&tt_from=copy&u_code=ecf730ebbg5md0&ug_btm=b8727%2Cb0&user_id=7334072145071277089&utm_campaign=client_share&utm_medium=ios&utm_source=copy',
-      color: 'hover:bg-black',
-      bgColor: 'bg-black'
+      icon: FaTwitter,
+      label: 'Twitter',
+      href: 'https://twitter.com/gilsonmendes_coach',
+      color: 'hover:bg-blue-400',
+      bgColor: 'bg-blue-400'
     },
     youtube: {
       icon: FaYoutube,
@@ -60,8 +60,8 @@ export const SocialIcons = ({
     tiktok: {
       icon: FaTiktok,
       label: 'TikTok',
-      href: 'https://www.tiktok.com/@gilson.coach',
-      color: 'hover:!bg-black hover:!border-black',
+      href: 'https://tiktok.com/@gmfitness',
+      color: 'hover:bg-black',
       bgColor: 'bg-black'
     },
     linkedin: {
@@ -181,7 +181,7 @@ export const WhatsAppFloat = ({
 export const SocialMediaSection = ({ 
   title = "💬 Réseaux Sociaux",
   description = "Suivez mes conseils et découvrez les transformations de mes clients",
-  platforms = ['facebook', 'instagram', 'tiktok', 'whatsapp'],
+  platforms = ['facebook', 'instagram', 'whatsapp'],
   variant = 'default',
   className = ''
 }) => {
