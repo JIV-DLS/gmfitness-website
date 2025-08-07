@@ -22,7 +22,7 @@ Téléphone: {{phone}}
 
 ═══════════════════════════════════════
 
-🌐 Envoyé depuis le site GM Fitness
+🌐 Envoyé depuis le site GML Fitness
 ⏰ Le {{date}} à {{time}}
 
 ---
