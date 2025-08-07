@@ -25,14 +25,14 @@ export const SocialIcons = ({
     facebook: {
       icon: FaFacebookF,
       label: 'Facebook',
-      href: 'https://facebook.com/gilsonmendes.coach',
+      href: 'https://www.facebook.com/Gilson.Coach.sportif?mibextid=wwXIfr&rdid=QgqBM7sS9veZaLZg&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FtFnpwVeu%2F%3Fmibextid%3DwwXIfr%26al_applink_data%3D%257B%2522qpl_join_id%2522%253A%25226D8E0BF6-CEE4-4945-8EE1-0E35C5A73D58%2522%257D%26from_xma_click%3Dxma_e2ee%26tam_xma_content_type%3D2000%26is_fb_content%3Dtrue%26forward%3Dfalse%26ts%3D1754476913124%26pl%3D1',
       color: 'hover:!bg-blue-600 hover:!border-blue-600',
       bgColor: 'bg-blue-600'
     },
     instagram: {
       icon: FaInstagram,
       label: 'Instagram',
-      href: 'https://instagram.com/gilsonmendes_coach',
+      href: 'https://www.instagram.com/gilson_mendes_coach_sportif/',
       color: 'hover:!bg-gradient-to-r hover:!from-purple-500 hover:!to-pink-500 hover:!border-purple-500',
       bgColor: 'bg-gradient-to-r from-purple-500 to-pink-500'
     },
