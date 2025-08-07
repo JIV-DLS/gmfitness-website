@@ -61,14 +61,14 @@ export const SocialIcons = ({
       icon: FaTiktok,
       label: 'TikTok',
       href: 'https://www.tiktok.com/@gilson.coach?_r=1&_d=secCgYIASAHKAESPgo8Ffwa3cTjnC5Bp2IT7%2BzrkDzY8ingcX0oRtElMbDz6nVrFTwLpFUGxXOsRmVzt78V3c5GwlPljCa%2BVuyHGgA%3D&_svg=2&checksum=e90ca44a4e9707a02e8068d3b4f2c816f9b792978f51037839afbc5a35a1b718&item_author_type=1&sec_uid=MS4wLjABAAAAFGtOv8D8wloT4qyM6Dxf1ldLDnQpYrk73ravVLKifkmXiB9nWZ1EawQpcDPmqalX&sec_user_id=MS4wLjABAAAAFGtOv8D8wloT4qyM6Dxf1ldLDnQpYrk73ravVLKifkmXiB9nWZ1EawQpcDPmqalX&share_app_id=1233&share_author_id=7334072145071277089&share_link_id=A87E8DF8-A5D9-4ABC-8AF2-20F5FBF2FC00&share_scene=1&sharer_language=fr&social_share_type=4&source=h5_m&timestamp=1754477359&tt_from=copy&u_code=ecf730ebbg5md0&ug_btm=b8727%2Cb0&user_id=7334072145071277089&utm_campaign=client_share&utm_medium=ios&utm_source=copy',
-      color: 'hover:bg-black',
+      color: 'hover:!bg-black hover:!border-black',
       bgColor: 'bg-black'
     },
     linkedin: {
       icon: FaLinkedinIn,
       label: 'LinkedIn',
       href: 'https://linkedin.com/in/gml-fitness',
-      color: 'hover:bg-blue-700',
+      color: 'hover:!bg-blue-700 hover:!border-blue-700',
       bgColor: 'bg-blue-700'
     }
   };
@@ -181,7 +181,7 @@ export const WhatsAppFloat = ({
 export const SocialMediaSection = ({ 
   title = "💬 Réseaux Sociaux",
   description = "Suivez mes conseils et découvrez les transformations de mes clients",
-  platforms = ['facebook', 'instagram', 'whatsapp'],
+  platforms = ['facebook', 'tiktok', 'instagram', 'whatsapp'],
   variant = 'default',
   className = ''
 }) => {
