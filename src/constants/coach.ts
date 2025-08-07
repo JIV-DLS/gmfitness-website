@@ -81,7 +81,7 @@ export const COACH_DATA: Coach = {
   },
   contact: {
     phone: '06 17 04 35 99',
-    email: 'contact@gilsonmendes.fr',
+    email: 'gilson.mendes-landim@hotmail.com',
     location: 'Mouans-Sartoux (06370) - Côte d\'Azur',
     availability: 'Sur rendez-vous - Flexibilité horaire'
   },

@@ -240,7 +240,7 @@ const Footer = () => {
                               <div>
                 <p className="text-gray-300 mb-4 text-sm">Suivez-nous</p>
                 <SocialIcons 
-                  platforms={['facebook', 'instagram', 'twitter', 'whatsapp', 'youtube']}
+                  platforms={['facebook', 'tiktok', 'instagram', 'whatsapp', 'youtube']}
                   variant="footer"
                   showLabels={false}
                 />

@@ -398,7 +398,7 @@ const Contact = () => {
                 Suivez mes conseils et découvrez les transformations de mes clients
               </p>
               <SocialIcons
-                platforms={['instagram', 'facebook', 'whatsapp', 'youtube']}
+                platforms={['instagram', 'facebook', 'tiktok', 'whatsapp', 'youtube']}
                 variant="default"
                 showLabels={true}
               />
