@@ -7,6 +7,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import InstagramFeed from '@/components/social/InstagramFeed';
 import YouTubeFeed from '@/components/social/YouTubeFeed';
+import GoogleReviews from '@/components/social/GoogleReviews';
 import { ShareBar } from '@/components/common/ShareButton';
 import { useI18n } from '@/hooks/useI18n';
 import { usePageViewTracking } from '@/hooks/useFacebookPixel';
@@ -96,7 +97,7 @@ const SocialMedia = () => {
 
         {/* YouTube Feed Section */}
         <motion.div
-          className="mb-16"
+          className="mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -114,6 +115,31 @@ const SocialMedia = () => {
             
             <YouTubeFeed 
               maxVideos={4}
+              showHeader={true}
+            />
+          </div>
+        </motion.div>
+
+        {/* Google Reviews Section */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl">
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                {t('social.google.title', '⭐ Avis Clients Google')}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                {t('social.google.description', 'Découvrez les témoignages authentiques de mes clients directement depuis Google Reviews.')}
+              </p>
+            </div>
+            
+            <GoogleReviews 
+              maxReviews={6}
               showHeader={true}
             />
           </div>

@@ -202,8 +202,32 @@
       }
     },
     "social": {
-      "title": "📱 Réseaux Sociaux",
-      "description": "Suivez mes conseils et transformations quotidiennes"
+      "title": "Suivez Mon",
+      "titleHighlight": "Actualité",
+      "subtitle": "Découvrez mes séances avec les clients, conseils fitness quotidiens, et transformations inspirantes sur mes réseaux sociaux.",
+      "description": "Suivez mes conseils et transformations quotidiennes",
+      "instagram": {
+        "title": "📸 Séances en Direct",
+        "description": "Découvrez mes séances avec mes clients et leurs transformations inspirantes sur Instagram."
+      },
+      "youtube": {
+        "title": "🎥 Vidéos & Conseils",
+        "description": "Profitez de mes vidéos gratuites : séances complètes, conseils techniques et programmes d'entraînement."
+      },
+      "google": {
+        "title": "⭐ Avis Clients Google",
+        "description": "Découvrez les témoignages authentiques de mes clients directement depuis Google Reviews."
+      },
+      "stats": {
+        "instagram": "Followers Instagram",
+        "youtube": "Abonnés YouTube",
+        "reviews": "Avis 5 étoiles",
+        "transformations": "Transformations"
+      },
+      "cta": {
+        "title": "Rejoignez la Communauté GML Fitness !",
+        "description": "Ne ratez aucun conseil, transformation ou séance. Suivez-moi sur tous mes réseaux sociaux !"
+      }
     },
     "map": {
       "description": "Découvrez les différents lieux où nous pouvons nous entraîner ensemble. Je me déplace également à votre domicile dans toute la région parisienne.",

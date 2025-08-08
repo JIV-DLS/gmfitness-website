@@ -202,8 +202,32 @@
       }
     },
     "social": {
-      "title": "📱 Social Media",
-      "description": "Follow my daily advice and transformations"
+      "title": "Follow My",
+      "titleHighlight": "Journey",
+      "subtitle": "Discover my client sessions, daily fitness tips, and inspiring transformations on social media.",
+      "description": "Follow my daily advice and transformations",
+      "instagram": {
+        "title": "📸 Live Sessions",
+        "description": "Discover my sessions with clients and their inspiring transformations on Instagram."
+      },
+      "youtube": {
+        "title": "🎥 Videos & Tips",
+        "description": "Enjoy my free videos: complete sessions, technical advice and training programs."
+      },
+      "google": {
+        "title": "⭐ Google Client Reviews",
+        "description": "Discover authentic testimonials from my clients directly from Google Reviews."
+      },
+      "stats": {
+        "instagram": "Instagram Followers",
+        "youtube": "YouTube Subscribers", 
+        "reviews": "5-star Reviews",
+        "transformations": "Transformations"
+      },
+      "cta": {
+        "title": "Join the GML Fitness Community!",
+        "description": "Don't miss any tips, transformations or sessions. Follow me on all my social networks!"
+      }
     },
     "map": {
       "description": "Discover the different places where we can train together. I also travel to your home throughout the French Riviera.",
