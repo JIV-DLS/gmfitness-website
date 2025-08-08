@@ -3,8 +3,8 @@
  * URLs et endpoints du backend
  */
 
-// URL du backend Vercel (version fonctionnelle avec Google Reviews)
-export const BACKEND_URL = 'https://gml-fitness-backend-17wu3wi87-jonas-vihoale-aniglos-projects.vercel.app';
+// URL du backend Vercel (API Google Reviews 100% fonctionnelle ✅)
+export const BACKEND_URL = 'https://gml-fitness-backend-8dvr7mby7-jonas-vihoale-aniglos-projects.vercel.app';
 
 // Endpoints API
 export const API_ENDPOINTS = {
