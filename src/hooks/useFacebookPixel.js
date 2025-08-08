@@ -7,8 +7,8 @@ import { useEffect } from 'react';
 
 // Configuration Facebook Pixel
 const FB_PIXEL_CONFIG = {
-  pixelId: process.env.VITE_FACEBOOK_PIXEL_ID || null, // À configurer dans .env.local
-  enabled: process.env.NODE_ENV === 'production' && typeof window !== 'undefined'
+  pixelId: import.meta.env.VITE_FACEBOOK_PIXEL_ID || null, // À configurer dans .env.local
+  enabled: import.meta.env.PROD && typeof window !== 'undefined'
 };
 
 /**
