@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import './i18n' // Initialise i18next
-import { ThemeProvider } from '@/components/common/ThemeProvider'
+import { ThemeProvider } from './components/common/ThemeProvider'
 
 // Error handling pour les erreurs non catchées
 window.addEventListener('error', (event) => {

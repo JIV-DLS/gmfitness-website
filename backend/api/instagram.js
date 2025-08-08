@@ -34,7 +34,11 @@ export default async function handler(req, res) {
     // Récupération des posts Instagram
     const instagramUrl = `https://graph.instagram.com/${INSTAGRAM_USER_ID}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${INSTAGRAM_ACCESS_TOKEN}&limit=12`;
     
-    console.log('🔄 Fetching Instagram data...', { url: instagramUrl.replace(INSTAGRAM_ACCESS_TOKEN, '[HIDDEN]') });
+    console.log('🔄 Fetching Instagram data...', { 
+      userId: INSTAGRAM_USER_ID,
+      hasToken: !!INSTAGRAM_ACCESS_TOKEN,
+      tokenPrefix: INSTAGRAM_ACCESS_TOKEN.substring(0, 15) + '...'
+    });
 
     const response = await fetch(instagramUrl);
     
@@ -45,7 +49,14 @@ export default async function handler(req, res) {
       return res.status(response.status).json({
         error: 'Instagram API Error',
         status: response.status,
-        message: 'Erreur lors de la récupération des données Instagram'
+        message: 'Erreur lors de la récupération des données Instagram',
+        debug: {
+          httpStatus: response.status,
+          userId: INSTAGRAM_USER_ID,
+          tokenValid: INSTAGRAM_ACCESS_TOKEN && INSTAGRAM_ACCESS_TOKEN.length > 10,
+          errorDetails: errorData.substring(0, 500),
+          suggestedSolution: response.status === 400 ? 'Token expired or invalid - please regenerate Instagram token' : 'Check Instagram API permissions'
+        }
       });
     }
 

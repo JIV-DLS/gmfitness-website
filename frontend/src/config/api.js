@@ -3,8 +3,8 @@
  * URLs et endpoints du backend
  */
 
-// URL du backend Vercel (dernière version avec Place ID corrigé)
-export const BACKEND_URL = 'https://gml-fitness-backend-gybc471nb-jonas-vihoale-aniglos-projects.vercel.app';
+// URL du backend Vercel (dernière version avec test_place_id)
+export const BACKEND_URL = 'https://gml-fitness-backend-ht0k4a2sy-jonas-vihoale-aniglos-projects.vercel.app';
 
 // Endpoints API
 export const API_ENDPOINTS = {

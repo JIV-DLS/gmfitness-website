@@ -22,7 +22,8 @@ export default async function handler(req, res) {
   try {
     // Configuration Google Places API
     const GOOGLE_PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
-    const GOOGLE_PLACE_ID = process.env.GOOGLE_PLACE_ID;
+    // Permettre de tester avec un autre Place ID via paramètre de requête
+    const GOOGLE_PLACE_ID = req.query.test_place_id || process.env.GOOGLE_PLACE_ID;
 
     if (!GOOGLE_PLACES_API_KEY || !GOOGLE_PLACE_ID) {
       return res.status(500).json({ 
@@ -34,7 +35,11 @@ export default async function handler(req, res) {
     // Récupération des avis Google Places
     const placesUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${GOOGLE_PLACE_ID}&fields=name,rating,reviews,user_ratings_total&key=${GOOGLE_PLACES_API_KEY}&language=fr`;
     
-    console.log('🔄 Fetching Google Reviews...', { placeId: GOOGLE_PLACE_ID });
+    console.log('🔄 Fetching Google Reviews...', { 
+      placeId: GOOGLE_PLACE_ID.substring(0, 20) + '...', 
+      hasApiKey: !!GOOGLE_PLACES_API_KEY,
+      apiKeyPrefix: GOOGLE_PLACES_API_KEY.substring(0, 10) + '...'
+    });
 
     const response = await fetch(placesUrl);
     
@@ -45,7 +50,13 @@ export default async function handler(req, res) {
       return res.status(response.status).json({
         error: 'Google Places API Error',
         status: response.status,
-        message: 'Erreur lors de la récupération des avis Google'
+        message: 'Erreur lors de la récupération des avis Google',
+        debug: {
+          httpStatus: response.status,
+          placeIdFormat: GOOGLE_PLACE_ID.startsWith('ChIJ') ? 'ChIJ (correct)' : 'Invalid format',
+          placeIdLength: GOOGLE_PLACE_ID.length,
+          errorDetails: errorData.substring(0, 500)
+        }
       });
     }
 
@@ -57,7 +68,15 @@ export default async function handler(req, res) {
       return res.status(400).json({
         error: 'Google Places API Status Error',
         status: data.status,
-        message: data.error_message || 'Erreur API Google Places'
+        message: data.error_message || 'Erreur API Google Places',
+        debug: {
+          googleStatus: data.status,
+          placeId: GOOGLE_PLACE_ID,
+          placeIdLength: GOOGLE_PLACE_ID.length,
+          suggestedSolution: data.status === 'INVALID_REQUEST' ? 
+            'Place ID is invalid. Please verify the Place ID format and try a complete ChIJ... ID from Google Maps.' :
+            'Check Google Places API key permissions and enable Google Places API in Google Cloud Console.'
+        }
       });
     }
 

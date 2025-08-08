@@ -1,9 +1,8 @@
 import React, { Suspense, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { AppProvider } from '@/context/AppContext';
-import { LoadingSpinner } from '@/components/common/LoadingSpinner';
-import { commonVariants } from '@/utils/animations';
-import { WhatsAppFloat } from '@/components/common/SocialIcons';
+import { AppProvider } from './context/AppContext';
+import { LoadingSpinner } from './components/common/LoadingSpinner';
+import { WhatsAppFloat } from './components/common/SocialIcons';
 
 // Lazy loading des composants pour améliorer les performances
 const Header = React.lazy(() => import('./components/Header'));
