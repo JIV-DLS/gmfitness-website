@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "name": "gml-fitness-backend",
+  "functions": {
+    "api/*.js": {
+      "runtime": "@vercel/node@3.0.0"
+    }
+  },
+  "env": {
+    "INSTAGRAM_ACCESS_TOKEN": "@instagram_access_token",
+    "INSTAGRAM_USER_ID": "@instagram_user_id", 
+    "GOOGLE_PLACES_API_KEY": "@google_places_api_key",
+    "GOOGLE_PLACE_ID": "@google_place_id"
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods", 
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ]
+}

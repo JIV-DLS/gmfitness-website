@@ -19,7 +19,7 @@ Pour que les previews fonctionnent parfaitement sur WhatsApp, Messenger, etc., v
    - "Gilson Mendes"
    - "Coach Sportif Côte d'Azur"
    - "06 17 04 35 99"
-   - "@gilsonmendes_coach"
+   - "@gilson_mendes_coach_sportif"
 3. **Design** : Utiliser les couleurs du site (bleus océan/azur)
 4. **Background** : Style Côte d'Azur (océan, ciel bleu)
 

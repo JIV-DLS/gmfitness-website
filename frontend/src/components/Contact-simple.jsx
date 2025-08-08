@@ -365,7 +365,7 @@ const Contact = () => {
                 <div className="text-2xl">📱</div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Instagram</h4>
-                  <p className="text-gray-600 dark:text-gray-300">@gilsonmendes_coach</p>
+                  <p className="text-gray-600 dark:text-gray-300">@gilson_mendes_coach_sportif</p>
                   <p className="text-gray-600 dark:text-gray-300">Conseils quotidiens</p>
                   <p className="text-gray-600 dark:text-gray-300">Transformations clients</p>
                 </div>

@@ -1,0 +1,30 @@
+{
+  "name": "gml-fitness-backend",
+  "version": "1.0.0",
+  "description": "Backend API pour GML Fitness - Instagram & Google Reviews",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for Vercel Functions'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@vercel/node": "^3.0.0"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "vercel",
+    "functions", 
+    "api",
+    "instagram",
+    "google-reviews",
+    "fitness"
+  ],
+  "author": "Gilson Mendes - GML Fitness",
+  "license": "MIT"
+}

@@ -218,7 +218,7 @@ const SocialMedia = () => {
           
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a
-              href="https://www.instagram.com/gilsonmendes_coach/"
+              href="https://www.instagram.com/gilson_mendes_coach_sportif/"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-white text-primary-600 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300 flex items-center space-x-2"

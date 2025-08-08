@@ -188,7 +188,7 @@ const Contact = () => {
       icon: "📱",
       title: "Instagram",
       content: [
-        "@gilsonmendes_coach",
+        "@gilson_mendes_coach_sportif",
         "Conseils quotidiens",
         "Transformations clients"
       ]

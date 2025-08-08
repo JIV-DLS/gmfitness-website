@@ -137,12 +137,12 @@ const InstagramFeed = ({
                 Séances en Direct
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                @gilsonmendes_coach
+                @gilson_mendes_coach_sportif
               </p>
             </div>
           </div>
           <motion.a
-            href="https://www.instagram.com/gilsonmendes_coach/"
+            href="https://www.instagram.com/gilson_mendes_coach_sportif/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300"
@@ -247,7 +247,7 @@ const InstagramFeed = ({
         viewport={{ once: true }}
       >
         <motion.a
-          href="https://www.instagram.com/gilsonmendes_coach/"
+          href="https://www.instagram.com/gilson_mendes_coach_sportif/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300"
