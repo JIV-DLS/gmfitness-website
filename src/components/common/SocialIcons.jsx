@@ -9,6 +9,7 @@ import {
   FaTiktok, 
   FaLinkedinIn 
 } from 'react-icons/fa';
+import { useFacebookPixel } from '@/hooks/useFacebookPixel';
 
 /**
  * Composant pour afficher les icônes des réseaux sociaux
@@ -20,6 +21,19 @@ export const SocialIcons = ({
   showLabels = true,
   className = ''
 }) => {
+  const { events: fbEvents } = useFacebookPixel();
+  
+  // Handler pour tracking des clics sociaux
+  const handleSocialClick = (platform) => {
+    if (platform === 'whatsapp') {
+      fbEvents.clickWhatsApp(variant);
+    } else {
+      fbEvents.trackEvent('SocialClick', {
+        platform: platform,
+        context: variant
+      });
+    }
+  };
   
   const socialPlatforms = {
     facebook: {
@@ -115,6 +129,7 @@ export const SocialIcons = ({
             href={social.href}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => handleSocialClick(platform)}
             className={`${styles.button} flex items-center justify-center transition-all duration-300 ${
               variant === 'footer' 
                 ? social.color 

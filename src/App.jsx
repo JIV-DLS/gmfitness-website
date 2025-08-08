@@ -11,6 +11,7 @@ const Hero = React.lazy(() => import('./components/Hero'));
 const Services = React.lazy(() => import('./components/Services'));
 const About = React.lazy(() => import('./components/About'));
 const VideoSection = React.lazy(() => import('./components/VideoSection'));
+const SocialMedia = React.lazy(() => import('./components/SocialMedia'));
 const TestimonialsSection = React.lazy(() => import('./components/testimonials/TestimonialsSection'));
 const BookingForm = React.lazy(() => import('./components/BookingForm'));
 
@@ -77,6 +78,14 @@ function App() {
               </div>
             }>
               <VideoSection />
+            </Suspense>
+
+            <Suspense fallback={
+              <div className="section-padding flex items-center justify-center">
+                <LoadingSpinner message="Chargement des réseaux sociaux..." />
+              </div>
+            }>
+              <SocialMedia />
             </Suspense>
 
             <Suspense fallback={

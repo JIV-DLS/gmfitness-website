@@ -3,8 +3,11 @@ import { useState } from "react";
 import { Map } from '@/components/common/Map';
 import { SocialIcons } from '@/components/common/SocialIcons';
 import { EmailService } from '@/services/EmailService';
+import { useFacebookPixel } from '@/hooks/useFacebookPixel';
 
 const Contact = () => {
+  const { events: fbEvents } = useFacebookPixel();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -81,6 +84,9 @@ const Contact = () => {
       if (result.success) {
         console.log('✅ Emails envoyés avec succès:', result);
         setStatus('success');
+        
+        // 🎯 Track Facebook Pixel - Lead Generated
+        fbEvents.submitContactForm(formData);
         
         // Reset form after success
         setTimeout(() => {

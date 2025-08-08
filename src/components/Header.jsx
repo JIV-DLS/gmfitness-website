@@ -11,6 +11,7 @@ const Header = () => {
     { href: "#accueil", label: t('nav.home') },
     { href: "#services", label: t('nav.services') },
     { href: "#about", label: t('nav.about') },
+    { href: "#social", label: t('nav.social', 'Réseaux') },
     { href: "#testimonials", label: t('nav.testimonials', 'Témoignages') },
     { href: "#booking", label: t('nav.booking', 'Réservations') },
     { href: "#contact", label: t('nav.contact') },
