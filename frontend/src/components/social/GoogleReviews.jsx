@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaStar, FaGoogle, FaQuoteLeft, FaExternalLinkAlt } from 'react-icons/fa';
 import { useFacebookPixel } from '../../hooks/useFacebookPixel';
+import { apiServices } from '../../config/api';
 
 /**
  * Configuration Google Reviews
@@ -108,11 +109,33 @@ export const useGoogleReviews = () => {
   ];
 
   useEffect(() => {
-    // Simuler chargement API Google Places
-    setTimeout(() => {
-      setReviews(mockReviews);
-      setLoading(false);
-    }, 800);
+    const fetchReviews = async () => {
+      try {
+        setLoading(true);
+        
+        // Appel à l'API backend
+        const response = await apiServices.reviews.getReviews();
+        
+        if (response.success && response.data) {
+          setReviews(response.data);
+          if (response.stats) {
+            setStats(response.stats);
+          }
+        } else {
+          // Fallback vers données mockées si l'API ne fonctionne pas
+          console.log('API indisponible, utilisation des données de démo');
+          setReviews(mockReviews);
+        }
+      } catch (error) {
+        console.error('Erreur lors du chargement des avis:', error);
+        // Fallback vers données mockées en cas d'erreur
+        setReviews(mockReviews);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchReviews();
   }, []);
 
   return { reviews, loading, stats };

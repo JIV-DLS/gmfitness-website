@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaInstagram, FaPlay, FaHeart, FaComment } from 'react-icons/fa';
 import { useFacebookPixel } from '../../hooks/useFacebookPixel';
+import { apiServices } from '../../config/api';
 
 /**
  * Composant principal Instagram Feed
@@ -87,11 +88,43 @@ const InstagramFeed = ({
   ];
 
   useEffect(() => {
-    // Simuler chargement API
-    setTimeout(() => {
-      setPosts(mockPosts.slice(0, maxPosts));
-      setLoading(false);
-    }, 1000);
+    const fetchPosts = async () => {
+      try {
+        setLoading(true);
+        
+        // Appel à l'API backend
+        const response = await apiServices.instagram.getPosts();
+        
+        if (response.success && response.data) {
+          // Transformer les données API vers le format attendu
+          const transformedPosts = response.data.map(post => ({
+            id: post.id,
+            type: post.type === 'VIDEO' ? 'video' : 'post',
+            image: post.media_url,
+            thumbnail: post.thumbnail_url || post.media_url,
+            caption: post.caption || '',
+            likes: post.likes || 0,
+            comments: post.comments || 0,
+            url: post.permalink,
+            date: new Date(post.timestamp).toLocaleDateString()
+          }));
+          
+          setPosts(transformedPosts.slice(0, maxPosts));
+        } else {
+          // Fallback vers données mockées si l'API ne fonctionne pas
+          console.log('API Instagram indisponible, utilisation des données de démo');
+          setPosts(mockPosts.slice(0, maxPosts));
+        }
+      } catch (error) {
+        console.error('Erreur lors du chargement des posts Instagram:', error);
+        // Fallback vers données mockées en cas d'erreur
+        setPosts(mockPosts.slice(0, maxPosts));
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
   }, [maxPosts]);
 
   const handlePostClick = (post) => {
