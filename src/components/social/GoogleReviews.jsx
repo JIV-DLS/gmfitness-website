@@ -6,7 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaStar, FaGoogle, FaQuoteLeft, FaExternalLinkAlt } from 'react-icons/fa';
-import { useFacebookPixel } from '@/hooks/useFacebookPixel';
+import { useFacebookPixel } from '../../hooks/useFacebookPixel';
 
 /**
  * Configuration Google Reviews

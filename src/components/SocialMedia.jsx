@@ -5,12 +5,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import InstagramFeed from '@/components/social/InstagramFeed';
-import YouTubeFeed from '@/components/social/YouTubeFeed';
-import GoogleReviews from '@/components/social/GoogleReviews';
-import { ShareBar } from '@/components/common/ShareButton';
-import { useI18n } from '@/hooks/useI18n';
-import { usePageViewTracking } from '@/hooks/useFacebookPixel';
+import InstagramFeed from './social/InstagramFeed';
+import YouTubeFeed from './social/YouTubeFeed';
+import GoogleReviews from './social/GoogleReviews';
+import { ShareBar } from './common/ShareButton';
+import { useI18n } from '../hooks/useI18n';
+import { usePageViewTracking } from '../hooks/useFacebookPixel';
 
 const SocialMedia = () => {
   const { t } = useI18n();

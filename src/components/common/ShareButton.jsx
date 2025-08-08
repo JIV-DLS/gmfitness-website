@@ -13,7 +13,7 @@ import {
   FaLinkedinIn,
   FaShare
 } from 'react-icons/fa';
-import { useFacebookPixel } from '@/hooks/useFacebookPixel';
+import { useFacebookPixel } from '../../hooks/useFacebookPixel';
 
 /**
  * Hook pour génération d'URLs de partage
