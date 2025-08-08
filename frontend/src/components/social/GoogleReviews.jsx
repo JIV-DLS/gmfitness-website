@@ -111,19 +111,7 @@ export const useGoogleReviews = () => {
           time: Date.now() - (42 * 24 * 60 * 60 * 1000),
           translated: false
         }
-    {
-      id: 'google_6',
-      author_name: 'Antoine T.',
-      author_url: null,
-      language: 'fr',
-      profile_photo_url: null,
-      rating: 5,
-      relative_time_description: 'il y a 4 mois',
-      text: 'Coach au top, compétent et serviable qui s\'adapte aux besoins de chacun. Grosse évolution pour ma part sur 6 mois d\'entraînement. Vous pouvez y aller les yeux fermés, c\'est du PRO !!',
-      time: Date.now() - (120 * 24 * 60 * 60 * 1000), // 4 mois
-      translated: false
-    }
-  ];
+      ];
 
   useEffect(() => {
     const fetchReviews = async () => {
