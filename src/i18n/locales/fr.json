@@ -68,12 +68,17 @@
         "title": "Coaching en Ligne",
         "description": "Programmes d'entraînement personnalisés à faire chez vous avec suivi vidéo.",
         "features": {
-          "flexibility": "Flexibilité horaire",
-          "video": "Suivi vidéo",
-          "nutrition": "Plans nutrition",
-          "support": "Support 7j/7"
+          "videos": "Suivi vidéo",
+          "plans": "Plans nutrition",
+          "support": "Support 7j/7",
+          "flexible": "Flexibilité horaire"
         },
-        "price": "35€/mois"
+        "price": "50€/mois",
+        "prices": {
+          "single": "70€/séance",
+          "pack5": "60€/séance (pack 5)",
+          "pack10": "50€/séance (pack 10)"
+        }
       },
       "corporate": {
         "title": "Interventions Entreprises",

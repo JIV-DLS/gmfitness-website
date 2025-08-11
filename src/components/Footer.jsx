@@ -259,7 +259,7 @@ const Footer = () => {
         >
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
             <div className="text-sm text-gray-300">
-              © {currentYear} GML Fitness. Tous droits réservés.
+              © {currentYear} Gilson Mendes Fitness. Tous droits réservés.
             </div>
             
             <div className="flex flex-wrap justify-center gap-4 text-sm">

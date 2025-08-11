@@ -28,7 +28,7 @@ const Header = () => {
           className="text-2xl font-bold text-primary-600 dark:text-primary-400"
           whileHover={{ scale: 1.05 }}
         >
-          GML FITNESS
+          GILSON MENDES FITNESS
         </motion.div>
 
         {/* Desktop Navigation */}

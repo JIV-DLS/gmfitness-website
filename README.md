@@ -1,4 +1,4 @@
-# 🏋️ GML Fitness - Site Web Coach Sportif
+# 🏋️ Gilson Mendes Fitness - Site Web Coach Sportif
 
 Site web moderne et responsive pour coach sportif professionnel, développé avec React + Vite + Tailwind CSS + Framer Motion.
 

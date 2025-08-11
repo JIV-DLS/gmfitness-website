@@ -73,7 +73,12 @@
           "support": "Personal accompaniment",
           "flexible": "Flexible schedule"
         },
-        "price": "€35/month"
+        "price": "€50/month",
+        "prices": {
+          "single": "€70/session",
+          "pack5": "€60/session (pack of 5)",
+          "pack10": "€50/session (pack of 10)"
+        }
       },
       "corporate": {
         "title": "Corporate Interventions",

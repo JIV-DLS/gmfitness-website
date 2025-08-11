@@ -22,7 +22,7 @@ Téléphone: {{phone}}
 
 ═══════════════════════════════════════
 
-🌐 Envoyé depuis le site GML Fitness
+🌐 Envoyé depuis le site Gilson Mendes Fitness
 ⏰ Le {{date}} à {{time}}
 
 ---

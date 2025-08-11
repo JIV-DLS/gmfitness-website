@@ -78,7 +78,7 @@ export const SERVICES_DATA: Service[] = [
       'Plans nutrition',
       'Support 7j/7'
     ],
-    price: '35€/mois',
+    price: '50€/mois',
     category: SERVICE_CATEGORIES[2],
     isPopular: true
   },

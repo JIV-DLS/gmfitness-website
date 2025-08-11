@@ -15,7 +15,12 @@ const Services = () => {
         "services.items.personal.features.mobility",
         "services.items.personal.features.mindfulness"
       ],
-      priceKey: "services.items.personal.price"
+      priceKey: "services.items.personal.price",
+      pricesKeys: [
+        "services.items.personal.prices.single",
+        "services.items.personal.prices.pack5",
+        "services.items.personal.prices.pack10"
+      ]
     },
     {
       icon: "👥",
@@ -39,7 +44,12 @@ const Services = () => {
         "services.items.online.features.support",
         "services.items.online.features.flexible"
       ],
-      priceKey: "services.items.online.price"
+      priceKey: "services.items.online.price",
+      pricesKeys: [
+        "services.items.online.prices.single",
+        "services.items.online.prices.pack5",
+        "services.items.online.prices.pack10"
+      ]
     },
     {
       icon: "🏢",
@@ -133,6 +143,13 @@ const Services = () => {
                 <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-4">
                   {t(service.priceKey)}
                 </div>
+                {service.pricesKeys && (
+                  <div className="text-sm text-gray-600 dark:text-gray-300 mb-4 space-y-1">
+                    {service.pricesKeys.map((priceTierKey, idx) => (
+                      <div key={idx}>{t(priceTierKey)}</div>
+                    ))}
+                  </div>
+                )}
                 <motion.button
                   className="btn-primary w-full"
                   whileHover={{ scale: 1.05 }}
