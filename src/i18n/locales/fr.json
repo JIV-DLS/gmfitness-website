@@ -9,7 +9,7 @@
   },
   "hero": {
     "title": "Transformez Votre",
-    "titleHighlight": "Bien-être",
+    "titleHighlight": "Corps",
     "subtitle": "Coach sportif diplômé sur la Côte d'Azur. Ancien sportif de haut niveau, je vous accompagne avec une approche holistique alliant corps et esprit pour votre transformation.",
     "cta": {
       "primary": "Commencer Maintenant",
@@ -73,12 +73,7 @@
           "support": "Support 7j/7",
           "flexible": "Flexibilité horaire"
         },
-        "price": "50€/mois",
-        "prices": {
-          "single": "70€/séance",
-          "pack5": "60€/séance (pack 5)",
-          "pack10": "50€/séance (pack 10)"
-        }
+        "price": "50€/mois"
       },
       "corporate": {
         "title": "Interventions Entreprises",
@@ -106,11 +101,11 @@
     "role": "Coach Sportif Diplômé",
     "location": "Côte d'Azur",
     "availability": "Disponible 7j/7",
-    "hours": "6h - 21h",
+    "hours": "Sur RDV",
     "bio": {
-      "p1": "Coach sportif diplômé, passionné par la transformation physique et le bien-être. Ancien sportif de haut niveau, animé par la discipline, le goût de l'effort et la recherche de progression, j'ai décidé de mettre mon expérience et mes compétences au service de ceux qui veulent se sentir mieux dans leur corps et dans leur esprit.",
-      "p2": "Mon approche : Holistique et personnalisée, elle allie performance, bien-être et équilibre mental pour une transformation durable.",
-      "p3": "Chaque personne est unique et mérite un accompagnement sur-mesure. Que vous souhaitiez perdre du poids, gagner en muscle ou simplement vous sentir mieux dans votre corps, nous trouverons ensemble la méthode qui vous convient."
+      "p1": "Coach sportif diplômé, basé sur la Côte d'Azur. Ancien sportif de haut niveau, je vous accompagne avec une approche holistique.",
+      "p2": "Coach sportif diplômé, passionné par la transformation physique et le bien-être. Ancien sportif de haut niveau, animé par la discipline, le goût de l'effort et la recherche de progression, j'ai choisi de mettre mon expérience et mes compétences au service de celles et ceux qui veulent se sentir mieux dans leur corps.",
+      "p3": "Mon approche : holistique et personnalisée, elle combine renforcement musculaire, gestion des émotions et coaching mental pour une transformation durable. Chaque personne est unique et mérite un accompagnement sur mesure. Que vous souhaitiez perdre du poids, gagner en muscle ou simplement retrouver un meilleur équilibre physique, nous définirons ensemble la méthode qui vous correspond."
     },
     "achievements": {
       "certifications": {
@@ -193,7 +188,7 @@
       },
       "hours": {
         "title": "Horaires",
-        "lines": ["Lun-Dim : 6h - 21h", "Flexibilité selon vos besoins"]
+        "lines": ["Lun-Dim sur RDV", "Flexibilité selon vos besoins"]
       }
     },
     "offer": {

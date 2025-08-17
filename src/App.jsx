@@ -57,6 +57,14 @@ function App() {
 
             <Suspense fallback={
               <div className="section-padding flex items-center justify-center">
+                <LoadingSpinner message="Chargement des vidéos..." />
+              </div>
+            }>
+              <VideoSection />
+            </Suspense>
+
+            <Suspense fallback={
+              <div className="section-padding flex items-center justify-center">
                 <LoadingSpinner message="Chargement des services..." />
               </div>
             }>
@@ -69,14 +77,6 @@ function App() {
               </div>
             }>
               <About />
-            </Suspense>
-
-            <Suspense fallback={
-              <div className="section-padding flex items-center justify-center">
-                <LoadingSpinner message="Chargement des vidéos..." />
-              </div>
-            }>
-              <VideoSection />
             </Suspense>
 
             <Suspense fallback={

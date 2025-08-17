@@ -1,12 +1,19 @@
 import { motion } from "framer-motion";
 import { useI18n } from '@/hooks/useI18n';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import GroupIcon from '@mui/icons-material/Group';
+import HomeIcon from '@mui/icons-material/Home';
+import BusinessIcon from '@mui/icons-material/Business';
+import StarIcon from '@mui/icons-material/Star';
 
 const Services = () => {
   const { t } = useI18n();
 
   const services = [
     {
-      icon: "💪",
+      Icon: FitnessCenterIcon,
+      color: "text-blue-500",
+      bgColor: "bg-blue-50 dark:bg-blue-900/20",
       titleKey: "services.items.personal.title",
       descriptionKey: "services.items.personal.description",
       featuresKeys: [
@@ -23,7 +30,9 @@ const Services = () => {
       ]
     },
     {
-      icon: "👥",
+      Icon: GroupIcon,
+      color: "text-green-500",
+      bgColor: "bg-green-50 dark:bg-green-900/20",
       titleKey: "services.items.group.title",
       descriptionKey: "services.items.group.description",
       featuresKeys: [
@@ -35,7 +44,9 @@ const Services = () => {
       priceKey: "services.items.group.price"
     },
     {
-      icon: "🏠",
+      Icon: HomeIcon,
+      color: "text-purple-500",
+      bgColor: "bg-purple-50 dark:bg-purple-900/20",
       titleKey: "services.items.online.title",
       descriptionKey: "services.items.online.description",
       featuresKeys: [
@@ -44,15 +55,12 @@ const Services = () => {
         "services.items.online.features.support",
         "services.items.online.features.flexible"
       ],
-      priceKey: "services.items.online.price",
-      pricesKeys: [
-        "services.items.online.prices.single",
-        "services.items.online.prices.pack5",
-        "services.items.online.prices.pack10"
-      ]
+      priceKey: "services.items.online.price"
     },
     {
-      icon: "🏢",
+      Icon: BusinessIcon,
+      color: "text-orange-500",
+      bgColor: "bg-orange-50 dark:bg-orange-900/20",
       titleKey: "services.items.corporate.title",
       descriptionKey: "services.items.corporate.description",
       featuresKeys: [
@@ -113,15 +121,19 @@ const Services = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600"
-              variants={itemVariants}
-              whileHover={{ y: -5, scale: 1.02 }}
-            >
-              <div className="text-center mb-6">
-                <div className="text-6xl mb-4">{service.icon}</div>
+          {services.map((service, index) => {
+            const { Icon } = service;
+            return (
+              <motion.div
+                key={index}
+                className="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600"
+                variants={itemVariants}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className="text-center mb-6">
+                  <div className={`mb-4 flex justify-center p-4 rounded-full ${service.bgColor} w-fit mx-auto`}>
+                    <Icon className={`text-4xl ${service.color}`} />
+                  </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                   {t(service.titleKey)}
                 </h3>
@@ -158,8 +170,84 @@ const Services = () => {
                   {t('services.choose', 'Choisir ce service')}
                 </motion.button>
               </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
+        {/* Galerie d'images d'entraînement collectif */}
+        <motion.div
+          className="mt-16 mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-8">
+                      <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 flex items-center justify-center gap-3">
+            <StarIcon className="text-4xl text-yellow-500" />
+            L'esprit d'équipe avant tout
+          </h3>
+            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Découvrez l'ambiance de mes séances collectives : bienveillance, motivation et dépassement de soi dans un cadre exceptionnel.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <motion.div
+              className="relative rounded-xl overflow-hidden shadow-lg group"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src="/entrainement_collectif_assis_en_cercle_rond_face_a_la_plage.png"
+                alt="Séance collective en cercle face à la plage"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="font-semibold">Séances en plein air</p>
+                  <p className="text-sm opacity-90">Ambiance unique face à la mer</p>
+                </div>
+              </div>
             </motion.div>
-          ))}
+
+            <motion.div
+              className="relative rounded-xl overflow-hidden shadow-lg group"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src="/entrainement_collectif_femme_tirant_sur_un_elastic.png"
+                alt="Entraînement avec élastiques"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="font-semibold">Entraînement fonctionnel</p>
+                  <p className="text-sm opacity-90">Équipements variés et adaptés</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="relative rounded-xl overflow-hidden shadow-lg group"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src="/phto_du_coach_discutant_avec_un_client_temoignant.png"
+                alt="Discussion coach-client"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="font-semibold">Accompagnement personnalisé</p>
+                  <p className="text-sm opacity-90">Écoute et conseils adaptés</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
 
         <motion.div
