@@ -47,7 +47,7 @@ const About = () => {
   return (
     <section 
       id="about" 
-      className="section-padding relative overflow-hidden"
+      className="section-padding py-20 relative overflow-hidden"
       style={{
         backgroundImage: "url('/coach_gilson_photo_de_cote.png')",
         backgroundSize: 'cover',

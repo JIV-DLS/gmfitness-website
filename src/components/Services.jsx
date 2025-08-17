@@ -95,7 +95,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="section-padding bg-white/90 dark:bg-azure-900/90 backdrop-blur-sm">
+    <section id="services" className="section-padding py-20 bg-gradient-to-br from-azure-50/50 via-white to-ocean-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
       <div className="container-max">
         <motion.div
           className="text-center mb-16"

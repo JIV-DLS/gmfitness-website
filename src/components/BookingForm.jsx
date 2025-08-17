@@ -9,7 +9,7 @@ export default function BookingForm() {
   return (
     <section
       id="booking"
-      className="min-h-screen bg-gradient-to-br from-azure-50 via-ocean-50 to-mediterranean-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-4 px-4"
+      className="section-padding py-20 bg-gradient-to-br from-ocean-50 via-azure-50 to-mediterranean-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800"
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}

@@ -304,7 +304,7 @@ const TestimonialsSection = memo(({
   );
 
   return (
-    <section id="testimonials" className={`section-padding bg-gray-50 dark:bg-gray-800 ${className}`}>
+    <section id="testimonials" className={`section-padding py-20 bg-gradient-to-br from-mediterranean-50/50 via-azure-50/30 to-ocean-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 ${className}`}>
       <div className="container-max">
         {/* Header */}
         <motion.div

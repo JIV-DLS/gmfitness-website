@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section 
       id="accueil" 
-      className="section-padding pt-32 relative overflow-hidden"
+      className="section-padding pt-32 pb-20 relative overflow-hidden"
       style={{
         backgroundImage: "url('/coach_gilson_photo_yoga.png')",
         backgroundSize: 'cover',

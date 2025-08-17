@@ -4,6 +4,12 @@ import { AppProvider } from '@/context/AppContext';
 import { LoadingSpinner } from '@/components/common/LoadingSpinner';
 import { commonVariants } from '@/utils/animations';
 import { WhatsAppFloat } from '@/components/common/SocialIcons';
+import { SectionDivider, SectionDividerWithIcon } from '@/components/common/SectionDivider';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import PersonIcon from '@mui/icons-material/Person';
+import StarIcon from '@mui/icons-material/Star';
+import BookIcon from '@mui/icons-material/Book';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
 
 // Lazy loading des composants pour améliorer les performances
 const Header = React.lazy(() => import('./components/Header'));
@@ -63,6 +69,9 @@ function App() {
               <VideoSection />
             </Suspense>
 
+            {/* Divider Hero → Services */}
+            <SectionDividerWithIcon Icon={FitnessCenterIcon} color="primary" />
+
             <Suspense fallback={
               <div className="section-padding flex items-center justify-center">
                 <LoadingSpinner message="Chargement des services..." />
@@ -70,6 +79,9 @@ function App() {
             }>
               <Services />
             </Suspense>
+
+            {/* Divider Services → About */}
+            <SectionDividerWithIcon Icon={PersonIcon} color="secondary" />
 
             <Suspense fallback={
               <div className="section-padding flex items-center justify-center">
@@ -79,6 +91,9 @@ function App() {
               <About />
             </Suspense>
 
+            {/* Divider About → Testimonials */}
+            <SectionDividerWithIcon Icon={StarIcon} color="accent" />
+
             <Suspense fallback={
               <div className="section-padding flex items-center justify-center">
                 <LoadingSpinner message="Chargement des témoignages..." />
@@ -86,6 +101,9 @@ function App() {
             }>
               <TestimonialsSection />
             </Suspense>
+
+            {/* Divider Testimonials → Booking */}
+            <SectionDivider variant="wave" color="primary" height="h-16" />
 
             {/* Section Réservations */}
             <Suspense fallback={
@@ -95,6 +113,9 @@ function App() {
             }>
               <BookingForm />
             </Suspense>
+
+            {/* Divider Booking → Contact */}
+            <SectionDividerWithIcon Icon={ContactPageIcon} color="secondary" />
 
             <Suspense fallback={
               <div className="section-padding flex items-center justify-center">
